@@ -1,0 +1,48 @@
+1)...say that you collected the runtiema nd memory...say you collected from main.... fro fc adn bc...as tt will take too long....REF for time it would thoeretically take tt for 1000 symbols.... make tables,...put it on document..... +++ turn off all the testcase data generation parts in main file
+
+2)put in the proper svg picture of uml using swin computer
+
+3) put in linh's id and out team esp number
+
+4) finish reference and ack part
+
+5) clean up inference engine map maker---keep kb stuff in comments and remove kb related files
+
+6)check testcase cmdline to ensure it works
+
+7) research and write about DPLL and pseudocode
+
+8) update the picture of testcase for multiple KB or KB update case
+
+9) Write team summary report---describe work progress...say that you did research...she did implement..all the algoes and dpll.+ resolution....how you guys came across parser... how you generated tst cases for bug detection and performance.....+modified the codes for testcase generation outputs, alongside modification of libraries for it to be able to run on windows (as she had written the codes on MAC)...+mention how you found out about it whilst making the .exe file......+ mention that you made .exe file + the fact that you focused on report writing and analysis (+ test case geenration and formatting of codes) whilst she focus on wirting the internal logic of codes and ensuring algorithms worked as intended
+
+10) upload all INF team stuff tongiht ---9pm once dhruv puts in sub titles
+
+11) finish ur own self reflection on INF
+
+........
+cbd points?
+
+
+•	Backward chaining will be starting from the goal case (ie ASKed proposition being implied by the Knowledge Base in TELL ) and will go upto the terminal nodes to prove or disprove it and thus would need the least amount of time and memory (and goes through even less nodes and clauses when compared to Forward Chaining)
+
+Get-ChildItem testNormal*.txt | foreach-object{.\iengine.exe FC $_}
+
+
+
+From the graphs, it can be seen that for forward chaining, as the number of horned clauses (both single and conjunction) increased, the the run time increased in an almost linear manner (Graph 1 (A)), whilst memory usage decreased, but in a fluctuating manner (Graph 2 (A)). Furthermore, for backward chaining, as the number of horned clauses increased, the run time fluctuated a lot (decreasing from 10 to 25, before increasing to new height for 50's case in Graph 1 (B)), whilst memory usage decreased in an almost linear manner (Graph 2 (B)).
+
+Moreover, when comparing forward and backward chaining, it can be seen that backward chaining always took less time (69%less for 10 case, 92% less for 25 case and 87% less for 50 case) but used more amount of memory (93%more for 10 case, 91% more for 25 case and 90% more for 50 case). Hence, if one has a large KB in horned form and needs a quick answer on a powerful machine (ie machine that can support large amount of memory) on whether a preposition in indeed entailed by KB, he or she should use backward chaining. But, if they want to perform it in a regular machine (ie machine that doesn't support large amount of memory) and doesn't need an immediate response, it would be better for them to use forward chaining instead.
+
+Note: But one should keep in mind that the time noted here is in nano seconds and memory used noted in bytes. Thus, if someone is trying to find out whether the preposition is entailed by KB for small KBs (or even for KB with 1000 preposition), he or she can go for either algorithms and they will still get the answer almost instantly (in terms of human perception of 100 mili seconds or 100,000,000 Nano seconds (https://www.pubnub.com/blog/how-fast-is-realtime-human-perception-and-technology/ )) with relatively little amount of memory being used (when compared with current 8 GB RAM that can be found on average computers (https://www.businessinsider.com/guides/tech/how-much-ram-do-i-need)).
+
+
+1469220	2391110	3948280
+451500	200050	524874
+
+
+337800630	412266570	440695240
+4541868851	4456285798	4241274470
+
+
+13ms * 1,000,000 Nano

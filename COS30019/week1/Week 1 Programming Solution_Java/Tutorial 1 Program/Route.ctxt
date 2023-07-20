@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.params=origin\ destination\ actualDistance\ straightLine
+comment0.target=Route(java.lang.String,\ java.lang.String,\ int,\ int)
+comment1.params=
+comment1.target=java.lang.String\ getOrigin()
+comment2.params=
+comment2.target=java.lang.String\ getDestination()
+comment3.params=
+comment3.target=int\ getActualDistance()
+comment4.params=
+comment4.target=int\ getStraightLine()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ A\ function\ that\ will\ allow\ us\ to\ easily\ print\ out\ all\ necessary\ Route\ information\r\n\ \r\n\ @return\ -\ The\ String\ that\ contains\ all\ the\ necessary\ Route\ information\r\n
+numComments=6

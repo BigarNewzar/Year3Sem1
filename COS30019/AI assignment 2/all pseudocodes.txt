@@ -1,0 +1,219 @@
+To Linh Vu:
+
+
+
+function tt_entail(kb,query,symbol):
+	function tt_check(kb,query,symbols,model,model_count):
+		IF no symbols,
+			IF model is being evaluated by KB,
+				increase model count
+				RETURN evaluation of model by query
+			ELSE
+				RETURN TRUE
+			ENDIF
+		ELSE
+			stack <- create a LIST of symbols for backtraking purposes			
+			p <- POP out the last element in the stack
+			tmp_model <- copy the model
+			model[p] <- set as TRUE
+			tmp_model[p] <- set as FALSE			
+			RETURN tt_check(kb, query, stack, model, model_count) and tt_check(kb, query, stack, tmp_model, model_count)
+		ENDIF
+model_count <- [0] {to keep track of model count}
+res <- tt_check(kb, query, symbols, {}, model_count)
+IF res is TRUE
+	PRINT ("Yes" and string form of the model_count[0])
+ELSE
+	PRINT("NO")	
+ENDIF	
+		
+		
+		
+function fc_entail(kb,query,symbol):
+	function fc(kb,query,count,agenda,inferred):
+		WHILE agenda is not empty,
+			p <- POP out the leftmost element from queue in Agenda
+			IF p is equal to query
+				RETURN True
+			ENDIF
+			IF p is not inferred
+				inferred[p] <- TRUE
+				FOR each clause in kb
+					IF p is in Head of the clause
+						decrease Count of clause by 1
+						IF Count of clause is 0
+							Append the Tail of the clause to the agenda
+						ENDIF
+					ENDIF
+				ENDFOR
+			ENDIF
+		ENDWHILE
+					
+count <- []
+inferred <- {}
+agenda <- Deque list
+horn <- set()
+
+FOR each clause in kb
+	IF clause is an instance of HornClause
+		add the clause to horn
+		count of the clause <- the length of the head of the cluase
+		For each preposition in head of clause
+			inferred[Premise] <- false			
+		ENDFOR
+		inferred[tail of clause] <- false
+		ELSE
+			inferred[clause] <- false
+			append the clause to the agenda
+	ENDIF
+ENDFOR
+res <- fc(horn, query, count, agenda, inferred)
+IF res is TRUE
+	output <- "YES : "
+	FOR each symbol in the inferred list
+		IF inferred[symbol] is True
+		add the string form of symbol to output with "," as delimiter		
+		ENDIF
+	ENDFOR
+	add string form of query to output
+	PRINT(output)
+ELSE
+	PRINT("NO")		
+ENDIF
+
+
+
+function bc_entail(kb,query,symbol):
+	function bc(kb,query,inferred):
+		IF query is in inferred
+			RETURN True
+		ENDIF
+		FOR each clause in kb
+			IF clause is an instance of HornClause
+				IF query is equal to tail of a clause
+					count is the length of head of clause
+					FOR each symbol in head of clause
+						IF bc(kb,sym,inferred)
+							decrease count by 1
+							add sym to inferred list
+						IF count is 0
+							RETURN True					
+						ENDIF
+					ENDFOR			
+				ENDIF
+			ELSE
+				IF query is equal to clause
+					RETURN True
+				ELSE
+					add clause to inferred
+				ENDIF
+			ENDIF
+		ENDFOR
+		RETURN FALSE
+					
+
+inferred <- set()
+res <- fc(horn, query, count, agenda, inferred)
+
+IF res is TRUE
+	output <- "YES : "
+	FOR each symbol in the inferred list
+		add the string form of symbol to output with "," as delimiter		
+	ENDFOR
+	add string form of query to output
+	PRINT(output)
+ELSE
+	PRINT("NO")		
+ENDIF		
+		
+		
+	
+function dpll_entail(kb,query,symbols):
+	function find_pure_symbols(symbols, conjunct, model):
+        FOR each symbol s in symbols:
+            set both pos and neg as FALSE
+            for each conjunction c in conjunct:
+                IF s in c:
+                    pos is set as True
+                IF NegationExpressionof s is in c:
+                    neg is set as True
+                IF pos is not equal to neg:
+                    RETURN s, pos
+				ENDIF
+			ENDFOR
+		ENDFOR
+        RETURN None, None
+
+
+    function find_unit_clause(conjunct, model):
+        FOR each conjunction c in conjunct:
+            set p and val as None
+            count <- 1
+            FOR each literal in c:
+                set p, val to literal of units in the model
+                IF p is true:
+                    decrease count by 1
+                IF count is less than 0
+                    break
+				ENDIF
+            IF p is not None and count is equal to 0:
+                RETURN p, val
+			ENDIF
+			ENDFOR
+		ENDFOR
+        return None, None
+
+
+    function cnfeval(disjunct, model):
+        eval <- {literal.cnfeval(model) for each literal in disjunct}
+        IF True in eval:
+            Return True
+        ELIF None in eval:
+            Return None
+        ELSE:
+            Return False
+		ENDIF
+
+
+    function dpll_true(clauses, symbols, model):
+        # Early exit
+        eval <- {cnfeval(c, model) for eah clause c in clauses}
+        IF False in eval:
+            Return False
+        ELIF None not in eval:
+            Return True
+		ENDIF
+
+        # Heuristics
+        p, val <- find_pure_symbols(symbols, clauses, model)
+        IF p is True:
+            remove(p) from symbols
+            model[p] <- val
+            return dpll_true(clauses, symbols, model)
+		ENDIF
+
+        p, val <- find_unit_clause(clauses, model)
+        IF p:
+            remove(p) from symbols
+            model[p] <- val
+            return dpll_true(clauses, symbols, model)
+		ENDIF
+
+        p <- symbols.pop()        
+        tmp_model <- model.copy()
+        model[p] <- True
+        tmp_model[p] <- False
+
+        RETURN dpll_true(clauses, symbols, model) or dpll_true(clauses, symbols, tmp_model)
+
+
+
+
+	
+		
+		
+		
+		
+		
+	
+		

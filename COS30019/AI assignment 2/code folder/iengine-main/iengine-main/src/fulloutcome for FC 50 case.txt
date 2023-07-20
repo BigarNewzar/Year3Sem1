@@ -1,0 +1,701 @@
+PS D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist> Get-ChildItem testNormal*.txt | foreach-object{.\iengine.exe fc $_}
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal0.txt
+fc
+YES: i1, g9, h7, h3, n9, e5, g6, j5, r5, u5, t1, m1, e4, t5, i7, y7, w5, w, c8, j2, g2, o5, u7, o, f5, a3, x, e9, g1, y2, t3, c2, c3, y1, b4, p, s5, l3, m2, b8, f3, n7, d3, j6, o2, c4, q2, y5, w8, e6, z6, n3, b2, f2, n1, n, l4, p1, w6, e8, j8, g4, t4, f9, w4, k5, p2, h, a5, a7, m, p5, u3, l6, d7, q, s1, g3, n2, m8, x3, e1, l, c6, k3, v6, u4, k8, m7, f1, i9, k6, o9, e, z8, p7, x5, y4, d6, t, g7, b7, j9, z5, k7, h8, d8, r2, u1, t8, a1, d2, o8, l1, r4, s9, d9, j3, c, r8, q1, w9, v5, y, p8, i4, q8, i8, y9, q6, x4, k9, u9, f4, o1, p4, a4, h6, n8, q9, v7, h4, o4, i6, m5, q7, d1, s6, h2, e3, r6, j1, p9, r1, r9, v2, k2, b6, l8, x6, z, z2, n6, e7, c1, u, z9, v3, g
+Runtime: 4997400
+Memory: 4495593472
+Runtime from Main: 438763100
+Memory from Main: 4494827520
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal1.txt
+fc
+YES: u1, g6, x6, l7, o5, q6, m9, z, z1, q, p1, w, t6, n7, s, r4, r9, h2, j3, i8, i1, k3, x8, a8, o2, y8, t, t3, o6, p9, d8, w3, r3, e3, p, p6, w4, c, b5, z7, w8, v6, t7, u4, k, f, y6, h7, v9, s2, v4, d2, l2, a4, z6, t8, y, h6, u9, j5, m, h8, i4, c1, o1, x4, g2, f1, a6, i6, p4, h5, m6, c9, f6, q4, d5, x3, n6, j, j1, v2, e5, g3, c3, m3, c8, j4, y7, r7, o9, r6, a2, h1, j7, z3, m5, j9, s8, s9, q3, g1, a5, y9, y2, l4, d6, v8, u3, d, u, m7, q7, s7, h4, a1, z5, s5, a9, b6, k5, g9, b9, q2, l3, l8, a, v7, d1, u8, d9, k2, f8, n9, x1, k4, s4
+Runtime: 3956500
+Memory: 4514902016
+Runtime from Main: 408957400
+Memory from Main: 4515356672
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal10.txt
+fc
+YES: l, g2, q7, a, u1, r4, v2, s4, f6, e6, g, b5, k7, n5, s6, i, n4, g6, n8, s2, a9, c5, q2, k4, c9, d4, a6, m3, g4, k3, w1, w3, b1, q5, m9, q9, d1, e4, d9, q6, g1, y8, t5, z4, j6, d5, o, s9, g8, b7, o5, q, y9, u3, w9, i1, r, s1, z1, t2, z, p6, l2, k2, v3, a4, s7, f3, b4, t4, q3, i6, x4, e, o2, p4, z6, i5, s, f7, s3, z7, h4, e9, o8, k, z9, w, l6, t, h5, t6, v1, l7, e5
+Runtime: 3025300
+Memory: 4525596672
+Runtime from Main: 443253700
+Memory from Main: 4524761088
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal11.txt
+fc
+YES: f3, n3, b2, m, a, q4, t3, i2, k5, m7, t5, s2, c9, i8, o3, q1, x3, r7, h7, q2, u6, b6, y2, o6, h3, i3, u1, g8, w5, d9, n8, d, z9, z8, p1, j9, i4, d7, s6, c4, i5, a9, r1, v4, e9, g1, a3, m4, k9, o1, o5, d4, f7, i, g7, c7, y3, j8, w6, c6, e4, p4, n4, i6, l4, m2, p3
+Runtime: 2460100
+Memory: 4516225024
+Runtime from Main: 442795100
+Memory from Main: 4516466688
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal12.txt
+fc
+YES: p9, l3, v, v9, k1, s2, e2, n9, s3, o3, o1, a, u2, m, i, g8, v3, b, b3, k8, m4, g4, r, h3, k2, p5, w6, r5, y5, p2, g6, g5, q7, c5, e1, f8, r1, l7, e6, r4, g, v2, u7, z1, o8, s8, e3, y2, w7, u8, t, j5, v7, y3, g2, z7, b9, i1, o5, t5, q4, c7, q8, v5, n5, m3, r2, e7, h2, e9, h7, h4, d9, q1, m2, r6, q5, d1, y, x8, f2, f1, c9, f5, r7, u3, c8, y4, p6, h1, g3, i4, d4, a8, a6, a5, w4, h8, d2, m6, p1, l, p3, t1, a4, w5, d8, b5, j2, s4, r9, b2, o6, f7, i3, k6, m5, a1, f3, g9, k5, k3, t7, o7, w9, s, l4, z2, p, u, c2, x7, w2, m9, b8, c6, u1, h5, s6, d5, e, d7, x, o9, n7, c1, w8, d6, v1, i7, j, c3, z8, n, u9, x1, q, t4, p4, q3, x5, o2, o4, n6, n1, x9, q9, v6, y7, p8, n2, a2, x4, d, e4, i5, s5, i9, r8, g7, c4, h, y1, k, b6, z, u4, z6, j3, o, p7, x3, s1, f6, z9, i2, w3, n8, t2, j4, e8, k9, j1, u5, s7, k4, l5, q6, y6, m8, b1, l6, v4, n3, f4, y9, n4, x2, y8, u6, v8, k7, f9, t9, j8, e5, a3, q2, t6, b7, t8
+Runtime: 7042300
+Memory: 4512018432
+Runtime from Main: 408988300
+Memory from Main: 4512018432
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal13.txt
+fc
+YES: y4, x2, m1, h4, i8, v, b, r5, w2, d8, o, j9, i5, b4, y7, j4, g, w4, a1, d1, c5, c, h, w7, u8, j7, y, r8, z1, r6, u5, m, h6, p2, x8, g9, w6, j, m5, b6, m8, o4, q7, i3
+Runtime: 2000500
+Memory: 4500475904
+Runtime from Main: 540816900
+Memory from Main: 4500496384
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal14.txt
+fc
+YES: o8, x3, c9, s1, h6, j4, g8, g, s7, z8, m, g3, w9, x6, t9, f2, x7, r9, d9, l4, d3, o3, t, e9, p2, b5, m3, c6, p7, z2, d1, g7, l7, i5, e4, v, b4, d4, t3, p1, e1, q, h1, g9, t8, y2, a2, n4, s4, m2, b8, z4, n1, e, x2, i3, o7, e5, y3, i1, b7, q5, a6, t2, l, e3, s5, f8, d7, z5, x4, y6, x1, c1, k6, p6, o4, b3, d6, j7, m4, o, k2, i4, n5, l8, o5, r4, l6, a7, l5, c2, k8, y9, c5, j9, u5, g2, v1, a1, g1, f1, j1, v4, g4, c7, f7, y5, h3, v7, u7, u2, p8, q8, p9, r6, h4, j5, f4, y1, v5, n7, f, m8, e6, c8, h7, v3, b2, u6, f6, b1, w, q2, l3, b9, m1, a5, s, n6, r7, f9, y4, y8, p5, t4, x5, r2, u9, l1, w3, d2, a4, q6, s3, k9, z1, r3, f5, z7, i6, x8, k5, k7, s2, h2, m7, d, w5, d5, q9, f3, b6, r1, m6, e8, v8, r8, b, v6, z3, l2, w8, m5, o6, o2, l9, i, q4, h9, s8, q3, a9, x, i2, q1, n8, z9, x9, c4, k, i7
+Runtime: 6002100
+Memory: 4491145216
+Runtime from Main: 452919900
+Memory from Main: 4491145216
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal15.txt
+fc
+YES: a, g9, z, f2, y2, c4, b6, x4, j, d5, o3, i, p1, t1, m5, c8, f8, s5, g4, q7, k7, h4, b9, f7, u6, u8, m3, n4, l, t8, r1, z9, k1, v8, o6, n5, r, d9, w4, r8, h3, t4, q1, e2, k6, t3, u3, i8, e7, g5, b8, l9, x8, j5, y3, e1, l4, n3, j9, b5, i7, i3, b4, t2, t6, u, u9, u5, p, q5, j8, e5, v, r5, c2, l8, j2, x7, c, p2, s3, q, d7, s4, i6, a8, z8, z1, i4, e6, a1, k3, c3, x5, k5, n7, d4, g2, l5, d8, s1, z6, d2, s2, a5, r6, l7, o9, u1, f4, i9, r7, s, x9, e9, a7, c5, c1, w7, q8, d6, v9, j6, w5, k4, w8, h1, c9, o4, p5, b2, u2, w, a6, e8, g1, n6, p7, p6, f, h8, p4, b7, m6, m4, v1, p3, o7, o8, g3, j7, m1, j1, w1, p8, w3, x1, y, b
+Runtime: 4999600
+Memory: 4499668992
+Runtime from Main: 447467000
+Memory from Main: 4499668992
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal16.txt
+fc
+YES: a, m5, t3, l3, h3, o2, i6, o3, x8, e2, j9, o7, d6, n, v9, u9, b1, k1, k5, b, z6, m4, a4, z3, c7, t6, h6, v, r6, o4, z7, l5, x3, t9, m2, y3, r7, u7, e4, d8, f6, w, n9, w9, o, l4, l1, g3, b5, v7, v3, w4, u3, m8, x1, k7, t2
+Runtime: 1998800
+Memory: 4507947008
+Runtime from Main: 406814400
+Memory from Main: 4508233728
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal17.txt
+fc
+YES: n4, c2, l4, r8, t6, q3, e2, c4, e3, f3, j7, s3, n9, b2, x2, r3, l5, h, m1, a9, k1, d5, s4, u3, y2, h2, x5, j5, r7, b7, q6, z1, c, s2, k, y, w6, r1, d7, i2, l1, r4, b8, u, o2, t8, p8, p2, b1, o5, w9, k6, g7, v8, v7, x8, v6, i5, d4, o9
+Runtime: 3000200
+Memory: 4512149504
+Runtime from Main: 416176600
+Memory from Main: 4511662080
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal18.txt
+fc
+YES: n9, a6, t4, k, h7, g6, g2, f3, k3, k6, i4, i8, z1, b9, g, q9, m2, v6, a5, z2, h1, e, i5, a4, s1, k5, e6, r2, l8, f, m6, l2, s3, z3, u2, b1, w2, i3, s6, e2, y2, s4, j, x2, i9, v3, r8, a7, x7, a9, r3, t6, z4, d2, w1, y7, s8, x1, d6, u9, d3, t, c8, o1, v1, q6, x9, j9, t7, f9, p8, u6, j7, g8, e4, c1, v8, c9, g7, p4, y5, t8, m4, c2, t1, q5, j8, q, w4, d8, b6, p7, m1, h4, t9, l5, v9, w9, z9, l7, y4, b8, u3, q8, w6, g5, b3, e5, q1, o2, g4, s7, o6, j2, n5, r5, w5, p9, t5, n4, j5, i1, i, g9, a1, h5, v5, l6, y, i6, r1, o, f7, d5, z5, p1, o9, t2, j6, x, s, y6, k1, e7, f2, c7, u4, c5, r7, g1, k4, f1, w8, d7, v4, b, c, k2, z6, w, x5, q3, n1, o5, d1, l9, m, p6, z7, s2, m7, i2, h6, n, g3, y3, d, e1, u5, j4, q7, r6, z8, x8, s9, m8, e9, n3, h8, n8, p3, o4, m5, f5, k9, b4, p2, p5, m3, k7, j1, u7, n7, q2, f8, l4, t3, o8, w7, q4, o7, r4, c3, y9, l3, r, u1, b5, e3, h3, f6, y8, b2, n2, u, h, p, a8, l, i7, x3, a3, s5, x4, o3, a2, h9, d4, v7, v2
+Runtime: 7576500
+Memory: 4511600640
+Runtime from Main: 446904800
+Memory from Main: 4511186944
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal19.txt
+fc
+YES: g9, m1, j3, l2, m4, e9, m8, w9, g5, w8, u7, y7, j, s1, b7, g3, f3, w3, t9, y1, k8, o9, p9, r4, t8, q2, v7, r2, m7, d6, u4, k3, y2, p2, l9, z9, y9, d8, b9, y, o4, s5, e3, f1, g2, k, r1, g1, r8, x6, c1, c7, a, i5, l5, z1, j4, a4, d, z2, l6, t5, w7, b2, h, v5, f8, i3, z3, t6, h8, a8, w2, o3, k9, x7, h1, j8, t1, j9, a3, z4, m3, c3, h5, c2
+Runtime: 2998400
+Memory: 4504285184
+Runtime from Main: 417873800
+Memory from Main: 4504576000
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal2.txt
+fc
+YES: l1, w7, x3, o1, n8, t9, m5, b6, x7, c9, h7, r5, y7, u8, a2, u, u6, g6, f7, u4, v2, f8, h5, g4, v9, y4, o6, u7, l7, c4, c, g, w1, o9, w, n1, j3, v3, e2, a3, m3, a5, a8, s, y9, r9, j, l4, c8, q1, t8, q5, z2, w9, h2, k, j7, e3, z8, l8, j8, f3, h, k8, p6, p2, m4, t3, b1, c6, n6, s4, i2, m9, q6, e, g5, u3, e8, y1, r2, o7, w5, i5, x2, s6, l5, v8, q4, l9, e1, y3, c2, m2, e7, k9, m, g3, b9, k1, r6, p1, q3, n3, e6, s5, s1, s8, f9, s3, i9, n5, p3, f5, f4, c3, o4, q9, b3, v4, j6, f1, o, h8, l3, i8, a7
+Runtime: 6154700
+Memory: 4496257024
+Runtime from Main: 482797300
+Memory from Main: 4496494592
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal20.txt
+fc
+YES: d, m6, f, s2, i6, k, q7, f3, a8, a4, a5, h6, y5, j, s6, s4, r6, b7, i4, f4, v5, c4, i3, o5, e4, f8, t8, p4, f7, u8, w2, x7, y, l1, b4, k6, i, z8, o2, j4, l8, x, h2, v1, s3, a9, k2, e, s1, l9, n7, w1, i2, d8, y4, e9, i1, p8, h3, c8, y7, l7, i7, i5, y3, x9, c3, a2, v9, q6, q9, t, m7, w8, o6, m1, n8, x6, r8, q, n4, m4, z7, h9, r3, n5, u2, g2, n1, t9, l5, v, b9, b3, h4, k4, m8, g9, p1, r5, l2, b5, t7, e3, f2, k8, h7, g1, s7, m9, l, i9, d5, j7, q5, n
+Runtime: 4997000
+Memory: 4468473856
+Runtime from Main: 570617900
+Memory from Main: 4468473856
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal21.txt
+fc
+YES: f5, v7, u9, p2, e1, u8, c8, d2, h9, m4, t, d5, h8, v1, i, r6, x5, k8, v8, x6, d3, s7, i4, a7, d8, c6, n5, y1, h7, v9, j, g5, w7, j8, g8, w1, t8, d1, m9, d7, w8, b2, i1, i5, h2, f3, b4, b1, k5, f8, s, y5, y7, r9, j6, d, z3, e5, y8, s6, f7, i9, b5, z8, c5, r, g2, x7, n3, l5, h5, f6
+Runtime: 2002400
+Memory: 4484071424
+Runtime from Main: 664903700
+Memory from Main: 4484685824
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal22.txt
+fc
+YES: t4, d7, e3, l9, b4, v1, c, m3, m6, o9, p1, d
+Runtime: 2492800
+Memory: 4497600512
+Runtime from Main: 423823900
+Memory from Main: 4497731584
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal23.txt
+fc
+YES: d6, l7, j, b8, g, b4, q6, r4, i7, n, c5, g2, t1, g1, c4, f9, h4, n6, u4, w7, r9, u3, e4, c1, s5, f8, k8, b1, d5, i9, c2, g8, m9, l2, e9, f6, x3, y1, p7, y7, t5, r7, o2, e7, h8, l8, b3, f7, u6, c, s7, p2, k3, a8, u1, o1, y8, h7, o4, j6, d9, k4, m3, k1, f4, o, i3, d3, e, z1, w2, k7, f5, y4, g4, h, v2, o6, x4, t9, b6, f, p9
+Runtime: 2988100
+Memory: 4518871040
+Runtime from Main: 439786000
+Memory from Main: 4518871040
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal24.txt
+fc
+YES: r, n6, d4, m4, a3, c2, j6, w4, d3, x5, b5, j4, v9, v8, g, m, k7, l5, u2, m9, j7, l8, g8, n7, b2, k, s9, m6, u4, d5, m8, u5, a, z8, c, h4, w3, z3, c5, s2, s6, r3, y5, r7, e1, h5, h2, a6, g2, q8, n5, i8, z4, e9, j2
+Runtime: 2502100
+Memory: 4522188800
+Runtime from Main: 437400500
+Memory from Main: 4522586112
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal25.txt
+fc
+YES: y2, f4, d1, s6, i5, z7, e, b6, i6, t4, m7, j2, a5, t3, p7, k2, n6, b8, i9, k3, q4, y8, k5, o4, r5, c9, w4, i2, d3, u7, z1, c1, e3, z, q6, q, m9, g6, v3, y3, f3, e9, n5, w8, u1, x2, n1, y7, x5, l8, z3, p3, e5, v5, l4, n8, z2, f7, d8, x9, c2, w5, u, n7, n2, g2, j8, e1, r, d5, c6, e6, i8, l9, z8, m3, c, v4, g, k1, a3, o7, l2, i7, m1, o3, o2, q7, x, b9, h8, r1, p5, z5, l, c8, c3, s5, u9, a2, u4, b2, q9, y4, t8, l6, o6, n4, r4, f, w7, k8, q5, b, f8, j6, v8, p4, y1, n, l7, r6, q3, b7, v, q2, o8, v1, s7, r7, e7, u8, l3, j3, y, v9, v2, b3, g5, m8, z6, x8, n9, q1, s3, a, g9, i4, h, t, s, q8, d9, i3, y6, w6, j4, e2, u2, b4, a8, f6, c7, e4, k9, p2, j9, y5, j5, d2, k, k7, e8, g8, p, x1, b5, o, p9, t1, f1, t2, r2, t5, w1, p6, w2, z4, c4, a7, h6, b1, j7, h2, u5, o9
+Runtime: 6003000
+Memory: 4526006272
+Runtime from Main: 428570800
+Memory from Main: 4526137344
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal26.txt
+fc
+YES: p7, t9, p5, u9, d2, p1, d8, i6, t4, r9, g6, l7, c4, c9, t5, u, j1, e, t6, m6, w, b5, d4, a7, r4, j5, o4, h8, o1, i1, i5, h2, p8, x2, r5, j9, s3, n9, y3, z, i9, x4, s6, q9, p9, x7, f, p3, b6, m2, t1, z8, g7, c, m8, d7, j6, f4, w7, g8, p6, s2, v4, d6, d3, g9, k5, e2, y8, q6, v5, c5, s7, l2, m9, m4, f5, t7, g4, q4, a6, a, j, w3, t3, i8, k3, m1, k8, u1, w1, c1, k2, p2, j2, e6, r1, i2, k, h4, n1, u8, m, j4, o, l4, x9, r6, x3, l1, a4, j8, f3, c2, j3, r7, v3, g3, w8, o3, i3, t, u2, a1, n4, f9, b9, a5, h9, t8, y, s4, q, f8, l5, b7, q1, a8, g1, v7, v6, z3, k9, l8, z6, r8, g, c3, z5, w4, i4, b2, b1, n3, m3, v1, s5, s1, v, w6, z1, a9, e7, u3, u7, r, q3, e8, y5, f6, s, s8, n, y7, c6, w9, x6, p4, l6, b3, z2, q7, c8, c7, b, g5, d1, y4, b4, y6, x8, z9, o5, p, j7, x, u6, r3, a3, h7, o6, i7, v2, u5, x1, h5, a2, e9, t2, v8, e5, z4, l, k1, l9, o2, n2, s9, w5, b8, d9, l3, o9, z7, f1, n6, q2, g2, d
+Runtime: 6929400
+Memory: 4530728960
+Runtime from Main: 496374400
+Memory from Main: 4529332224
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal27.txt
+fc
+YES: m8, a3, m, d1, i4, c4, u7, w6, y
+Runtime: 0
+Memory: 4524474368
+Runtime from Main: 430521200
+Memory from Main: 4524195840
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal28.txt
+fc
+YES: m7, f9, g6, n1, c8, f2, o1, v7, c5, p9, o8, e4, g, r6, x3, f1, h8, x4, b3, r2, m2, i1, w7, n7, y8, d7, w2, b9, m3, t1, x6, l1, y4, l8, d9, v4, c7, k3, q7, w, s6, z9, w6, x, d, t6, i6, y2, k4, g7, k8, e8, n2, t5, v5, p8, u9, t7, s4, n3, l5, d6, f7, p, u6, i9, x9, s8, g2, n6, i5, b5, b1, f3, q1, d1, f4, h4, t8, v2, o2, y6, j9, b, a6, a5, p3, i2, o9, m, q8, d8, s1, a8, z1, v, k9, h2, w1, p1, z2, z, w4, e3, u7, u, j4, c2, i3, m5, p4, v8, u8, z7, v3, h9, f, x1, j5, u5, t2, q6, k1, o, h1, h5, i8, l4, r1, m1, a9, l6, c3, m4, c4, q9, g5, r4, j6, x2, c1, z8, c9, s7, r8, j1, o7, m6, y1, s3, j3, u4, m9, b8, a7, k, t, a1, j7, d2, y9, g4, n, y, e7, c6, y3, j, h, r5, l7, k5, t9, d4, a3, o6, p5, h7, z5, e6, i, n5, c, e2, q2, w5
+Runtime: 6999800
+Memory: 4528447488
+Runtime from Main: 442928100
+Memory from Main: 4527513600
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal29.txt
+fc
+YES: j7, g, t7, y3, k6, l9, b3, r6, a3, i6, z8, e3, s7, l1, l6, m2, s4, w3, m7, w8, r2, w2, j5, d7, x3, l3, c3, q3, s8, t9, f9, h5, x6, g1, u4, o7, x1, b9, n8, f3, j2, r4, t6, m6, k7, h2, f8, o6, o1, e8, r3, x8, m, u5, y, c8, u7, i7, q5, v6, g4, e9, h9, x7, w6, j, l, i5, a9, m5, a1, v5, c9, a, v4, b8, v9, o2, p1, a7, n9, p5, n3, z1, z4, s3, w5, l7, s1, l2, e
+Runtime: 3030900
+Memory: 4525993984
+Runtime from Main: 432315000
+Memory from Main: 4525797376
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal3.txt
+fc
+YES: u6, r4, k5
+Runtime: 1476800
+Memory: 4522459136
+Runtime from Main: 427916500
+Memory from Main: 4522328064
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal30.txt
+fc
+YES: d6, e, h7, z8, u5, m8, g5, s1, r3, q3, l7, k2, q8, j, g2, w8, c3, s, e6, g9, t3, e7, a5, i5, t1, n1, v4, v8, b5, c7, q2, a6, m3, r8, c6, x5, l5, h6, l4, z6, i6, x7, j7, o3, d4, b2, q6, e9, j2, s2, m6, u1, l3, y3, a3, r2, u8, e3, j9, f5, e5, z2, z3, d7, a9, k7, o8, r, h4, t6, f7, q1, e4, x4, m5, e2, t7, u6, f2, d1, p, s4, n8, a1, j4, o5, d2, i4, h5, w4, o, j6, w6, w1, s3, m9, r9, u7, w2, p6, t5, y8, f4, d8, b8, e1, s8, f1, y, c5, v5, u9, x9, q7, g, m4, p8, y5, x1, i, p4, i7, o4, t9, v2, v6, y7, w7, h, a8, z4, g7, b3, g1, d9, m2, s9, d, l6, a2, b9, q9, j5, p5, c8
+Runtime: 4751700
+Memory: 4523741184
+Runtime from Main: 428891500
+Memory from Main: 4523282432
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal31.txt
+fc
+YES: n7, c2, a6, h3, v8, o1, q1, y, u7, c8, m9, k4, g8, u6, r4, h9, w2, w6, s4, f8, q8, b9, t9, i, n2, i1, v9, s, x7, l3, m7, w7, w1, r6, v6, i4, f1, j5, e7, h8, c7, f4, h, f9, a3, l2, a5, s7, b1, i2, n4, l8, x8, w9, f7, q2, d8, s8, d6, l, b7, w3, k9, x6, k3, g3, a9, a, j6, w, g7, r, z, g, u5, z1, a2, d, q7, l9, y7, i7, b3, k6, k, e3, i6, z2, y4, g9, y1, d9, e2, d1, h2, e1, z9, r7, g1, k2, p3, r3, o9, d4, z3, a7, t6, h6, t7, m6, s6, t2, n8, q6, x5, d2, x3, x, c3, e9, u9, c9, m5, c1, e4, h5, k7, j9, y5, a8, y9, c4, o8, j, i8, x1, r1, t4, t5, s1, o, f, v5, f3, b4, q9, j7, z7, y6, r9, m8, q, j2, m, v3, k5, g5, o5, g2, b8, p7, n1, m3, m1, p6, u2, r5, n, l5, n9, b5, y3, o2, n3, i3, d7, e, q4, z4, h1, v7, u1, v2, i9, c5, o6, a1
+Runtime: 6051600
+Memory: 4530712576
+Runtime from Main: 431892900
+Memory from Main: 4530339840
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal32.txt
+fc
+YES: s5, f3, k, k7, x1, r2, v6, i, j7, q5, i1, v4, u6, g6, k3, d6, p1, p4, o, u3, m, t7, z2, n9, j8, t4, e3, x3, b1, y6, g1, x9, h4, y7, w9, u8, s1, l2, h6, f5, a7, m8, t1, l3, q2, m1, s7, u2, h5, w8, b5, a9, o5, i3, r4, e1, b8, u4, l6, n8, x2, w2, v1, n3, z, d1, s8, k5, l7, y3, i9, x7, k8, r, p2, k2, i6, r7, h8, w4, m5, a2, g7, e4, q7, k9, t3, j6, m4, f2, r1, x5, q9, b, c5, a8, f8, c7, n1, f, b6
+Runtime: 2952500
+Memory: 4529000448
+Runtime from Main: 442530900
+Memory from Main: 4528590848
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal33.txt
+fc
+YES: v9, j, r7, v, a, j1, e8, a6, u8, o6, e7, w4, h7, p7, c, x6, p9, w9, k7, z, m, z4, b, h5, c9, x1, m6, r2, g3, b7, m4, a1, r8, w2, f5, b8, m5, j3, i9, n1, k1, a3, c4, a5, u7, w8, e6, w1, n, f9, e5, r, s7, k8, h6, f8, e, m7, p4, v4, o3, d9, o4, k2, k5, y1, j9, s5, t2, y3, w, l6, x3, c5, y, l8, n8, l5, a7, z6, d2, v7, e3, e1, c2, l4, o7, u3, a9, s3, f3, l, f2, x5, k, c3, z8, r6, i3, r9, l3, x2, k9, s4, v8, d4, u2, f4, s8, x, i6, d1, v1, x7, q2, y8, t, i8, n3, c7, j2, b4, m1, n5, s, b3, n9, z2, w7, y4, c6, w3, z1, r3, y9, y5, u1, a4, y7, v6, m2, k4, b1, g9, m3, j8, z7, l9, k6, t1, p5, i1, q, q6, l1, z5, j6, m8, g4, v2, i2, k3, g8, p, w5, b5, t7, y6, n7, n6, g6, v3, i5, d, c1, l2, l7, g7, h9, x8, e2, t3, s1, x4, q1, h8, e9, f, b2, z9, q5, s6, d6, t8, i4, d5, j4, h, d3, q9, w6, d8, s2, i, z3, d7, o9, u6, p2, q7, o8, g, y2, t4, q8, u, r4, o1, j5, u5, b6, b9, r1, o, n4, f7, f1, h4, u9, p6, q3, h1
+Runtime: 7488000
+Memory: 4529549312
+Runtime from Main: 442561100
+Memory from Main: 4529352704
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal34.txt
+fc
+YES: j1, i7, u1, z5, t6, t5, x7, x1, d, p6, r6, c1, j2, u5, i2, m2, a8, k6, c8, w5, t2, g7, b4, m7, c6, s2, u4, p2, h9, n6, g4, y3, q, g2, w6, h7, q6, q7, m, s4, h1, n7, g8, p7, l, d6, l6, y8, k, p4, n9, t7, x2, a9, o6, n4, i5, u3, f2, b1, o5, m5, g3, k3, g, j6, r, r5, f8, r4, a, f7, w2, c4, f4, i8, e, e4, s1, l8, l5, j5, e8, r3, t4, k2, h2, w1, p8, k7, n, x8, b3, l9, c3, b7, f3, t3, o2, b6, z6, t9, i9, a5, s, y4, u9, y2, z8, h5, l7, m1, n1, c, v6, m6, k8, v5, a1, m4, c5, v8
+Runtime: 5006000
+Memory: 4539367424
+Runtime from Main: 438902500
+Memory from Main: 4538798080
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal35.txt
+fc
+YES: l1, h1, x7, w3, r4, o4, m8, u9, c2, o3, g5, q2, i, n1, c8, j3, y7, b7, a5, w8, c3, v6, p6, m2, b8, d2, x, s9, p8, k7, w5, z9, o9, l, t1, a, y5, q1, d3, j5, v3, k4, v1, b1, g8, r2, h5, u7, z8, j1, v9, p5, v2, t, c7, d, n4, z, v7, o6, y9, r, e3, n9, s8, k5, q8, c1, p1, e6, k2, f4, d1, q6, p4, m7, w4, k8, g6, p9, d4, u3, g1, w2, o1, s1, l9, k3, h7, i4, e7, f8, z4, t5, w9, n8, s5, r9, o2, c6, p7, w, m1, u4, l7, n2, d8, b9, h9, d5, e4, f, r7, y8, x2, a6, m4, w6, f5, m6, q9, u, s, h2
+Runtime: 3997200
+Memory: 4534571008
+Runtime from Main: 474782200
+Memory from Main: 4534710272
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal36.txt
+fc
+YES: t6, e3, x1, m9, u5, l8, a8, k, x, a7, s4, w3, t9, f1, s1, y6, w, p3, b5, p2, n4, u4, b8, d4, g4, k7, q, e8, j, q9, x5, p9, p6, l, j6, d8, t, c3, c4, u6, e, k4, y1, f3, v4, r4, x4, l5, m6, w1, w9, t1, m2, w8, g8, o6, q8, e5, z7, m, s, y3, g3, a6, e6, v6, j7, t7, n5, r6, s7, n1, h1, c5, c6, i3, j9, f, u3, m4, v9, z1, r7, a, g7, u2, h9, f6, l3, v2, s2, b2, f8, t5, z4, d3, d7, f5, x7, e9, w7, u1, r2, c8, r1, b9, o5, a1, y, l2, o4, s5, w4, u8, y9, y8, z3, l7, e1, n7, d6, o1, n6, e4, j3, j5, x8, t8, p8, g1, y5, h7, r, h, d2, s3, k1, i7, p5, p7, l9, z8, t2, i5, a4, m5, l4, h4, l1, w2, x9, v, o, v5, o8, b7
+Runtime: 4999100
+Memory: 4535353344
+Runtime from Main: 437541700
+Memory from Main: 4535418880
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal37.txt
+fc
+YES: q9, a4, a2, g7, m4, a6, t5, w3, d9, f3, h7, g6, s9, d7, l9, c4, v1, k, y5, y2, f8, a, x, a1, y4, c1, k7, g5, s4, t6, e4, m5, h2, n8, f, y8, o8, x3, t4, k6, r3, b1, t8, t7, e1, u3, b4, j6, a3, y9, c6, n5, s5, h6, i1, j1, p1, r5, q8, o6
+Runtime: 2489800
+Memory: 4533309440
+Runtime from Main: 430082800
+Memory from Main: 4533428224
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal38.txt
+fc
+YES: o3, o9, k7, g7, b8, t6, a5, x4, q5, k2, w7, m5, w4, b9, h, j9, o, e5, s, e, u7, d9, d1, q9, z8, o7, t9, w9, t7, y1, r, d8, l1, x7, k5, m9, b3, c5, x1, c4, q6, v3, s5, y5, y2, h8, y4, b4, x3, o6, v5, z2, y, y9, a9, b5, w5, s7, i1, y7, k, y8, h3, n5, q3, m7, w, b2, a1, b1, a, n, n1, v4, e1, d, g8, a6, c9, l6, l, l2, f2, t5, x5, r7, z5, j7, q1, f7, z7, p9, c, m3, q, c7, p7, u6, w3, s4, l8, e4, v7, e3, h7, x9, c1, k4, e2, e9, k8, s3, a8
+Runtime: 3952200
+Memory: 4534054912
+Runtime from Main: 438717300
+Memory from Main: 4534005760
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal39.txt
+fc
+YES: w5, m7, v5, v8, p6, k6, m9, h5, a3, y1, d9, e6, y4, h9, l8, j, z9, j7, f3, x6, d4, o, s8, z8, y2, h3, d6, k3, j5
+Runtime: 2001100
+Memory: 4540895232
+Runtime from Main: 431118700
+Memory from Main: 4540428288
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal4.txt
+fc
+YES: o4, j2, g, r9, q1, e, m3, t9, y8, x3, j9, p3, p5, h2, i8, s9, u9, s5, q8, h, x2, t7, n7, r3, i1, l4, v7, l1, q6, d4, x6, c4, y2, s6, s4, h6, d6, t, q, g3, i3, r8, l2, k, s1, r6, w2, k5, s7, o7, b4, d9, j4, a3, m2, p1, b3, t3, j7, j8, a7, b2, n, v1, k3, s8, e6, w7, d2, f, n4, k9, y9, c9, e4, i, w, z2, h9, d1, o5, l8, z5, x, b1, s3, o9, i2, o8, z3, a5, b7, q2, d, m, t4, i5, q7, p8, k1, e3, w3, b5, h8, o6, r7, f8, x1, d7, v3, p4, u, d5, h1, g4, l5, l3, v6, z7, x7, y5, z, v, h4, k7, x5, o3, i9, f2, u1, p6, z9, v8, b8, c1, w6, f1, x8, t2, g8, h7, p9, u5, c, v2, f4, n9, w8, t1, r1, e5, a, m6, f5, r, p2, c8, j1, f3, h3, v9, x9, a9, n2, x4, w4, g2, o1, g1, u3, i4, k6, q9, t6, n6, q3, g7, l6, m4, n8, m9, y4, r2, y1, f9, e7, v4, c5, y3, u4, p, q4, u8, p7, r4, m8, v5, a8, z6, y7, s2, l9, m7, e2, w9, i7, a4, m5, j6, g9, g5, z1
+Runtime: 6999100
+Memory: 4537495552
+Runtime from Main: 419020600
+Memory from Main: 4537495552
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal40.txt
+fc
+YES: g8, u2, f7, z2, s2, e4, h6, q3, w2, m2, k9, f5, o2, n5, x7, d4, n6, o4, k2, u, l7, o3, k5, q7, n, l, y6, g7, c5, x9, d7, e1, v3, a7, h8, x6, w5, f2, u5, i1, y2, m8, y8, d9, y7, v5, z7, a, d, a1, p4, a4, r7, j3, a5, e7, x2, g, m3, w1, o6, t9, h4, z4, h3, k4, g4, y4, v2, o9, e9, h9, a9, v1, h7, g9, m4, e8, v4, u8, c4, m1, u4, d5, m7, u9, g3, b7, p2, k1, b5, p9, w9, i, i9, b3, c1, r8, q2, z, t8, k6, p1, n9, n8
+Runtime: 5051100
+Memory: 4543885312
+Runtime from Main: 422949400
+Memory from Main: 4541919232
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal41.txt
+fc
+YES: i3, r8, e1, m8, f1, m9, n4, q9, r4, a1, x6, p5, m7, z3, j7, e5, f5, e3, s1, y9, y, q6, g6, m1, q, q8, g8, o2, r7, u1, w, n8, x8, d6, q4, i2, o5, f8, k1, h1, b4, y3, g2, o6, i5, n1, o8, i9, o7, a7, v6, b3, y4, p3, o1, t5, s6, m6, h8, b1, a, v8, c9, a3, q3, l, x4, z6, w8, w1, k4, o4, p7, v4, v, n5, f7, e6, r6, x1, y1, c, r2, j9, w4, g9, h5, y7, l5, u7, r, n6, p1, u3, w3, z8, r5, q1, o3, a6, x, j3, b, c7, e, d9, w5, s8, w9, d7, k7, w2, u, t8, t, l4, v3, s9, r9, v7, v2, y2, y8, v9, c1, q7, k5, e7, p, j1, g1, d3, t4, a8, f6, z9, z2, a2, e8, u4, l2, h9, v5, i4, h4, b2, f4, u2, w6, h, f3, z5
+Runtime: 5989600
+Memory: 4545282048
+Runtime from Main: 433816100
+Memory from Main: 4545536000
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal42.txt
+fc
+YES: z9, p6, w3, a4, h5, f9, p3, r8, l7, d, i7, d1, j2, i1, w6, e6, r6, i, m1, i5, l1, k7, s9, j9, g, b6, i8, j4, n2, n4, u2, y1, t2, y4, o3, z3, r9, l9, t, l2, c
+Runtime: 2556900
+Memory: 4539633664
+Runtime from Main: 438330200
+Memory from Main: 4539768832
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal43.txt
+fc
+YES: q4, i4, y9, b3, e8, j7, a1, d5, j8, v2, d7, s6, m, t9, i8, n5, m7, c6, x6, r1, i3, u1, w, z9, h3, s2, k2, z8, t1, a3, v8, b8, q, g9, f7, s3, q9, x2, t, h1, l7, u4, r8, r2, y7, r7, m1, v7, v3, n, n4, p3, d9, e6, w4, x, q2, p, d6, k9, d4, n6, r9, s, j9, g4, a4, c4, x4, i2, v1, i1, v, g5, a5, y6, f, w3, d8, h5, c1, u8, s9, v9, o9, m9, v6, j5, y8, x8, k1, c5, w6, l6, t5, p5, l5, l4, k5, p8, f9, e9, a7, o6, c7, g6, p2, l3, s8, r3
+Runtime: 2998800
+Memory: 4539703296
+Runtime from Main: 463976500
+Memory from Main: 4539703296
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal44.txt
+fc
+YES: r, i8, b8, b7, b6, q9, y4, g4, d, e, h8, g9, c6, y2, p1, d4, t9, z8, b5, h2, k2, m2, i2, o9, g8, y9, z2, b3, f5, s3, y3, z5, w2, p8, j1, y6, x7, r8, o, h9, o5, h, j8, p2, k1
+Runtime: 2005100
+Memory: 4538593280
+Runtime from Main: 441977700
+Memory from Main: 4538777600
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal45.txt
+fc
+YES: i1, b3, i6, j6, n9, i3, z8, f4, d8, e4, e1, k3, b1, l8, f3, f2, u6, c1, m8, k4, t6, v7, u4, p9, t2, r6, y, p, x7, m1, z1, n1, z7, o5, w3, s6, d7, e2, k7, a4, u9, v2, x9, e7, v6, r, i7, c9, i2, f9, x, z2, a5, j3, c2, t9, c7, m6, r9, a8, b7, f1, e5, h7, o2, d6, i, x3, e8, v3, q7, k6, o9, v5, f7, l, o, u, r5
+Runtime: 3000800
+Memory: 4547747840
+Runtime from Main: 418106700
+Memory from Main: 4547432448
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal46.txt
+fc
+YES: y7, t7, u4, f3, i1, a9, v5, s5, h, a5, g5, h7, f9, x7, h4, z, s8, r5, x, g3, v9, d4, v3, y4, i9, m4, l3, l8, b2, q9, b8, g8, y6, s7, c3, h6, o2, b1, m5, w5, j1, i5, f2, k7, d9
+Runtime: 2956500
+Memory: 4548169728
+Runtime from Main: 445661900
+Memory from Main: 4548100096
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal47.txt
+fc
+YES: s2, h7, b6, k5, c1, x1, k9, p8, n3, k6, z, i7, z8, z3, a9, g7, m6, c8, f7, z4, l7, c3, s8, w5, h8, g6, b8, p4, k3, r, s, u5, q2, u6, s9, s6, t5
+Runtime: 1041000
+Memory: 4544421888
+Runtime from Main: 429510900
+Memory from Main: 4544212992
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal48.txt
+fc
+YES: f8, q2, d, h2, r9, y8, c7, f6, t4, l1, i9, a1, b, c2, n6, d2, p4, t, k8, f7, q7, z, n7, p, j3, c9, z6, j8, n8, z1, z9, b3, a, q3, m1, m9, n3, j2, t1, d5, e8, k5, c8, b7, l2, s8, x2, h4, o3, o8, d1, g8, w2, q1, w3, x8, u6, i1, d6, i4, b2, l4, s5, k3, f1, p3, q, m4, j5, y2, p5, s6, f, w, v5, z5, t7, q6, v4, h9, g1, o7, v7, o1, i6, v6, s2, l, t8, h1, z3, k6, d4, g3, x7, r2, d9, n4, m, f5, x9, a6, f2, m2, i7, r5, a3, o2, x1, f4, g7, o4, z4, c, r4, p2, e5, l3, u3, l5, v9, r1, q9, y4, m5, g4, k2, n1, r3, i5, m6, w1, t3, q4, b4, j7, x6, w6, l6, b9, l7, w8, d7, w9, u5, m3, l8, r7, n2, f3, s3, p7, x4, y, b6, m7, o9, p9, n9, s4, x3, e6, i, j, c1, o5, v2, k4, r6, h5, l9, q5, x, e4, g, r8, a8, u1, g5, t9, k, c6, j9, o, h8, m8, z2, c5, a5, z8, e9, t2, g6, e1, w4, y7, t5, y3, y5, h3, c3, s9, a4, h7, e2, z7, s7, n, r, b5, i3, v3, g2, k7, s, c4, t6, v1, w5, j6, s1, y9, e7, v8, v, o6, a2
+Runtime: 7563800
+Memory: 4534054912
+Runtime from Main: 460848500
+Memory from Main: 4534067200
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal49.txt
+fc
+YES: n2, p5, b4, q4, x, x2, a5, y9, z4, s2, e2, b1, r2, x4, w1, n7, s4, w2, f5, j7, z1, e9, t6, a9, l3, g7, c, z, y7, m2, t, o5, q7, o9, g9, e7, w6, w7, v3, f3, g3, r9, m8, i3, v9, i5, r3, x8, o2, w, o, n, v8, c4, r7, d3, i8, k2, r6, p4, o3, k8, g2, o8, t2, w3, m1, k5, q3, a2, n6, h5, v2, q2, y6, s6, t9, k7, h, j1, m3, t7, m9, j9, h3, n1, y3, m6, z8, n4, v, g5, s8, l8, q6, h8, h1, r4, u2, y1, a7, j, l5, m5, p1, s7, b8, q9, w9, s1, d7, s5, y2, v1, b2, t3, u6, j8, z5, c2, n5, e4, r1, g1, t1, o1, z9, r8, m4, e8, m7, a4, q, d9, z2, c6, l4, z7, y5, p2, m, z6, l9, q5, h2, h4, t5, b7, d2, i9
+Runtime: 5053000
+Memory: 4528504832
+Runtime from Main: 485788200
+Memory from Main: 4528504832
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal5.txt
+fc
+YES: c6, s5, t9, d, b, z9, v6, v9, m3, i1, a6, m6, h6, e6, p8, e5, w9, u, j6, w, k3, e1, t, h7, a8, o6, m4, l3, f4, q, a2, z8, e7, a1, i9, v2, b8, g2, n3, b7, j9, l4, l5, n9, m5, o9, j3, g5, w1, l9, o, o4, b1, p2, x5, e9, u7, q8, i3, w2, l8, n1, j7, y, n8, j1, d7, k1, m, l, x1, o3, p4, i7, i5, k6, y3, k9, o2, g, f7, v7, y1, f2, x7, x2, u4, p, i4, i, z4, z7, c, f8, l7, d6, t3, c2, h, k5, g9, d5, r, a3, k4, n6, l2, w8, k2, u5, h3, j8, q2, c8, r1, c7, a9, g3, f9, n5, f1, o5, t5, n7, u3, y9, q4, v, h1, z2, y4, g8, t1, a4, r2, j5, v3, s6, t2, y6, p3, s1, f, k8, q9, e2, a5, w5, q5, o1, c4, c5, v8, e4, s2, s8, t6, e8, r9, p5, a7, f3, p9, y2, z5, v1, x3, b3, r8, p7, d2, h9
+Runtime: 7167000
+Memory: 4507090944
+Runtime from Main: 718639500
+Memory from Main: 4507090944
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal50.txt
+fc
+YES: u3, s4, q1, d1, d4, z7, i1, a2, i4, i8, s3, u8, h8, k6, m5, v3, x1, j9, r3, q9, n9, l9, n2, k9, i6, x9, q4, u4, g1, a1, n1, l4, b8, w7, j, a4, f4, m9, l2, c6, y5, p4, v5, w, w6, w5, v6, o9, e5, o6, f2, p, m7, e8, g3, z6, b7, t7, w2, q6, v8, s9, i3, t9, a, j2, m1, q, l8, h, y8, m2, p6, a7, f5, l, y7, k1, o5, o4, j7, a5, y3, y9, v1, n8, y1, u, b9, t4, p9, t6, t1
+Runtime: 4996400
+Memory: 4491694080
+Runtime from Main: 477696900
+Memory from Main: 4491980800
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal51.txt
+fc
+YES: v1, c, c4, w3, z4, k6, v7, t8, a1, a3, i, t3, h, v2, d1, c7, n4, b8, g1, x2, a8, g5, z7, e1, m7, b2, p7, o1, q5, a2, x4, i2, k3, p5, t, d3, f4, p9, u5, j4, m5, a4, d7, c2, o7, y4, z1, p1, o, l5, l3, d2, x8, u1, e3, j8, j7, r2, b9, s1, e2, o2, l7, s6, j1, w7, s5, z, z9, k2, n7, w8, o6, d9, v5, y2, b7, h5, z3, k5, y9, h4, g9, g, p3, g8, q3, h1, t2, w, k7, w2, r6, g3, h8, i1, v4, y, n6, z2, e7, h3, y3, d6, i5, o3, g2, m8, o5, s8, n, i7, a6, h2
+Runtime: 3953600
+Memory: 4484550656
+Runtime from Main: 470000300
+Memory from Main: 4484333568
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal52.txt
+fc
+YES: p4, k6, q1, l2, g, w9, h7, n3, t6, c, k9, k5, t4, h3, l1, s7, m3, w3, g3, p6, m7, y3, v8, u1, t1, r5, i1, w, i9, v1, e3, w2, f6, j2, k2, d5, f7, e6, p7, i5, s9, q9, s8, x4, g1, d, h8, k3, f, m4, b8, e, d3, q8, n9, c4, a9, h1, x8, o4, y7, q2, x7, m1, w1, z5, g5, r8, x1, f8, m2, c3, r, k, u8, z8, i, c1, a6, d1, c8, b9, c6, i6, j7, z4, j5, t3, u4, q3, y9, f5, w7, a3, a4, z6, e4, n5, j6, u5, u6, b7, p5, l9, f2, n7, e8, e7, a5, j1, u3, o8, r9, a7, x, t5, i7, d8, e2, n2, r7, d2, g7, w5, u, y5, r3, o3, s5, q5, j8, z9, g4, p9, p, a2, m5, p8, h, l7, h6, i3, j3, e1, v4, g8, v, j, h9, d6, w8, t8, x9, o, b2, b4, p2
+Runtime: 3997000
+Memory: 4491776000
+Runtime from Main: 461578900
+Memory from Main: 4491853824
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal53.txt
+fc
+YES: q4, l5, f1, x5, c3, b8, n6, a4, a6, u4, k7, u3, w2, d8, g4, r1, s5, g3, o9, a1, w7, m8, z4, h6, i5, i, k5, f8, e6, z3, i7, t5, q, p1, k8, b7, p, j, r2, f6, u1, c1, l3, u6, f, n9, l, b2, z6, v3, o, y, u2, y2, k, h5, o2, t, v5, e3, t1, t8, v2, c8, z1, x1, n7, r5, e5, g, h9, t4, q2, z9, i4, f5, f9, p3, x, z7, b3, v, t7, g5, l6, h7, p5, b4, x6, y7, a8, a9, w, x9, l9, v7, u9, j9, o4, e8, l4, e2, k3, m7, t9, r9, g9, a2, k4, a, i9, q6, r7, s3, d9, s4, o6, s8, i6, x3, e1, m5, q3, w3, h3, n4, h1, d7, j4, s6, q1, d3, j1, k6, b1, f7, e, b, f3, w1, k9, w8, y4, e7, x8, y6, g7, m4, e4, h4, c, t6, g2, q8, c2, p2, o1, c7, c4, j8, v6, r, w5, s1, o7, x7, u8, d2, n5, z, c5, n1, l2, n, a3, w9, w4, x2, o8, g1, m6, h8, d1, n2, p7, a7, o3, i1, k2, j6, b6, r6, s, w6, m3, y8, u7, d, f2, d5, f4, v8, v9, n3, u, d4, s2, s7, d6, a5, g8, v1, y5, t2, r4, l8, q5, z2, z5
+Runtime: 8855800
+Memory: 4482314240
+Runtime from Main: 476060200
+Memory from Main: 4482314240
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal54.txt
+fc
+YES: x3, a5, l8, t1, b, b6, h9, q9, n4, j6, o, p5, v4, n9, z5, i9, z3, p7, x2, d4, r5, v6, h8, s4, j5, g8, c6, w7, a1, v1, b4, r9, p1, i7, r6, d3, c, k7, i, t8, e4, c5, y3, g, l5, j2, k9, n5, v9, w2, a3, p4, h3, i4, l, y9, y4, f, t, z7, x1, z1, g5, y1, n, k, u3, q4, a7, r7, n1, w8, c4, g4, z, r1, a, y8, k1, z9, f2, c7, g2, j3, q5, m8, n3, e5, q1, s7, y5, p3, r8, l1, a2, w3, h2, u4
+Runtime: 4997300
+Memory: 4485496832
+Runtime from Main: 522573700
+Memory from Main: 4485480448
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal55.txt
+fc
+YES: g2, f5, g4, u5, r, v5, a9, n8, i7, k2, e5, i4, j3, g7, f6, i8, p5, l8, z4, t3, b3, v8, f8, g8, j1, i2, m8, b4, v6, e8, r3, e2, k6, c8, g3, w2, n5, u9, l7, w, v2, v, p6, j, r1, j7, o4, a3, c5, a7, m6, n2, h1, w6, b1, g9, k8, c4, b2, x2, j2, t, q9, p2, d5, p1, z, f9, e7, b6, r9, h5, z2, c7, w7, t4, x7, b8, c, p4, d9, v7, x1, f7, g6, k, q1, c1, w3, r8, r5, s2, b, w5, s, m4, n9, b9, s6, a6, o9, r4, m2, a5, t8, z8
+Runtime: 5004200
+Memory: 4486705152
+Runtime from Main: 447580500
+Memory from Main: 4486983680
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal56.txt
+fc
+YES: j5, g8, d3, o3, c5, q3, w5, j, e6, o7, p8, e, w4, y5, w2, t5, x2, b8, v, z2, p5, q4, m1, y1, c1, p4, m5, y6, j6, v9, t2
+Runtime: 0
+Memory: 4489039872
+Runtime from Main: 487498900
+Memory from Main: 4489498624
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal57.txt
+fc
+YES: l, w5, v1, u9, d9, d7, g4, s4, u4, x9, z8, p7, a, i9, g3, u6, m1, l7, p2, l5, g2, f2, x1, b1, a4, v3, j5, k6, z6, m3, d, h4, y, z4, g5, d8, o1, b, i6, y7, o9, m9, s9, p1, v7, w4, n7, c1, y3, q6, e5, v2, h2, q5, b6, o5, n8, q, c3, h6, k2, y9, j4, n2, t2, s3, r3, n, h, p6, p8, z, p9, p3, u5, l9, r9, i7, k1, j2, d3, x3, g6, r4, o, h1, j1, j3, c4, k4, b2, y2, e3, p5
+Runtime: 2501100
+Memory: 4488806400
+Runtime from Main: 505121000
+Memory from Main: 4488806400
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal58.txt
+fc
+YES: i9, t8, j4, n3, a1, g1, h3, s6, q6, z9, o9, w6, o3, d7, q8, a6, t2, w4, r7, k3, u6, d6, j8, h2, e, r3, b9, i5, z4, c9, a2, t, y, m3, n, n5, b3, k5, u4, w, i3, i1, d8, j1, v7, p6, x, h1, l5, h8, c7, e7, h6, l8, i2, g9, a, x8, f7, k1, i, u1, j3, e3, y7, v3, q5, i4, n8, x4, j6, t4, b2, c5, g5, d2, r6, q1, w7, g6, w2, z1, e9, a8, p3, z6, w5, s, e6, v, p4, z3, l3, t6, y2, o1, m4, j2, g4
+Runtime: 2500800
+Memory: 4501426176
+Runtime from Main: 497050700
+Memory from Main: 4501954560
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal59.txt
+fc
+YES: f8, g6, n8, y1, m4, l, j1, g5, n, p, e5, l5, o5, j2, s3, r6, i9, n9, m7, m5, p7, w8, y4, x2, f3, r, u2, p2, e8, v4, u, j6, y9, q8, n1, n2, b, l2, g, c5, u7, t1, g3, t2, b1, u5, w1, g8, m1, f5, y2, u1, r5, e1, v, t4, r8, v3, x3, o7, v6, z, x5, o1, q2, s4, l7, p8, z5, v5, k3, t8, l6, s7, h1, w3, z1, k6, l3, q3, e2, a6, z6, i3, i8, h8, t7, s1, a1, r2, y8, t, a9, e4, j5, j4, h9, c, w5, u9, c4, s2, o4, v8, o3, j8, i5, n7, g2, a3, v2, v1, f, w4, a2, y3, s9, z7, u3, d2, b2, k, b4, l1, p1, b6, o9, k2, r7, h, f7, i6, r3, y6, s, k4, r1, p9, m3, v7, g4, q5, x, x1, o, w7, h5, j9, z4, w6, f6, a7, c8, r9, t6, u8, q7, y5, c2, q4, c7, y, e6, l8, m9, t3, x4, j, n3, a, m, n4, o8, w9, x8, i4, j3, g1, d5, x6, b9, p3, d, h7, p5, k5, s5, s8, i7, k8, z9, m2, e7
+Runtime: 7501800
+Memory: 4505350144
+Runtime from Main: 565069000
+Memory from Main: 4505608192
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal6.txt
+fc
+YES: o3, u4, k7, a, x3, x1, c4, m6, h5, a1, e6, t, t8, v4, h7, k2, d1, b5, s5, c1, l2, f6, u1, i1, o8, c3, w8, h9, e4, m3, l5, s1, g2, a5, i7, h8, o1, b, l7, y7, f2, w6, p5, t4, r8, v1, m4, t9, v3, k, r4, h4, w2, s8, d, x6, f, v6, u7, y8, g, k9, b8, z3, e1, s4, c5, i6, y, d3, v9, q7, t2, z2, b4, f4, y4, m9, z, p, w1, j8, v, n1, z9, e5, k4, l8, d5, y1, v7, i4, n7, w7, c9, g4, e7, c6, o7, o4, b1, t7, m1, r6, n, v5, r5, o2, y5, q2, p2, n4, r, b7, n8, f7, p3, z1, f1, i2, g3, c2, h3, a7, g7, w5, x, z5, f5, z6, j7, l4, s6, u, y3, b9, i5, p9, s3, g9, b3, q, a2, g5, y2, t5, l6, f8, k3, e9, x9, s9, m7, h, u5, u2, u8, m8, p4, o5, h1, k1, r1, h2, p8, j2, q5, o9, q4, g6, t6, y9, b2, o, e8, w9, l3, u3, c8, c7, r2, j4, k5, d2, j5, r9, d4, x8, e3, o6, q3, t1, x5, v2, j1, t3
+Runtime: 7500100
+Memory: 4501151744
+Runtime from Main: 440617800
+Memory from Main: 4501413888
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal60.txt
+fc
+YES: e7, t6, s, u3, a4, z5, n6, z3, v4, q2, z1, x2, b9, m7, j3, z, l3, a2, p7, u9, t4, m2, y4, c6, t2, p9, n3, o1, j2, g, v2, u7, i8, o, e, a9, w9, x9, z9, q, z7, g4, o3, i1, q8, g3, b6, x, v6, o4, g5, k9, e6, t8, c8, f5, c1, b1, m, h2, p6, i6, t5, v3, e5, q6, i, k, x8, s7, o2, z8, w, f6, o5, r9, c, d, q1, r8, y6, j5, j6, w7, y2, m8, s1, h8
+Runtime: 5003200
+Memory: 4512808960
+Runtime from Main: 442456300
+Memory from Main: 4512993280
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal61.txt
+fc
+YES: t3, w, i9, c5, o2, q5, f3, y9, w9, s5, l2, u7, k5, b, d7, a9, h2, s3, j3, r8, n8, i7, r, s1, b8, c4, p4, c8, y4, f8, u4, q, c1, i2, q7, x5, q8, b4, i4, d9, l9, t6, n2, n5, n9, p2, f1, k6, k4, v7, i6, m6, x9, q6, a8, c, o6, d5, g2, t7, i3, g9, f9, e4, w8, g7, w5, h9, c2, s6, y3, y2, h5, r3, z9, k3, x3, c3, z7, m5, f2, d1, u, z4, t9, a2, g5, h, d3, y8, x2, h4, g1, s7, a3, m2, p, n6, p3, l8, r6, d2, v9, t8, j5, p1, k2, z1, a7, i8, o9, l6, t, n1, l, y, b1, n7, h7, g4
+Runtime: 4951700
+Memory: 4513701888
+Runtime from Main: 502839200
+Memory from Main: 4513304576
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal62.txt
+fc
+YES: r6, x1, c3, t2, v9, l6, i, x8, p2, m7, j, r1, g6, x3, c8, l1, b8, u2, k5, m9, c, j7, w, z3, y9, u3, w5, p1, u5, y5, c4, o7, f2, e7, h7, a8, r, t, h2, h5, e8, q3, v5, f3, i7, a9, b2, q7, d4, e9, e5, s5, d1, e6, e3, t9, s9, a6, z, k2, u1, s1, e, l7, w9, i2, z4, r4, k8, v1, o4, t5, x, d6, s2, b, n8, d, x9, h8, a, s4, g1, u7, i5, o8, b6, z6, w8, u4, e1, h, g2, a5, g5, k7, y, c6, i9, q6, x7, x4, g3, b5, n2, i3, r2, o9, v8, w1, m8, l8, g9, o3, m6, z9, n3, j8, h6, m1, j1, v6, v3, g, s3, k4, n6, d2, z5, v, p9, z2, b1, a4, t7, z8, l5
+Runtime: 4999700
+Memory: 4511784960
+Runtime from Main: 492460400
+Memory from Main: 4512030720
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal63.txt
+fc
+YES: i8, q6, m9, o3, y4, b3, m1, z, l7, f9, v4, j, p4, k5, c8, l9, h7, d3, l8, j3, x2, h5, n, p, r3, n9, e7, a5, x7, w8, b2, b9, g, z1, p5, i3, i9, n4, b6, d1, z2, p9, d7, a7, f4, k7, h8, f1, m7, h4, r2, g9, j1, f3, z8, e9, i4, o, t4, p3, v6, x1, x6, y, n8, q2, r, c5, w7, v, y1, v8, d4, g4, x3, x4, l5, w6, k9, k1, g5, o9, c9, k8, k6, y3, e2, s5, w3, v5, s9, q7, i7, p1, m4, a2, i1, h1, b1, z3, u3, d5, a6, c7, q3, m5, m8, u7, o5, n2, o2, j2, j8, s6, u6, a1, n1, h2, t8, j4, l4, j6, l1, w9, q4, e5, h9, y7, l, p2, t3, p8, d2, c6, s3, t5, r4, m, e8, t9, t, g7, z6, t7, v3, u, f5, p7, x, x9, x5, v1, y2, f2, o1, t1, u9, m6, e4, r6, g2, g8, v2, u1, j9, d, k2, b5, y5, f6, b4, r7, q8, a, z5, c3, i6, a9, f8, k4, y9, x8, c, f
+Runtime: 7537100
+Memory: 4464443392
+Runtime from Main: 617300000
+Memory from Main: 4463845376
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal64.txt
+fc
+YES: e8, t7, e5, b5, s8, s5, f3, u4, m, x6, a5, r1, u1, b3, x, m4, r2, d3, p1, l, v1, s4, w9, x8, t4, u5, r6, k5, l5, i3, q5, z3, f, x5, o, t6, v4, x7, t2, p9, o2, h5, z2, r8, t5, d6, z4, q7, v7, h6, l8, h, a7, c9, g3, v, t, t3, f2, o9, b7, j9, b, g7, v6, j2, b1, u2, e6, s1, s7, l7, w2, s3, x1, a6, o7, r7, w3, u7, h2, g8, d9, k, q3, n4, v3, r9, v8, d8, n8, j3, a9, y5, k1, i4, h3, z1, q1, i, w, m3, h7, t1, p7, k9, s6, u3, h1, d2, y3, y, q8, y6, n5, e3, e2, u9, e9, y4, z6, c, e7, h9, o1, g6, y8, x3, e1, u, k3, y2, r3, m6, j4, z5, k6, z8, y7, i5, n7, m9, o5, h8, g9, l6, m1, n, k2, r, w4, j, s9, i1, g, j1, w6, d7, c3, a8, c4, g1, m8, q6
+Runtime: 5064900
+Memory: 4400209920
+Runtime from Main: 540289500
+Memory from Main: 4400295936
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal65.txt
+fc
+YES: a8, j5, r4, r6, a9, i5, v6, w6, p5, t2, p1, m, q8, o2, h9, z6, k4, e3, r, o3, s3, j6, c3, h8, p8, r8, w5, p3, n8, k5, z, j2, w8, n2, x5, o5, e4, v4, b4, m7, d6, j3, r5, z4, w9, p2, z5, l, t8, l4, s4, r9, b3, k2, o7, x2, r3, h, m4, i8, v, k7, u, l5, u5, t, t9, g1, e1, m5, g6, x4, t1, j7, q9, c1, h3, g5, b, h5, e6, z2, l9, y6, x1, d1, u9, k8, y4, t3, m2, a4, h2, y1, c9, k3, s6, b9, u4, d4, s2, k1, z8, v9, n3, s8, f, f6, n6, c4, o8, u6, u2, n1, m3, n4, y2, h6, i2, d2, r1, l8, s, s9, a3, w4, v2, i3, i4, j4, d3, x3, y8, j9, b2, w2, y7, n9, e2, m1, q, v7, u7, l1, e7, f3, c, q1, p6, e8, e, l6, l7, f2, j, d8, u8, a1, p7, a2, g, x7, r7, g8, q4, b6, q6, q5, m9, x8, x6, z1, l3, a5, i1, x9, l2, s7, f5, b1, i9, t7, k, t6, q2, w, m6, f7, f1, b5, o, d5, h7, i6, s1, h4, v1, a6, o4, z9, f8, a7, p, n7, c5, q3, j1, o1, g4, r2, e5, g9, z3, n, k6, g3, p4, f9, q7, y9, p9, o9, e9
+Runtime: 7495500
+Memory: 4404056064
+Runtime from Main: 734981600
+Memory from Main: 4404056064
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal66.txt
+fc
+YES: d6, o, j4, o9, y9, m8, y8, k1, r2, d4, c5, u2, x3, i1, z2, m2, x, l3, u9, n4, j9, q8, w3, b4, y4, h4, r1, v1, e6, d7, i9, z6, z7, c3, q4, u7, f5, t5, n5, e8, n9, x7, e4, p1, s4, j, y5, h2, u, l5, z4, f4, m, e2, v2, r4, k6, a8, o3, s2, a2, x5, q9, a9, b6, x6, n3, b1, u1, p3, e3, v9, w, b9, v, f1, t6, f, m5, c4, f9, i, z5, z8, j2, c6, m9, i6, h5, j5, t9, p4, j8, o5, b, h8, a, l7, a5, b8, m7, t4, l, p5, c, d3, j1, a6, z, k3, h6, j6, w8, v7, i7, f3, h1, b2, t1, f6, c1, u4, q3, s7, y1, q, s8, h7, l2, r, m3, d8, a1, g2, s3, p9, v3, i4, l4, a4, k8, u6, o7, f8, g5, p7, h, l1, w7, l6, t, f2, n6, w9, s1, u3, b5, s9, x9, s, i2, e7, y3, m6, e9, u5, k9, n2, p6, r5, a7, v4, w4, q5, q2, s6, d1, r8, m4, s5, t7, d5, t3, x2, p, q7, c2, x8, v8, i8, y2, l9, h3, g, w2, c7, o4, t8, c8, n8, d2, j3, g6, f7, y7, q1, y, i5, o6, p8, r6, v5, g4, r9, e5, k7, u8, t2, z1, g9, r7, r3, z3, k2
+Runtime: 7497600
+Memory: 4402352128
+Runtime from Main: 487071500
+Memory from Main: 4402372608
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal67.txt
+fc
+YES: q6, l3, m6, j8, l, o6, p3, q2, k6, p1, k5, c1, k, w, g5, q5, g4, h2, y7, n1, e8, e1, t4, b4, a6, b, s3, h8, v6, w4, u2, t9, g2, z3, e5, y6, f4, b2, c3, m7, h1, w6, y9, t3, a2, m5, z2, n4, t7, s6, d, y3, g7, e4, f9, f1, e3, j2, z7, q8, p, i5, b6, f6, u8, v2, f5, x4, s9, c2, m4, t6, v8, y4, n9, n5, k9, p5, p2, x6, k3, r4, e9
+Runtime: 5001100
+Memory: 4391657472
+Runtime from Main: 580453200
+Memory from Main: 4392468480
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal68.txt
+fc
+YES: j4, z5, p7, o9, e3, v2, p, j1, t9, i6, n, r8, h4, e6, k5, l5, k1, o, y3, p4, y, j6, i9, w1, u9, j9, k, y7, u7, v, s1, o1, k4, n3, b1, r4, n1, u, d6, r2, z7, s7, b8, e9, d4, x5, i8, j7, s9, a5, p3, t2, w8, u2, u8, m2, s6, w6, x3, n5, g3, a2, f1, e7, r5, d7, t5, n9, f9, g, b5, s, x9, g5, e5, i7, f7, s5, e4, a7, n6, h6, e2, q4, r9, g6, l4, i1, v8, x, c, v5, n7, v6, j2, c8, y1, c5, b9, s3, w4, b3, w, m6, t4, m4, g9, u4, j8, g1, r3, z, k3, z8, u1, l9, s2, i2, l3, n4, j3, r7, c3, z4, m, q5, x6, v4, a9, q
+Runtime: 4939500
+Memory: 4398309376
+Runtime from Main: 492604000
+Memory from Main: 4398309376
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal69.txt
+fc
+YES: d9, q2, b3, a9, y, i2, u5, l1, n8, i4, f9, y8, c2, x9, b8, t8, k9, g6, h4, j2, r6, j6, s5, m8, j9, n2, m, u, d, k7, p2, r4, z2, o1, h5, l9, g9, o9, f1, v2, j5, w3, r3, b6, u3, c4, i5, l7, m4, d6, l5, x8, s4, f8, n6, u7, x, m9, k5, z, z8, o6, d8, k8, f4, m5, k, u4, u9, o5, u1, e3, z4, n1, l4, q9, x6, g1, v3, c8, g, h7, b1, e2, h, p6, b4, k1, c5, f3, b2, z6, i7, x3, k2, c9, s6, p, d1, p8, w8, n3, v9, v5, f, s1, t3, a6, m3, z1, g5, u2, b, e9, j3, o4, o8, s8, y4, a8, p1, q5, w1, e6, w9, l6, r1, g3, m6, x7, n4, n5, n9, s, g4, p5, i, h6, r, v, h8, z7, y3, c7, r8, p3, b9, i8, h9, t4, t1, t2, m7, t6, e4, t5, l8, f2, o, z9, l, w7, j, k3, y5, x1, j7, d4, r9, v7, q1, k4, w2, y9, r5, a4, c6, f5, g7, w, x4, j1, i9, p4, a2, d3, r7, a7, x2, q6, e1, o7, w5, l2
+Runtime: 5041000
+Memory: 4392943616
+Runtime from Main: 449997600
+Memory from Main: 4393365504
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal7.txt
+fc
+YES: s8, u5, n5, t8, k7, x, p3, s5, c4, p9, z2, d4, a5, n9, n8, d5, s6, m9, t1, q7, w9, m4, u8, r2, a9, b1, q9, m1, g9, t5, x8, s3, z7, l4, t3, u2, o3, l8, h8, p6, o1, y7, h4, e, g5, x7, s2, f9, f, e1, w4, q3, p4, o4, i2, c9, c8, q1, i4, z3, s7, g2, t4, b5, h9, w1, e3, j7, l1, k8, w6, r1, k3, y2, v, d1, v4, r7, j3, n, i, f1, d3, f6, m5, v3, u1, n1, s9, t7, r, y5, p7, u7, l5, c5, a, h1, h, u6, c7, r3, e8, s1, j9, x1, k2, f3, f8, v5, y6, v1, p5, j2, z1, b, x6, o8, k9, j4, z5, u4, p, a1, e2, d7, q5, a4, w5, g6, y8, z, g8, g3, j5, y3, v2, n3, x2, h7, x9, k6, q8, g1, o, i6, a6, s, d2, x5, j6, m6, v7, u9, u, u3, i8, b7, o5, w8, r8, p8, h6, e5, b3, e6, i5, t, q, w2
+Runtime: 5001400
+Memory: 4397199360
+Runtime from Main: 507460700
+Memory from Main: 4397199360
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal70.txt
+fc
+YES: a4, m7, b4, w7, l1, u3, e2, f8, s9, o5, r9, c2, f1, c1, s, w2, g7, o3, r3, d9, m8, a8, c4, s1, l2, e3, o, a3, m5, a, t4, u9, x6, p9, z4, x3, u, p5, d7, r7, t8, t7, m2, z5, n, g8, k1, i9, g4, i7, m3, q8, a7, o7, c6, i2, f5, e7, x1, s4, v2, i8, l6, u6, n2, l3, c5, f, w9, u1, t2, r6, t1, h2, h4, d5, q7, v1, x2
+Runtime: 4958000
+Memory: 4404482048
+Runtime from Main: 595031300
+Memory from Main: 4404482048
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal71.txt
+fc
+YES: r9
+Runtime: 0
+Memory: 4365643776
+Runtime from Main: 615043700
+Memory from Main: 4363284480
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal72.txt
+fc
+YES: u5, p3, h9, k5, o2, l2, s9, l, g6, k2, g7, c8, n7, w1, g5, h7, w2, u6, a6, r5, w, d2, g8, r, u9, t1, s7, o, l1, n9, p5, x9, x2, d4, f4, s1, d8, x1, y1, h6, h8, y9, r4, z5, f7, q2, k8, a1, z6, u2, i5, p8, h2, t5, k4, y6, t8, b8, w7, v2, p2, i8, a4, k9, m9, k6, e2, n5, k1, i4, r3, i7, s8, j8, d3, x3, o4, m1, n4, i9, n2, g9, x8, a9, a2, a5, j2, x, g2, j6, m2, f6, t2, l7, q, z9, o3, j5, e5, u7, h5, e4, x4, x6, m, e3, q8, c4, l6, b9, t4, y8, n6, p4, q9, a, l3, o9, l5, y4, j1, b6, o6, s2, e, e7, j9, z4, h, b3, k3, m6, v6, w6, y5, p7, o1, m5, f
+Runtime: 14001800
+Memory: 4352983040
+Runtime from Main: 578892100
+Memory from Main: 4352696320
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal73.txt
+fc
+YES: o6, x5, i5, t2, l4, v9, r8, t8, h6, u6, o7, q9, f1, l3, h5
+Runtime: 2039500
+Memory: 4336812032
+Runtime from Main: 561962800
+Memory from Main: 4335771648
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal74.txt
+fc
+YES: x1, f9, o7, e5, k5, z9, w4, m1, u5, w7, z8, b6, s5, t5, r6, f6, r4, y1, q9, e9, b3, c3, n1, x9, u, r8, s2, u1, s6, a9, u8, p5, o2, w, y5, n2, n3, g8, r, x3, m7, k2, g, m8, f4, e, h, x2, a, b, h1, x5, n7, v8, y3, w8, d1, v6, l4, t9, i8, a6, k7, k, d9, q4, t6, n4, s8, t3, d, z7, y4, e8, o9, x4, c2, z4, q7, f, z1, l3, e6, f2, t1, s7, f8, c5, f3, g6, l2, s3, s, v9, h5, i, c9, p4, a7, q2, d2, d5, o6, e4, r9, g9, c4, u2, j3, l6, r3, g5, h7, c, n8, e7, l8, h3, a2, y8, d7, l5, b5, z5, g7, j9, r2, j1, m4, h9, t7, a3, j, j5, j4, e2, b2, c8, z, o4, s4, p2, k8, b1, r1, m9, k1, d6, i7, i5, r5, n5, w3, e3, p3, b8, b7, v5, p, x8, a1, c1, u3, o8, h4, f7, v, a8, q5, j2, g3, c6, m3, s1, k3, d4, i9
+Runtime: 10997400
+Memory: 4315561984
+Runtime from Main: 883994400
+Memory from Main: 4314726400
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal75.txt
+fc
+YES: k, y4, k6, a7, u8, k4, t9, a5, u2, o9, a, o1, u9, j6, e9, u, n4, m5, f2, w7, c4, o8, x9, z7, p6, p2, x, x3, e3, w4, e2, x2, f7, l2, g2, l7, t2, z1, i6, i, a9, j9, z4, e1, t5, g3, e4, a6, s2, r1, j4, r7, d5, y9, l, c6, l9, r8, t6, u7, t, i4, o3, w9, v9, a8, k8, n8, w3, z, n, l4, t3, i3, k7, b6, i5, k9, n1, s, c2, f, y5, c7, r6, j7, f1, m4, p5, z9, p4, d4, x6, k5, v8
+Runtime: 11998600
+Memory: 4282912768
+Runtime from Main: 766009800
+Memory from Main: 4282175488
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal76.txt
+fc
+YES: f7, b7, u7, z8, k7, m9, m1, l3, i, w8, s3, g5, p1, q4, x9, a1, w3, a3, h6, s4, o7, a6, r5, d7, w5, x7, j, s9, k, i3, p4, c4, v2, r1, s8, r2, w2, c6, x1, z3, v5, b1, f4, g8, j6, i9, d5, l9, t3, x6, j4, p9, z, g7, y4, y3, n9, u2, x4, h9, l2, y5, z9, b2, e3, f3, c2, k8, t4, n2, j1, p3, k1, r8, f8, d1, h8, r4, z4, t6, k3, z6, q5, o4, u8, p, h5, a5, l6, u6, l8, l7, g2, p7, e1, o5, a, e6, d8, h3, t9, q9, q6, p8, k6, d2, g3, m2, b5, f6, d9, w, k4, c9, y2, o2, p2, g9, t7, e, u1, r9, m5, j5, z2, v9, f, n1, a9, p6, b6, m6, x8, s5, e2, k2, i5, c8, o, c3, s6, f5, g1, t1, w1, v, s1, d, b3, m8, i6, r6, m4, k5, a7, x2, n6, t8, v1, b4, u4, d3, v7, w7, m7, e8, j7, i2, n3, z7, m, b8, w4, m3, i1, e5, u5, i7, h4, x3, g6, q7, j2, v3, o1
+Runtime: 20999100
+Memory: 4144082944
+Runtime from Main: 1627995200
+Memory from Main: 4139851776
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal77.txt
+fc
+YES: s9, f4, v3, r1, n3, t7, c8, k7, m3, e2, k9, h1, b3, b7, f6, h3, b2, v9, k6, z8, f, j3, q7, d7, a7, p4, t, s7, y9, w7, g8, y1, t5, o7, b1, a5, e, c, g4, e6, g, l3, z6, z1, t2, l8, y2, w1, i7, f3, t6, v4, q1, y8, d5, a6, o3, p1, r4, g3, m5, r3, w8, p, l1, l6, o5, s6, i2, m7, d4, t8, t3, n7, s, l, p9, z7, e9, p8, g7, d1, o8, k2, u6, c9, v6, a3, t9, x6, i5, b6, a9, v1, b8, o4, f5, i9, c7, w6, z4, g9, x3, x5, m8, b4, y6, v5, u1, d, y3, c6, y7, g2, l4, f9, l9, k5, j6, n2, e1, e4, n, f2, r7, j7, r9, x4, t4, q5, e8, w9, m9, p2, j9, o6, t1, c5, f7, n9, l7, m6, i, v, h, d2, w, h4, h7, v8, p5, n8, r, j5, p3, i3, e7, h9, i6, u4, m4, j8, q2, i1, d9, h6, x, a2, u5, z5, g6, s2, c2, r2, s1, o9, z9, q4, j2, a8, q8, j4, w2, g5, o, d6, v2, x8, c4, x1, e5, r5
+Runtime: 14001700
+Memory: 3807637504
+Runtime from Main: 1377003500
+Memory from Main: 3785662464
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal78.txt
+fc
+YES: p2, t4, n1, a5, b5, z1, t6, r1, p, d2, y3, y2, a8, s1, q1, u1, j5, g, n8, q3, r, u3, o3, j4, e9, t3, u5, z5, k7, d7, x4, j3, k8, m, s7, x9, w3, w1, r8, f8, l2, n9, m7, a, j6, h7, m4, i6, p7, f7, v5, o5, b8, x7, e5, z8, m6, x6, h2, v9, o, w5, i8, b6, g2, t9, k5, g1, v7, p1, t2, p9, s6, j7, q5, p4, a3, p5, c9, g8, f, b7, s9, o1, o6, z2, s2, u2, i4, s4, g6, e2, h5, y4, b4, a2, h1, q4, q9, b2, t1, v, d1, a1, e8, q2, i3, t5, i7, m8
+Runtime: 5999800
+Memory: 3999981568
+Runtime from Main: 508995300
+Memory from Main: 3999981568
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal79.txt
+fc
+YES: z8, u7, t2, g5, e5, k6, s5, n7, o6, c1, v4, m8, y2, p2, t7, g3, h8, q6, o7, r9, j2, a1, y1, k3, i2, p3, o8, p1, d5, a2, o5, b7, r8, x5, c5, k9, a9, f, o4, b, l3, i9, s3, b1, f3, q8, z3, a5, w7, j9, u5, p8, z2, n3, d4, f1, a, q4, l1, h9, l5, b9, i7, d, m2, s4, o3, u6, h7, k1, l2, y4, e, h, a4, g, g9, s6, y5, p4, k2, l7, n, x2, o9, j7, g1, d1, d9, n4, o2, u4, u3, g7, e6, y3, r3, b6, c4, l4, h5, k5, u2, j1, u, t3, v5, j, w2, n8, w1, x1, y8, s7, a6, w9, c6, f8, c9, y9, z4, h4, v3, t5, e3, a7, i6, a8, h3, b5, p6, s, y, r6, u9, d2, z, m3, n5, m, g8, u1, f9, w8, n2, l, l8, f7, y6, g2, f6, x6, k, w3, q3, i3
+Runtime: 6001100
+Memory: 4016234496
+Runtime from Main: 496969800
+Memory from Main: 4016779264
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal8.txt
+fc
+YES: g8, k9, w3, o1, w2, l5, t, p6, i2, s9, i7, j, k2, x3, j3, c8, l, s, u9, j7, e7, i3, u5, q9, o7, o3, d3, t1, h8, a2, a4, q7, l3, c3, p1, n6, e, g2, s3, m8, v2, r2, s8, j2, k1, i1, a5, n4, m6, v8, i5, z5, x1, c6, p4, p9, l1, x2, g5, x5, n, n8, e4, p7, y9, n9, y4, v, k7, s1, e5, y7, f2, s6, e6, t5, f3, m5, u3, u2, d5, m, f5, z8, i6, u8, s7, r, h6, m7, p8
+Runtime: 4000400
+Memory: 4036730880
+Runtime from Main: 492957600
+Memory from Main: 4033454080
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal80.txt
+fc
+YES: p9, y9, w9, x1, g9, f7, f3, o2, d7, t2, g6, k1, h9, l7, i5, l4, r2, j4, f4, d2, z, h5, n7, g8, v5, q9, q7, k2, v6, v3, a5, y5, n3, t3, u1, i3, r4, w8, w7, f5
+Runtime: 1001500
+Memory: 4005965824
+Runtime from Main: 490062800
+Memory from Main: 4006600704
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal81.txt
+fc
+YES: y9, c6, u2, n7, d6, a, z1, l1, k7, c2, n1, t3, m7, e9, w2, l7, h6, f3, j3, e, s1, n9, a2, g2, f5, l3, k3, s7, f7, h4, f9, l2, b7, o2, w5, g, j4, q1, u3, t8, l6, e5, d2, i5, i1, b3, t4, n8, n2, a9, f8, s4, w3, e2, v4, u4, c5, o6, i6, c4, h3, u1, d8, h1, d3, v8, l, o3, y5, i2, i7, n, g9, v5, k2, s6, p2, t, m5, c7, w6, a6, u8, o7, j5, u9, p, t6, m9, g6, m1, p8, m, a3, b9, z5, u6, e3, s3, i, k, f, m8, y, y1, b6, g7, u, x7, p4, o5, z, q5, s, h2, y4, f6, e8, y6, a1, h8, w4, u5, t7, j6, r1, z7, x6, z3, d, q, z2, p6, e1, w9, b5, p9, i4, d9, l8, m4, w, j1, t2, q2, m3, r7, o8, x5, t9, n5, h9, l5, c, v3, d7, x4, c3, q4, j8, f1, a5, v2, k8, w8, o1, n4, y3
+Runtime: 7955800
+Memory: 4009246720
+Runtime from Main: 460884100
+Memory from Main: 4005400576
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal82.txt
+fc
+YES: m7, s5, d, a7, k5, h7, h8, v3, c3, b2, p1, r9, q9, t7, f4, s, z4, n5, j1, k8, f1, y9, e2, s3, b5, x6, l7, i2, x2, a8, c2, a2, c7, g, r, p8, s2, q, g3, p4, f, t9, f9, g4, w1, f8, u9, r8, k1, v6, c1, x9, h2, y, b9, k, o4, s9, s7, q6, c4, v9, r5, f5, n6, d7, a1, g5, x4, w4, t6, e1, m4, r6, a6, i, m8, l3, r7, u3, o9, u8, x5, b4, t, u5, r2, z6, r1, v1, z3, m5, j2, m, k3, o5, y1, o1, y3, y6, z, q7, e7, v7, f2, e4, n4, l1, f3, d9, q2, x3, j7, b8, c5, i7, i5, j8, b6, r4, h, g1, b1, i1, h3, t5, m1, q3, w7, n2, q8, j4, h5, s4, n7, s8, l, y7, p9, z9, e6, t2, m3, w3, s1, o3, n3, w, e5, y5, h1, x1, o6, p2, c6, n8, j3, k7, w6, m2, n, p, y8, i3, w5, w9
+Runtime: 6003500
+Memory: 4018843648
+Runtime from Main: 503042700
+Memory from Main: 4019171328
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal83.txt
+fc
+YES: g4, c7, v, f7, p7, b8, l8, j2, u4, q, v3, v1, w5, t5, z4, c6, j6, m3, r4, z9, f2, f1, f9, x, o5, q9, i6, e, h5, a1, x3, z3, r9, f, n2, f4, x5, d4, r8, n3, o9, e2, s, y, l, l4, j3, y2, y1, k1, h7, n6, q4, h4, s4, v7, e1, t8, a, a9, s5, s1, x9, d3, w, h3, p4, s7, f3, c2, k4, d7, k8, p6, u6, q7, m7, j5, x7, d9, r6, m5, g8, b9, s2, e5, o3, y4, o6, q3, o1, u5, j8, m1, m6, k9, g5, n7, b6, y9, z6, k7, b1, z, q8, r5, w2, r2, d5, u2
+Runtime: 4000900
+Memory: 4020719616
+Runtime from Main: 469072800
+Memory from Main: 4019736576
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal84.txt
+fc
+YES: l6, u7, l, h8, j2, g6, p6, v, i6, u1, t3, n1, p9, w6, b7, u9, g5, o7, r8, c1, l9, g4, d4, w2, w1, e5, a7, z2, b4, y1, y7, e, m9, r1, w5, c2, t4, x4, n2, y3, f7, x6, d, r3, z5, w3, n3, g, p8, s8, w7, g8, u5, s1, o5, z1, k5, o3, z7, o1, j7, v3, x9, p4, h4, v5, f4, s4, e7, y, t2, d3, t, j, j4, u6, e4, j1, k2, x8, a9, i7, t1, z, n4, o9, a3, x5, q1, g3, i9, u, v6, q, n7, i1, e1, m4, e9, j3, h7, b6, c6, b, q3, e3, q6, s6, o4, z3, z8, v1, k3, q2, e6, v4, o6, m, e8, m5, m6, b5, q4, p5, i4, n8, j6, j9, l4, d2, j8, b2, a, l2, n9, b8, c, r, w9, a2, n6, v2, v8, x2, r9, r6, w, h6
+Runtime: 3999300
+Memory: 4040720384
+Runtime from Main: 427992100
+Memory from Main: 4040163328
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal85.txt
+fc
+YES: f5, l4, n2, n, b9, x5, q, v4, q8, a7, d4, k5, s, g, q9, w9, r1, t, u1, o2, q5, b8, c5, t8, i1, w1, d3, x9, n8, p8, j8, f1, a5, s5, e7
+Runtime: 1998000
+Memory: 4039561216
+Runtime from Main: 456001100
+Memory from Main: 4037521408
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal86.txt
+fc
+YES: r5, x9, w6, q1, n4, k9, w5, q8, u9, l1, e8, f3, b, a7, k5, s5, h5, j1, i4, o2, v7, q2, c6, f, d6, q3, m9, o9, i7, t2, m7, u6, x2, i9, r6, f1, u4, l2, k6, p1, i6, v8, f7, e7, t8, u1, f5, n, f8, c9, x6, w8, d, u2, k, a3, j, a1, t6, h7, o8, y1, b5, e1, i, m2, f4, k1, i8, g1, j3, h, w4, z2, z4, c7, d1, l, z1, f6, b3, v1, a8, h3, c2, t5, z9, w1, r9, e6, n2, t3, l5, u3, w2, r8, l4, a4, y6, x, z5, y2, o4, e9, l9, y9, m4, y8, x8, v9, p3, f9, r7, g6, x5, s3, a6, l7, w, l8, q6, y3, p5, l3, j6, s6, c1, v, o3, p7, o7, i3, c4, a5, b1, i2, k4, q7, t, w9, x3, v6, q5, s, a2, h9, h4, b7, o, j5, d2, o6, b9, b6, p8, p, z6, f2, m, h2, k8, y5, d3, s2, t4, r, s8, v5, e4, g4, c3, g3, v3, d9, q4, r2, y, g9, z, n5, t1, s9, b8, x1, w7, d7, z8, x7, m6, y4
+Runtime: 5995900
+Memory: 4057493504
+Runtime from Main: 472959700
+Memory from Main: 4057493504
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal87.txt
+fc
+YES: s8, b9, o8, h7, g2, m, j2, u7, t1, s1, n3, i1, b5, a, k1, w8, b2, q, l6, j6, l, n7, f6, p, f5, f, r4, q9, y, r9, m4, m5, d2, i6, c7, a8, e8, i9, u1, r, r1, l8, v9, d, n, r6, j4, o9, m7, k6, y4, b7, t2, g5, j5, i7, v1, u, e, d3, f9, q7
+Runtime: 2993800
+Memory: 4063645696
+Runtime from Main: 474961000
+Memory from Main: 4063645696
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal88.txt
+fc
+YES: c3, i2, r8, y4, p9, w7, x, q8, k4, g2, l2, n8, o7, h8, e4, e5, q4, g9, t1, r2, z1, n9, y2, t8, s3, i, u6, b7, k1, l7, c8, y5, p8, w, f6, o8, g1, d6, s, b9, v3, d2, q1, h9, c4, f4, e2, p, r, j8, d3, d7, y9, z, r9, h4, i8, k, t9, a6, o3, d9, n4, r3, u7, m1, h7, w4, g3, y8, f3, u1, x3, s4, j2, p3, i7, g7, l9, v, v1, q5, i1, s8, j6, c, c1, l1, x6, i5, i9, t6, w8, i6, v7, o, b2, f7, k6, u, q, z3, f2, d8, g, i3, g5, k3, u5, j3, n3, j, h5, m4, a5, w1, c2, w9, t, h2, x1, x4, t5, r1, m3, c7, t4, r7, d4, s6, b1, a3, g6, d1, w2, s2, z2, t7, p4, u9, z6, k8, x5, s7, m6, s9, p5, k9, v6, w5, r5, p1, x9, e9, n2, b, b6, d5, r4, e3, e, r6, e8, b8, e6, t3, a9, j5, b5, v5, m8, a4, m7, z8
+Runtime: 5004000
+Memory: 4077142016
+Runtime from Main: 434048600
+Memory from Main: 4077142016
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal89.txt
+fc
+YES: u9, o2, d, n4, c1, g, t9, s9, s4, s5, b4, h3, x9, w4, g4, z9, l2, s, n, m9, o4, f6, j2, h4, v5, t7, h1, n2, s1, m4, k4, v4, j3, e5, o8, f8, o3, x, z4, k, z7, e9, x8, j7, m2, y2, b2, f5, z2, h8, l5, i5, r, c5, y1, p7, o, u2, h9, a4, c4, j1, f, t4, a7, p2, q2, d4, g5, i1, g3
+Runtime: 2999800
+Memory: 4086423552
+Runtime from Main: 476020400
+Memory from Main: 4085284864
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal9.txt
+fc
+YES: j2, x2, y6, h5, t7, f6, i2, y3, g4, v2, a1, v5, r5, w7, b6, v4, v1, k2, i, w9, g3, l, e2, b4, j8, j6, p2, m7, l9, d5, q1, i3, o6, p1, x9, h8, e8, p4, w1, t2, v3, n8, u6, m2, k4, r1, b, r7, r2, e7, d8, i1, f3, e3, f7, g2, z3, t1, b1, h9, o8, x6, s2, t5, o5, x7, y, o3, m5, a5, k, d4, e4, p3, o2, u7, j5, f1, b8, m3, k9, q5, h7, w3, a, z4, u2, c7, d3, z6, r9, z8, r8, l2, g9, s4, m4, f2, c8, c6, y2, c4, c, v, n4, e, p8, c1, i8, o7, l5, y8, z1
+Runtime: 4038100
+Memory: 4096004096
+Runtime from Main: 441539300
+Memory from Main: 4096720896
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal90.txt
+fc
+YES: j3, p1, i5, l8, m, e8, a9, i1, b8, t4, x4, k8, u1, o9, y9, r6, m1, j8, p9, t9, x7, z6, r9, n9, z7, g7, a8, g6, j2, j5, j, k4, r, g9, w3, k2, a5, x6, u6, l9, o, s1, e6, s5, h, r7, a3, n8, p, o3, r4, y1, d3, t8, i9, b5, i8, f, e2, c, c1, y2, y5, h6, g1, u2, a1, a, q6, f5, p2, g2, q5, p7, y4, k3, b7, m8, m2, t2, i4, d4, z4, z1, q2, h1, t7, q3, n7, i3, u5, w6, n, q4, b2, l, z3, s, i, e4, o1, z, y8, z2, v1, p5, p8, a4, v5, n5, k7, d6, w9, f2, j7, e5, q9, p4, l4, z5, d8, s3, g, q, e9, j1, o2, n2, t, c6, u9, f3, m3, h3, x, x9, k6, o5, d, x5, t5, h8, s6, v9, a2, g3, m7, v8, l7, s2, g5, t1, s7, z9, w8, w7, a7, c7, w4, h4, n1, m6, d7, l3, d9, y6, u, q7, w, h7, v6, g4, w2, e, o4, f1, f9, n4, v7, h2, x1, h5, v4, b, x2, j6, s4, o6, g8, q8, o7, w5, b3, n3, j4, u4, f4, p6, b4, j9, f6, o8, l5, s9, w1, s8, r5, k, h9, q1, i7, b6, c9, t3, l2, c4, i2, k5, v2, f8, r1, v3, v, c3, t6, y3, p3, m5, f7, e7, r3, x3, d1, c2, m9, e1, m4, d5, r8
+Runtime: 8223100
+Memory: 4099936256
+Runtime from Main: 466187600
+Memory from Main: 4099936256
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal91.txt
+fc
+YES: d2, f4, t1, o7, f7, g3, w9, a3, i7, s4, x7, u4, w2, m8, e9, e7, p9, q1, x3, g5, n6, j2, q8, h3, m4, k2, n9, l, p6, c9, d7, o9, g, z9, t, q, t5, i3, u1, c7, y3, k7, q2, f1, s6, w5, u8, i5, f3, d5, w7, h6, h, h7, m, z7, y1, c6, h9, a9, p1, e6, p5, q4, k5, l5, t2, b9, r4, b4, r7, v8, g1, x2, d9, c5, h1, h4, l7, x1, f6, e3, a8, s5, s9, p3, v4, l3, s8, e8, y7, e4, s2, u7, e5, m1, z2, c4, r3, y2, b5, a, t7, k1, k, u6, q6, r5, v7, t6, m7, x8, z3, q5, v2, o5, z8, z5, t9, u9, q9, b, j7, a6, g7, o, x6, i, m5, i6, n5, l8, f5, o1, z4, v1, c, b6, o4, u2, o2, j8, o6, v3, v, i9, x5, v6, m9, a4, y9, u3, h2, p2, w3, g8, w1, j3, v9, d, x, h8, y6, c8, w6, d4, l2, d1, v5, y5, f9, i8, k9, k8, r6, p4, a7, l4, b1, r, u, i2, n7, k6, p, p7, r1, f8, m6, y8, i1, k4, a1, w8, s, j9, a2, f, w4, t3, j5, y4, j6, k3, t4, o3, y, p8, g4, i4, b7, g6, h5, d6
+Runtime: 7000200
+Memory: 4107689984
+Runtime from Main: 472027500
+Memory from Main: 4106493952
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal92.txt
+fc
+YES: o5, q6, e4, l2, b9, a5, d2, k1, t2, d9, q4, u, y3, k5, e5, i5, q3, s9, s
+Runtime: 997600
+Memory: 4098199552
+Runtime from Main: 431958300
+Memory from Main: 4098199552
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal93.txt
+fc
+YES: n4, c5, f4, j, x6, l1, q5, f1, v, s1, o5, k3, e5, n8, t7, b3, t9, f8, g4, h4, n5, s8, a8, b2, v9, b6, n, p2, r5, i2, e4, i1, d4, w8, c9, a, w4, p3, s4, y3, i8, d5, x8
+Runtime: 1958800
+Memory: 4098813952
+Runtime from Main: 437002300
+Memory from Main: 4098551808
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal94.txt
+fc
+YES: k, f7, x1, j2, d3, s5, l7, a, a1, g9, i5, n1, y3, o4, j, l8, d1, z6, d2, f6, j7, l, l3, n6, d9, a9, d4, p1, v8, f1, a3, l6, n4, t4, v3, f2, c9, h4, j4, i6, w4, m4, w3, y2, e2, c6, c8, t, p3, b7, v5, z5, n2, l5, s7, g2, t6, o1, x5, r3, c, i7, w2, w, f9, h, w1, h1, r1, t5, z7, m2, x2, p, t3, b6, n5, m9, k2, x4, s1, u, s2, h3, j5, w6, e7, h9, w8, o3, q6, q5, l1, k6, o, w5, q4, r2, n3, v6, v2, s8, j1, c5, x3, z8, r8, z3, b, u2, a8, a4, u8, p4, i9, u4, g1, s9, w7, o5, p8, g, g5, u1, e6, e1, y5, u3, o8, g7, k8, x, f5, m6, v9, j6, n9, s, q7, a7, b1, r, h7, k3, j9, t2, v7, n8, i8, u6, z1, w9, o2, z, c3, k5, o7, f3, v4, q2, n7, y7, l4, i1, o9, m, q3, y4, r5, m1, c2, u9, y1, s4, r7, t9, d8, s3, x7, p7, h6, p6, m3, e5, k4, q, u7, f, h2
+Runtime: 7004300
+Memory: 4096749568
+Runtime from Main: 512968000
+Memory from Main: 4096606208
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal95.txt
+fc
+YES: n7, h3
+Runtime: 949100
+Memory: 4105826304
+Runtime from Main: 424064100
+Memory from Main: 4105728000
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal96.txt
+fc
+YES: j, h6, s1, n3, b7, p1, i5, k8, r, c3, a, r7, p6, y8, l6, c9, f4, t6, t, m2, k9
+Runtime: 998500
+Memory: 4108079104
+Runtime from Main: 436032100
+Memory from Main: 4107558912
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal97.txt
+fc
+YES: a8, j4, v3, e7, a3, g5, h1, i5, r1, i, f4, b6, d, l5, l6, v, u7, b5, z9, l1, m5, c8, y, k, d9, p3, b4, p6, l7, e2, j1, p, h2, e4, d5, s5, t2, w, t7, m, x9, z4, p4, g3, s4, v9, y5, n9, s7, s3, a1, s6
+Runtime: 2057900
+Memory: 4104654848
+Runtime from Main: 453995100
+Memory from Main: 4104761344
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal98.txt
+fc
+YES: x6, b4, f4, t7, u, e, c9, k5, x7, m, a4, m3, a, u3, u8, z3, p9, b, y1, o5, d6, i3, b5, y6, m5, t4, u2, t5, j6, b2, g, t, o2, a7, z1, i2, b3, s8, j5, j4, l8, s2, t3, j1, w4, f3, r, x8, h6, l6, b8, f6, z9, e6, q, b6, e4, v1, k, u7, k7, u9, w6, m2, i5, v7, z7, q8, j3, m6, i6, x4
+Runtime: 1998200
+Memory: 4107476992
+Runtime from Main: 470075900
+Memory from Main: 4107550720
+D:\year3sem1 stuff\COS30019\AI assignment 2\code folder\iengine-main\iengine-main\src\dist\testNormal99.txt
+fc
+YES: w5, t6
+Runtime: 66300
+Memory: 4104810496
+Runtime from Main: 461001400
+Memory from Main: 4104810496

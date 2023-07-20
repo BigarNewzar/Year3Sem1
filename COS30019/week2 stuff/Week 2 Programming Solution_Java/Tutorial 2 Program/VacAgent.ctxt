@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=percepts
+comment0.target=Action\ next(java.util.LinkedList)
+comment0.text=\r\n\ Receives\ a\ list\ of\ percepts\ and\ determines\ what\ action\ is\ appropriate\ according\ to\ the\ status\ of\ the\ last\ item\ in\ the\ list.\r\n\ \r\n\ This\ is\ where\ your\ implementation\ could\ improve\ upon\ how\ the\ agent\ moves\ around\ the\ floor.\r\n\ At\ the\ moment\ all\ the\ agent\ does\ is\ move\ up,\ which\ clearly\ can't\ clean\ any\ tiles\ in\ any\ other\ column.\r\n\ \r\n\ @param\ percepts\ -\ The\ list\ of\ percepts\ in\ the\ simulation\ so\ far.\r\n\ @return\ -\ The\ next\ action\ to\ be\ produced\ by\ the\ agent.\r\n
+numComments=1

@@ -1,0 +1,52 @@
+
+
+DepthLimitedSearch.cs
+public class Tree<K, V>
+    where K : class, IComparable<K>
+    where V : class
+{
+    private Node<K, V> root;
+
+    /// <summary>
+    /// Searches tree using BFS but the depth of the search
+    /// is limited
+    /// </summary>
+    /// <param name="root">To start the search</param>
+    /// <param name="goal"></param>
+    /// <param name="depth">Maximum depth of level to search</param>
+    /// <returns></returns>
+    public V DepthLimitedSearch(Node<K, V> root, K goal, int depth)
+    {
+        if(depth == 0 && root.key == goal)
+        {
+            return root.value;
+        }
+        else if (depth > 0)
+        {
+            foreach (var child in root.children)
+            {
+                var result = DepthLimitedSearch(child, goal, depth-1);
+                if(result != default(V))
+                {
+                    return result;
+                }
+            }
+            return default(V);
+        }
+        else
+        {
+            return default(V);
+        }
+    }
+
+    private class Node<K, V>
+        where K : class, IComparable<K>
+        where V : class
+    {
+        public K key;
+        public V value;
+        public Node<K, V>[] children;
+    }
+}
+
+

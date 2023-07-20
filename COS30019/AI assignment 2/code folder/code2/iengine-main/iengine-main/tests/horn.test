@@ -1,0 +1,5 @@
+TELL
+True || False;
+
+ASK
+False

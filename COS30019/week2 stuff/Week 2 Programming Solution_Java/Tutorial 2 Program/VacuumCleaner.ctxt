@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment0.text=\r\n\ @param\ args\ -\ [0]\ The\ name\ of\ the\ file\ to\ read\ from\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ -\ [1]\ Location\ of\ the\ vacuum\ agent\ in\ the\ form\ [x,y]\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ -\ [2]\ Life\ time\ of\ the\ agent\r\n
+comment1.params=fileName
+comment1.target=Status[][]\ readProblemFile(java.lang.String)
+comment1.text=\r\n\ Reads\ the\ file\ that\ has\ been\ provided\ to\ the\ program.\ Information\ is\ stored\ in\ a\ 2D\ array\ that\ represents\ the\ floor\r\n\ Static\ ensures\ that\ only\ one\ file\ can\ be\ read.\r\n\ \r\n\ @param\ fileName\ -\ The\ name\ of\ the\ file\ to\ read\ from\r\n\ @return\ -\ The\ 2D\ array\ with\ the\ floor\ information\r\n
+numComments=2

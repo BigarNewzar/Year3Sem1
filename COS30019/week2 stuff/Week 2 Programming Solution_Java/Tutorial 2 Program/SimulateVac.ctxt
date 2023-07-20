@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=initAgent\ initEnv
+comment0.target=SimulateVac(VacAgent,\ VacEnv)
+comment1.params=maxLoop
+comment1.target=void\ execute(int)
+comment1.text=\r\n\ Runs\ the\ simulation,\ taking\ into\ account\ the\ life\ time\ of\ the\ agent.\r\n\ \r\n\ @param\ maxLoop\ -\ The\ life\ time\ of\ the\ agent\r\n
+numComments=2

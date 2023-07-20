@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=floorFF\ vFF
+comment0.target=VacEnv(Status[][],\ Location)
+comment0.text=\r\n\ Constructor\ for\ VacEnv,\ accepts\ arguement,\ and\ also\ sets\ EastBound\ and\ SouthBound\ based\ on\ the\ size\ of\ the\ array\r\n\ \r\n\ @param\ floorFF\ -\ A\ 2D\ representation\ of\ the\ floor,\ containing\ the\ status\ of\ each\ tile\r\n\ @param\ vFF\ -\ The\ location\ of\ the\ vacuum,\ in\ the\ form\ of\ a\ Location\ (internally\ as\ x,y)\r\n
+comment1.params=
+comment1.target=int\ measure()
+comment1.text=\r\n\ Determines\ how\ many\ of\ the\ tiles\ have\ been\ cleaned/start\ clean\ on\ the\ floor.\ The\ higher\ the\ score,\ the\ more\ tiles\ that\ are\ clean\r\n\ \r\n\ @return\ -\ The\ score\ based\ on\ number\ of\ clean\ tiles.\r\n
+comment2.params=col\ row\ newSt
+comment2.target=void\ updateFloor(int,\ int,\ Status)
+comment2.text=\r\n\ Updates\ a\ particular\ tile\ on\ the\ floor\ with\ the\ provided\ Status\r\n\ \r\n\ @param\ col\ -\ The\ x\ position\ of\ the\ tile\r\n\ @param\ row\ -\ The\ y\ position\ of\ the\ tile\r\n\ @param\ newSt\ -\ The\ state\ to\ apply\ to\ the\ tile\r\n
+comment3.params=newLoc
+comment3.target=void\ updateLoc(Location)
+comment3.text=\r\n\ Move\ the\ vacuum\ to\ a\ new\ location\ on\ the\ floor\r\n\ \r\n\ @param\ newLoc\ -\ The\ location\ to\ move\ the\ vacuum\ to\r\n
+comment4.params=
+comment4.target=Location\ getVacLoc()
+comment5.params=
+comment5.target=Status\ getStatusAtLoc()
+comment6.params=nextAct
+comment6.target=void\ updateVacLoc(Action)
+comment6.text=\r\n\ Updates\ the\ location\ of\ the\ vacuum\ based\ on\ the\ Action\ that\ is\ received.\ Makes\ sure\ to\ check\ that\ the\ Action\ will\ result\ with\ the\ vacuum\ ending\ up\r\n\ in\ a\ valid\ location\r\n\ \r\n\ @param\ nextAct\ -\ The\ Action\ containing\ the\ direction\ the\ agent\ will\ try\ to\ move\r\n
+numComments=7

@@ -1,0 +1,5 @@
+TELL
+(a & b) => c =>  d & ~e || g <=> (b & c => p) => (x & y) => t =>  z & ~g || e <=> (d & c => f);
+
+ASK
+d
