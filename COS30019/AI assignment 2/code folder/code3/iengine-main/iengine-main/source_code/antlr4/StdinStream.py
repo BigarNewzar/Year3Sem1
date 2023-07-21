@@ -1,11 +1,3 @@
-import codecs
-import sys
-
-from antlr4.InputStream import InputStream
-
-
-class StdinStream(InputStream):
-    def __init__(self, encoding:str='ascii', errors:str='strict') -> None:
-        bytes = sys.stdin.buffer.read()
-        data = codecs.decode(bytes, encoding, errors)
-        super().__init__(data)
+version https://git-lfs.github.com/spec/v1
+oid sha256:30c487e3337c4fa8bf9eefb7fd394dfb71389cf3386f92a02b8193ea7fc55100
+size 303

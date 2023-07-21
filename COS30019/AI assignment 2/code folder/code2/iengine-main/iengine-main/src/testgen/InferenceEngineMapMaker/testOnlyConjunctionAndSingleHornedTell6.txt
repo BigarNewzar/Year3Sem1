@@ -1,4 +1,3 @@
-TELL 
-a2 => t9; z3 => x9; z3 => x9; z3 => t9; z3 => x9; a2 => x9; t9 => z3; t9 => z3; t9 => z3; a2 => t9; a2 => z3; a2 => t9; z3 => t9; z3 => x9; a2 => z3; t9 => z3; a2 => z3; x9 => z3; a2 => z3; t9 => x9; z3 => a2; t9&a2 => z3; z3&t9 => x9; a2&z3 => t9; x9&a2 => t9; t9&x9 => a2; a2&z3 => t9; t9&z3 => a2; x9&t9 => a2; x9&t9 => a2; 
-ASK
-z3
+version https://git-lfs.github.com/spec/v1
+oid sha256:70bd22e3141444055a970979e5e9f8ec684faa786b802837f8837bbd0138e794
+size 340

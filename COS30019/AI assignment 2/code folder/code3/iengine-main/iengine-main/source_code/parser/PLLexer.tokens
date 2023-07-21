@@ -1,23 +1,3 @@
-T__0=1
-T__1=2
-T__2=3
-T__3=4
-T__4=5
-SYMBOL=6
-CONJUNCTION=7
-DISJUNCTION=8
-NEGATION=9
-IMPLICATION=10
-BICONDITIONAL=11
-NEWLINE=12
-WHITESPACE=13
-'TELL'=1
-';'=2
-'ASK'=3
-'('=4
-')'=5
-'&'=7
-'||'=8
-'~'=9
-'=>'=10
-'<=>'=11
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e6058ea6c27cbaffc8454838df8bbcaaf122d0b8a85812faa9bd223cf302fe8
+size 211

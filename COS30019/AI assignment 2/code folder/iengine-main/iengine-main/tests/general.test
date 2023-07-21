@@ -1,5 +1,3 @@
-TELL
-(a & b) => c =>  d & ~e || g <=> (b & c => p) => (x & y) => t =>  z & ~g || e <=> (d & c => f);
-
-ASK
-~d || ~e || g => ~f <=> ~c
+version https://git-lfs.github.com/spec/v1
+oid sha256:a94b17794b1de8b0db0398c41c2584f4085876f53631ea7bee0f54973a40b93e
+size 133

@@ -1,26 +1,3 @@
-from PLExpression import PLExpression
-
-
-class DisjunctionExpression(PLExpression):
-    def __init__(self, lhs: PLExpression, rhs: PLExpression):
-        self.__lhs = lhs
-        self.__rhs = rhs
-
-
-    def evaluate(self, model):
-        return self.__lhs.evaluate(model) \
-            or self.__rhs.evaluate(model)
-
-
-    def __eq__(self, other):
-        return isinstance(other, DisjunctionExpression) \
-            and self.__lhs == other.__lhs \
-            and self.__rhs == other.__rhs
-
-
-    def __ne__(self, other):
-        return not self.__eq__(other)
-
-
-    def __hash__(self):
-        return hash(('||', self.__lhs, self.__rhs))
+version https://git-lfs.github.com/spec/v1
+oid sha256:dba4dc6d7c4f42a59223244dc4f0825fd659621a667eef053bfc749018318f8f
+size 635

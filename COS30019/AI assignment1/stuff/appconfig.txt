@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-    <startup> 
-        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
-    </startup>
-</configuration>
+version https://git-lfs.github.com/spec/v1
+oid sha256:53b6dc6176476644afd5128173cff4842d365396e15ac1902ca9cee5cecf934c
+size 181

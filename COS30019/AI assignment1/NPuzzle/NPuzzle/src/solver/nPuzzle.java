@@ -1,20 +1,3 @@
-package solver;
-
-public class nPuzzle {
-	public PuzzleState StartState;
-	public PuzzleState GoalState;
-	
-	public nPuzzle(PuzzleState aStartState, PuzzleState aGoalState)
-	{
-		//initialise the start and end states.
-		StartState = aStartState;
-		GoalState = aGoalState;
-	}
-	
-	public nPuzzle(int[][] startState, int[][]goalState)
-	{
-		//initialise the start and end states using only the puzzle arrays
-		StartState = new PuzzleState(startState);
-		GoalState = new PuzzleState(goalState);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:13b618119b919c54d0058108399f5d1a4df278513204a960c6064d5477754358
+size 490

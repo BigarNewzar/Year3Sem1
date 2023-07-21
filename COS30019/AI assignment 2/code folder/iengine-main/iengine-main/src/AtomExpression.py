@@ -1,28 +1,3 @@
-from PLExpression import PLExpression
-
-
-class AtomExpression(PLExpression):
-    def __init__(self, symbol):
-        self.__symbol = symbol
-
-
-    def __str__(self):
-        return self.__symbol
-
-
-    def evaluate(self, model):
-        return model[self]
-
-
-    def __eq__(self, other):
-        return isinstance(other, AtomExpression) \
-            and self.__symbol == other.__symbol
-
-
-    def __ne__(self, other):
-        return self.__eq__(other)
-
-
-    def __hash__(self):
-        return hash(('', self.__symbol))
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:35662f7be9386e0a5a7d10661114f2ef6eb333d7868f9816cbe7cf22bf904d00
+size 516

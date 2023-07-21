@@ -1,7 +1,3 @@
-#BlueJ class context
-comment0.params=initAgent\ initEnv
-comment0.target=SimulateVac(VacAgent,\ VacEnv)
-comment1.params=maxLoop
-comment1.target=void\ execute(int)
-comment1.text=\r\n\ Runs\ the\ simulation,\ taking\ into\ account\ the\ life\ time\ of\ the\ agent.\r\n\ \r\n\ @param\ maxLoop\ -\ The\ life\ time\ of\ the\ agent\r\n
-numComments=2
+version https://git-lfs.github.com/spec/v1
+oid sha256:34397123c5ee9084288da9357b94c20490ab1eeee5f99721d46c2447b8cf2d7a
+size 343

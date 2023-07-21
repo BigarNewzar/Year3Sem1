@@ -1,5 +1,3 @@
-TELL
-c => q; l & b => c; b & l => m; a & p => l; a & b => l; a; b;
-
-ASK
-q
+version https://git-lfs.github.com/spec/v1
+oid sha256:0095ab0656b13b6590df42f07c9885ff429c29a26dcb3d8c7f5438c9713ef7ef
+size 74

@@ -1,4 +1,3 @@
-[10,10]
-(2,3)
-(9,1)
-(0,4,1,4)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e29cd42c617730b9b7580395d28d4002f5a0e5d839810e36d810c92bf7d3fc7
+size 30

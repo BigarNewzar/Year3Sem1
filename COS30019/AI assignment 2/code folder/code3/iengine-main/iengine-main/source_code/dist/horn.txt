@@ -1,4 +1,3 @@
-TELL
-c=>q;l&b=>c;b&l=>m;a&p=>l;a&b=>l;a;b;
-ASK
-q
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1323abfbd7f6228ad1bd755f7eb233762ae1bfe659ef612271690027b2703a4
+size 49

@@ -1,17 +1,3 @@
-# Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.
-# Use of this file is governed by the BSD 3-clause license that
-# can be found in the LICENSE.txt file in the project root.
-#/
-
-from enum import IntEnum
-
-# Represents the type of recognizer an ATN applies to.
-
-class ATNType(IntEnum):
-
-    LEXER = 0
-    PARSER = 1
-
-    @classmethod
-    def fromOrdinal(cls, i:int):
-        return cls._value2member_map_[i]
+version https://git-lfs.github.com/spec/v1
+oid sha256:c60bfc00c554eed734ed4ef7fe14539b502267b32f1a1a1a3f97d388eaeb0868
+size 422

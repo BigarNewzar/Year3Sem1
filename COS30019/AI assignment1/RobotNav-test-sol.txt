@@ -1,13 +1,3 @@
-The follwoing solutions can be used as reference for the RobotNav test case provided:
-
-DFS: 
-up; right; down; down; right; right; down; right; up; up; up; right; down; down; down; right; up; up; up; right;
-
-BFS:
-down; right; right; right; right; up; up; right; right; right;
-
-GBFS:
-right; down; right; right; right; up; up; right; right; right;
-
-AS:
-right; down; right; right; right; up; up; right; right; right;
+version https://git-lfs.github.com/spec/v1
+oid sha256:2918243973850e284da366280fed24eee47dfeab0a288bc98621bff8f5f3fe14
+size 413

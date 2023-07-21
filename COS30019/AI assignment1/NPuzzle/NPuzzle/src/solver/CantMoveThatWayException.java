@@ -1,17 +1,3 @@
-package solver;
-
-public class CantMoveThatWayException extends Exception {
-	static final long serialVersionUID = 1988122502;
-	
-	public PuzzleState Source;
-	public direction Direction;
-	
-	public CantMoveThatWayException(PuzzleState source, direction aDirection)
-	{
-		//The puzzle in Source tried to move in the direction aDirection.
-		//This is an illegal move (It put a tile off the edge of the puzzle!)
-		Source = source;
-		Direction = aDirection;
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e019f617cfe21fc310d12ef693946d0130ebf87bf137cf385ac302e3a3eef0b
+size 455

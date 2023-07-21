@@ -1,5 +1,3 @@
-TELL
-True || False;
-
-ASK
-False
+version https://git-lfs.github.com/spec/v1
+oid sha256:eae592967096e116874bbdb3e88145b2f19d8236f870af5df11488448055a280
+size 31

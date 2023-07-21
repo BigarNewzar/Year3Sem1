@@ -1,34 +1,3 @@
-using System;
-using System.Text.RegularExpressions;
-using System.Collections.Generic;
-
-namespace ConsoleApp1
-{////////////////fix namesoace + rename calss to Sanitise
-    public class IntFromString
-    {
-        private string stringToDivide;
-
-        public IntFromString(string s)
-        {
-            stringToDivide = s;
-        }
-
-        public List<int> getIntFromString()
-        {
-            string[] numbers = Regex.Split(stringToDivide, @"\D+");///checl what this actually does
-
-            List<int> listInt = new List<int>();
-
-            foreach (string value in numbers)
-            {
-                if (!string.IsNullOrEmpty(value))
-                {
-                    int i = int.Parse(value);
-                    listInt.Add(i);
-                }
-            }
-
-            return listInt;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5134c7576c124c2f2eb839f89b95e2125003b62b70113903caaf953908f58e6c
+size 829

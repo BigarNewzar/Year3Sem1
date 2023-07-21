@@ -1,4 +1,3 @@
-TELL 
-w2 => w; j => u7; c6 => i9; w6 => z7; w => a3; z7 => w6; u7 => c6; x3 => w2; i9 => w2; w2 => a3; w6 => x3; w6 => i9; z7 => w6; w2 => c6; w6 => u7; x3 => c6; w2 => u7; c6 => w6; j => c6; x3 => w6; w2 => i9; w2 => z7; a3 => w; w6 => w2; j => x3; x3 => j; w2 => u7; z7 => x3; w6 => z7; z7 => a3; w => c6; a3 => w; z7 => w6; w2 => i9; u7 => a3; w => w6; w2 => u7; u7 => w6; w6 => x3; j => c6; x3 => u7; w6 => a3; w6 => z7; i9 => j; z7 => w2; j => w6; c6 => w6; x3 => z7; w => u7; w => i9; u7&z7 => w2; a3&u7 => c6; j&i9 => x3; w6&x3 => w; w2&i9 => u7; w6&w2 => w; w6&j => a3; i9&u7 => z7; a3&z7 => u7; x3&u7 => w2; u7&w6 => x3; w&i9 => x3; w&a3 => z7; w&u7 => j; a3&w6 => u7; a3&c6 => x3; a3&c6 => x3; w6&w2 => u7; c6&w6 => w; w6&w2 => u7; c6&x3 => w6; z7&a3 => w6; u7&w => x3; i9&j => w2; u7&w2 => z7; u7&j => i9; a3&w2 => w; a3&c6 => z7; w2&j => w6; u7&i9 => w; w&c6 => x3; c6&w2 => i9; a3&i9 => w6; j&z7 => i9; w6&j => z7; u7&w6 => w; i9&w => x3; u7&z7 => x3; w2&x3 => z7; a3&w6 => w; c6&j => a3; z7&j => w; c6&x3 => u7; i9&u7 => a3; c6&x3 => w6; w2&u7 => i9; z7&w6 => u7; x3&z7 => w; j&x3 => w2; i9&u7 => x3; a3; c6; w; u7; z7; x3; i9; w6; j; w2; 
-ASK
-i9
+version https://git-lfs.github.com/spec/v1
+oid sha256:44216fbace0b5ec4326b5ea99e1d18832230ba22869f72fd410ce63d806276cb
+size 1161

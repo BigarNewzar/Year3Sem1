@@ -1,20 +1,3 @@
-TELL
-p2=> p3;
-
-TELL
-p3 => p1;
-
-TELL
-c =>   e;
-
-TELL
-f&g => h; p1=>d; p1&p3 => c; a; b; p2; b&e => f; z;
-
-ASK
-g
-
-TELL
-z => g;
-
-ASK
-g
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7d1091fe23814db34e4bef57807be5e176bd71de7ce383b3d3696ab279bc974
+size 132

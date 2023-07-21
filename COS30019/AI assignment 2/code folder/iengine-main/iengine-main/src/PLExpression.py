@@ -1,27 +1,3 @@
-from abc import abstractmethod
-
-
-class PLExpression:
-    @abstractmethod
-    def evaluate(self, model):
-        ...
-
-
-    # Called by forward chaining and backward chaining
-    def to_cnf(self):
-        ...
-
-
-    @abstractmethod
-    def __eq__(self, other):
-        ...
-
-
-    @abstractmethod
-    def __ne__(self, other):
-        ...
-
-
-    @abstractmethod
-    def __hash__(self):
-        ...
+version https://git-lfs.github.com/spec/v1
+oid sha256:089ff23d5bd5e92e37998049a8d9464fec35ce3743e9078a0b50116c27b11708
+size 391

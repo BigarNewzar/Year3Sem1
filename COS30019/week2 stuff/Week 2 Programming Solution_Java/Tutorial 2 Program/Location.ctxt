@@ -1,15 +1,3 @@
-#BlueJ class context
-comment0.params=xCoord\ yCoord
-comment0.target=Location(int,\ int)
-comment1.params=
-comment1.target=Location\ getLocation()
-comment2.params=
-comment2.target=int\ getX()
-comment3.params=
-comment3.target=int\ getY()
-comment4.params=xCoord\ yCoord
-comment4.target=void\ setLocation(int,\ int)
-comment4.text=\r\n\ Allow\ for\ setting\ the\ x\ and\ y\ values\ of\ the\ Location\ either\ by\ passing\ in\ a\ Location\ object,\r\n\ or\ by\ passing\ in\ a\ seperate\ x\ and\ y\ integer.\r\n
-comment5.params=loc
-comment5.target=void\ setLocation(Location)
-numComments=6
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b5a706269ab60ad9ad904c7594fe7eef76d3661c4e6c7325c1220da9ec29654
+size 582

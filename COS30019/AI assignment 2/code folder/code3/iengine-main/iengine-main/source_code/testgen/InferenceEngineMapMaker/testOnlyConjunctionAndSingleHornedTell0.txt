@@ -1,4 +1,3 @@
-TELL 
-u2 => v6; j6 => v6; j6 => u2; u2 => j6; j6 => v6; u2 => j6; u2 => j6; v6 => j6; j6 => v6; u2 => j6; v6 => u2; u2 => v6; u2 => j6; u2 => j6; v6 => u2; v6 => u2; v6 => u2; u2 => j6; j6 => u2; u2 => j6; u2&j6 => v6; u2&j6 => v6; u2&v6 => j6; v6&j6 => u2; u2&j6 => v6; u2&j6 => v6; v6&u2 => j6; v6&j6 => u2; v6&u2 => j6; u2&j6 => v6; v6&j6 => u2; j6&v6 => u2; u2&j6 => v6; j6&v6 => u2; v6&j6 => u2; u2&j6 => v6; v6&j6 => u2; v6&u2 => j6; j6&u2 => v6; j6&v6 => u2; v6&j6 => u2; u2&j6 => v6; 
-ASK
-u2
+version https://git-lfs.github.com/spec/v1
+oid sha256:455aabf46906bbd7f4e838820f26e8075013ca4cefdd8a8b54f68c6f359365d1
+size 499
