@@ -1,0 +1,1865 @@
+sudo openvpn --remote 192.168.19.129 --dev tun1 --ifconfig 10.4.0.1 10.4.0.2 --verb 5 --secret mykey
+
+sudo openvpn --remote 192.168.19.128 --dev tun1 --ifconfig 10.4.0.2 10.4.0.1 --verb 5 --secret mykey
+
+if tunnel was setup complete. then initialize sequence has been completed will be displayed
+
+if multiple subnets--then can cause some errors
+
+
+
+
+VM2 stuuff
+nsr@nsr-VirtualBox:~/Desktop$ ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.19.129  netmask 255.255.255.0  broadcast 192.168.19.255
+        inet6 fe80::32cb:dd33:ef4f:640  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:22:b8:1c  txqueuelen 1000  (Ethernet)
+        RX packets 173  bytes 24085 (24.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 172  bytes 19569 (19.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 84  bytes 9078 (9.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 84  bytes 9078 (9.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tun1: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1500
+        inet 10.4.0.2  netmask 255.255.255.255  destination 10.4.0.1
+        inet6 fe80::e982:bc53:df31:b99c  prefixlen 64  scopeid 0x20<link>
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 100  (UNSPEC)
+        RX packets 2  bytes 96 (96.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4  bytes 192 (192.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+nsr@nsr-VirtualBox:~/Desktop$ ping 10.4.0.1
+PING 10.4.0.1 (10.4.0.1) 56(84) bytes of data.
+64 bytes from 10.4.0.1: icmp_seq=1 ttl=64 time=0.560 ms
+64 bytes from 10.4.0.1: icmp_seq=2 ttl=64 time=1.57 ms
+64 bytes from 10.4.0.1: icmp_seq=3 ttl=64 time=1.54 ms
+64 bytes from 10.4.0.1: icmp_seq=4 ttl=64 time=1.52 ms
+64 bytes from 10.4.0.1: icmp_seq=5 ttl=64 time=1.51 ms
+64 bytes from 10.4.0.1: icmp_seq=6 ttl=64 time=0.434 ms
+64 bytes from 10.4.0.1: icmp_seq=7 ttl=64 time=2.46 ms
+64 bytes from 10.4.0.1: icmp_seq=8 ttl=64 time=2.51 ms
+64 bytes from 10.4.0.1: icmp_seq=9 ttl=64 time=0.437 ms
+64 bytes from 10.4.0.1: icmp_seq=10 ttl=64 time=0.443 ms
+64 bytes from 10.4.0.1: icmp_seq=11 ttl=64 time=1.88 ms
+64 bytes from 10.4.0.1: icmp_seq=12 ttl=64 time=0.581 ms
+64 bytes from 10.4.0.1: icmp_seq=13 ttl=64 time=1.56 ms
+64 bytes from 10.4.0.1: icmp_seq=14 ttl=64 time=1.48 ms
+64 bytes from 10.4.0.1: icmp_seq=15 ttl=64 time=1.45 ms
+64 bytes from 10.4.0.1: icmp_seq=16 ttl=64 time=1.72 ms
+64 bytes from 10.4.0.1: icmp_seq=17 ttl=64 time=1.63 ms
+64 bytes from 10.4.0.1: icmp_seq=18 ttl=64 time=1.60 ms
+64 bytes from 10.4.0.1: icmp_seq=19 ttl=64 time=1.60 ms
+64 bytes from 10.4.0.1: icmp_seq=20 ttl=64 time=1.72 ms
+64 bytes from 10.4.0.1: icmp_seq=21 ttl=64 time=0.836 ms
+64 bytes from 10.4.0.1: icmp_seq=22 ttl=64 time=0.518 ms
+64 bytes from 10.4.0.1: icmp_seq=23 ttl=64 time=0.512 ms
+64 bytes from 10.4.0.1: icmp_seq=24 ttl=64 time=0.634 ms
+64 bytes from 10.4.0.1: icmp_seq=25 ttl=64 time=0.535 ms
+64 bytes from 10.4.0.1: icmp_seq=26 ttl=64 time=0.545 ms
+64 bytes from 10.4.0.1: icmp_seq=27 ttl=64 time=0.538 ms
+64 bytes from 10.4.0.1: icmp_seq=28 ttl=64 time=1.57 ms
+64 bytes from 10.4.0.1: icmp_seq=29 ttl=64 time=0.728 ms
+64 bytes from 10.4.0.1: icmp_seq=30 ttl=64 time=1.37 ms
+64 bytes from 10.4.0.1: icmp_seq=31 ttl=64 time=0.502 ms
+64 bytes from 10.4.0.1: icmp_seq=32 ttl=64 time=0.906 ms
+64 bytes from 10.4.0.1: icmp_seq=33 ttl=64 time=0.470 ms
+64 bytes from 10.4.0.1: icmp_seq=34 ttl=64 time=0.437 ms
+64 bytes from 10.4.0.1: icmp_seq=35 ttl=64 time=0.567 ms
+64 bytes from 10.4.0.1: icmp_seq=36 ttl=64 time=0.518 ms
+64 bytes from 10.4.0.1: icmp_seq=37 ttl=64 time=0.478 ms
+64 bytes from 10.4.0.1: icmp_seq=38 ttl=64 time=0.458 ms
+64 bytes from 10.4.0.1: icmp_seq=39 ttl=64 time=0.758 ms
+64 bytes from 10.4.0.1: icmp_seq=40 ttl=64 time=0.515 ms
+64 bytes from 10.4.0.1: icmp_seq=41 ttl=64 time=0.519 ms
+64 bytes from 10.4.0.1: icmp_seq=42 ttl=64 time=0.481 ms
+64 bytes from 10.4.0.1: icmp_seq=43 ttl=64 time=0.491 ms
+64 bytes from 10.4.0.1: icmp_seq=44 ttl=64 time=1.09 ms
+64 bytes from 10.4.0.1: icmp_seq=45 ttl=64 time=0.939 ms
+64 bytes from 10.4.0.1: icmp_seq=46 ttl=64 time=0.648 ms
+64 bytes from 10.4.0.1: icmp_seq=47 ttl=64 time=0.522 ms
+64 bytes from 10.4.0.1: icmp_seq=48 ttl=64 time=1.44 ms
+64 bytes from 10.4.0.1: icmp_seq=49 ttl=64 time=1.56 ms
+64 bytes from 10.4.0.1: icmp_seq=50 ttl=64 time=0.934 ms
+64 bytes from 10.4.0.1: icmp_seq=51 ttl=64 time=0.776 ms
+64 bytes from 10.4.0.1: icmp_seq=52 ttl=64 time=0.535 ms
+64 bytes from 10.4.0.1: icmp_seq=53 ttl=64 time=1.17 ms
+64 bytes from 10.4.0.1: icmp_seq=54 ttl=64 time=0.540 ms
+64 bytes from 10.4.0.1: icmp_seq=55 ttl=64 time=2.29 ms
+64 bytes from 10.4.0.1: icmp_seq=56 ttl=64 time=0.905 ms
+64 bytes from 10.4.0.1: icmp_seq=57 ttl=64 time=1.53 ms
+64 bytes from 10.4.0.1: icmp_seq=58 ttl=64 time=0.687 ms
+64 bytes from 10.4.0.1: icmp_seq=59 ttl=64 time=0.625 ms
+64 bytes from 10.4.0.1: icmp_seq=60 ttl=64 time=1.64 ms
+64 bytes from 10.4.0.1: icmp_seq=61 ttl=64 time=1.83 ms
+64 bytes from 10.4.0.1: icmp_seq=62 ttl=64 time=1.62 ms
+64 bytes from 10.4.0.1: icmp_seq=63 ttl=64 time=1.54 ms
+64 bytes from 10.4.0.1: icmp_seq=64 ttl=64 time=0.907 ms
+64 bytes from 10.4.0.1: icmp_seq=65 ttl=64 time=1.42 ms
+64 bytes from 10.4.0.1: icmp_seq=66 ttl=64 time=1.00 ms
+64 bytes from 10.4.0.1: icmp_seq=67 ttl=64 time=1.01 ms
+64 bytes from 10.4.0.1: icmp_seq=68 ttl=64 time=0.615 ms
+64 bytes from 10.4.0.1: icmp_seq=69 ttl=64 time=1.40 ms
+64 bytes from 10.4.0.1: icmp_seq=70 ttl=64 time=1.41 ms
+64 bytes from 10.4.0.1: icmp_seq=71 ttl=64 time=1.39 ms
+64 bytes from 10.4.0.1: icmp_seq=72 ttl=64 time=0.959 ms
+64 bytes from 10.4.0.1: icmp_seq=73 ttl=64 time=0.998 ms
+64 bytes from 10.4.0.1: icmp_seq=74 ttl=64 time=0.965 ms
+64 bytes from 10.4.0.1: icmp_seq=75 ttl=64 time=0.651 ms
+64 bytes from 10.4.0.1: icmp_seq=76 ttl=64 time=0.806 ms
+64 bytes from 10.4.0.1: icmp_seq=77 ttl=64 time=1.55 ms
+64 bytes from 10.4.0.1: icmp_seq=78 ttl=64 time=1.46 ms
+64 bytes from 10.4.0.1: icmp_seq=79 ttl=64 time=0.950 ms
+64 bytes from 10.4.0.1: icmp_seq=80 ttl=64 time=0.701 ms
+64 bytes from 10.4.0.1: icmp_seq=81 ttl=64 time=0.945 ms
+64 bytes from 10.4.0.1: icmp_seq=82 ttl=64 time=1.65 ms
+64 bytes from 10.4.0.1: icmp_seq=83 ttl=64 time=1.57 ms
+64 bytes from 10.4.0.1: icmp_seq=84 ttl=64 time=1.52 ms
+64 bytes from 10.4.0.1: icmp_seq=85 ttl=64 time=1.56 ms
+64 bytes from 10.4.0.1: icmp_seq=86 ttl=64 time=1.62 ms
+64 bytes from 10.4.0.1: icmp_seq=87 ttl=64 time=1.50 ms
+64 bytes from 10.4.0.1: icmp_seq=88 ttl=64 time=1.63 ms
+64 bytes from 10.4.0.1: icmp_seq=89 ttl=64 time=1.76 ms
+64 bytes from 10.4.0.1: icmp_seq=90 ttl=64 time=1.74 ms
+64 bytes from 10.4.0.1: icmp_seq=91 ttl=64 time=0.772 ms
+64 bytes from 10.4.0.1: icmp_seq=92 ttl=64 time=1.37 ms
+64 bytes from 10.4.0.1: icmp_seq=93 ttl=64 time=1.54 ms
+64 bytes from 10.4.0.1: icmp_seq=94 ttl=64 time=1.56 ms
+64 bytes from 10.4.0.1: icmp_seq=95 ttl=64 time=1.45 ms
+64 bytes from 10.4.0.1: icmp_seq=96 ttl=64 time=0.665 ms
+64 bytes from 10.4.0.1: icmp_seq=97 ttl=64 time=1.64 ms
+64 bytes from 10.4.0.1: icmp_seq=98 ttl=64 time=1.04 ms
+64 bytes from 10.4.0.1: icmp_seq=99 ttl=64 time=1.52 ms
+64 bytes from 10.4.0.1: icmp_seq=100 ttl=64 time=1.47 ms
+64 bytes from 10.4.0.1: icmp_seq=101 ttl=64 time=1.46 ms
+64 bytes from 10.4.0.1: icmp_seq=102 ttl=64 time=1.65 ms
+64 bytes from 10.4.0.1: icmp_seq=103 ttl=64 time=1.55 ms
+64 bytes from 10.4.0.1: icmp_seq=104 ttl=64 time=1.45 ms
+64 bytes from 10.4.0.1: icmp_seq=105 ttl=64 time=1.71 ms
+64 bytes from 10.4.0.1: icmp_seq=106 ttl=64 time=1.61 ms
+64 bytes from 10.4.0.1: icmp_seq=107 ttl=64 time=1.60 ms
+64 bytes from 10.4.0.1: icmp_seq=108 ttl=64 time=0.848 ms
+64 bytes from 10.4.0.1: icmp_seq=109 ttl=64 time=1.55 ms
+64 bytes from 10.4.0.1: icmp_seq=110 ttl=64 time=1.56 ms
+64 bytes from 10.4.0.1: icmp_seq=111 ttl=64 time=1.55 ms
+64 bytes from 10.4.0.1: icmp_seq=112 ttl=64 time=0.587 ms
+64 bytes from 10.4.0.1: icmp_seq=113 ttl=64 time=1.64 ms
+64 bytes from 10.4.0.1: icmp_seq=114 ttl=64 time=1.26 ms
+64 bytes from 10.4.0.1: icmp_seq=115 ttl=64 time=1.75 ms
+64 bytes from 10.4.0.1: icmp_seq=116 ttl=64 time=0.674 ms
+64 bytes from 10.4.0.1: icmp_seq=117 ttl=64 time=1.48 ms
+64 bytes from 10.4.0.1: icmp_seq=118 ttl=64 time=1.74 ms
+64 bytes from 10.4.0.1: icmp_seq=119 ttl=64 time=1.67 ms
+64 bytes from 10.4.0.1: icmp_seq=120 ttl=64 time=0.951 ms
+64 bytes from 10.4.0.1: icmp_seq=121 ttl=64 time=1.75 ms
+64 bytes from 10.4.0.1: icmp_seq=122 ttl=64 time=1.63 ms
+64 bytes from 10.4.0.1: icmp_seq=123 ttl=64 time=1.51 ms
+64 bytes from 10.4.0.1: icmp_seq=124 ttl=64 time=1.57 ms
+64 bytes from 10.4.0.1: icmp_seq=125 ttl=64 time=1.71 ms
+64 bytes from 10.4.0.1: icmp_seq=126 ttl=64 time=1.67 ms
+64 bytes from 10.4.0.1: icmp_seq=127 ttl=64 time=1.74 ms
+64 bytes from 10.4.0.1: icmp_seq=128 ttl=64 time=1.52 ms
+64 bytes from 10.4.0.1: icmp_seq=129 ttl=64 time=1.62 ms
+64 bytes from 10.4.0.1: icmp_seq=130 ttl=64 time=1.74 ms
+64 bytes from 10.4.0.1: icmp_seq=131 ttl=64 time=1.59 ms
+^C
+--- 10.4.0.1 ping statistics ---
+131 packets transmitted, 131 received, 0% packet loss, time 131033ms
+rtt min/avg/max/mdev = 0.434/1.213/2.507/0.495 ms
+nsr@nsr-VirtualBox:~/Desktop$ telnet 10.4.0.1
+Trying 10.4.0.1...
+Connected to 10.4.0.1.
+Escape character is '^]'.
+Ubuntu 20.04.1 LTS
+nsr-VirtualBox login: user
+Password: 
+
+Login incorrect
+nsr-VirtualBox login: nsr
+Password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.15.0-69-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+463 updates can be installed immediately.
+228 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Tue Apr  4 21:59:21 AEST 2023 from 10.4.0.2 on pts/1
+nsr@nsr-VirtualBox:~$ ls -al
+total 92
+drwxr-xr-x 17 nsr  nsr  4096 Apr  4 21:31 .
+drwxr-xr-x  4 root root 4096 Feb  4  2021 ..
+-rw-------  1 nsr  nsr  1736 Apr  4 22:06 .bash_history
+-rw-r--r--  1 nsr  nsr   220 Feb  4  2021 .bash_logout
+-rw-r--r--  1 nsr  nsr  3771 Feb  4  2021 .bashrc
+drwx------ 13 nsr  nsr  4096 Feb  9  2021 .cache
+drwx------ 12 nsr  nsr  4096 Feb  9  2021 .config
+drwxr-xr-x  2 nsr  nsr  4096 Apr  4 22:14 Desktop
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Documents
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Downloads
+drwx------  3 nsr  nsr  4096 Apr  4 21:29 .gnupg
+drwx------  3 nsr  nsr  4096 Feb  4  2021 .local
+drwx------  5 nsr  nsr  4096 Feb  9  2021 .mozilla
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Music
+-rw-------  1 nsr  nsr   636 Apr  4 21:31 mykey
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Pictures
+-rw-r--r--  1 nsr  nsr   807 Feb  4  2021 .profile
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Public
+drwxr-x---  2 root root 4096 Feb  4  2021 shares
+drwx------  2 nsr  nsr  4096 Apr  4 21:35 .ssh
+-rw-r--r--  1 nsr  nsr     0 Feb  4  2021 .sudo_as_admin_successful
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Templates
+-rw-r-----  1 nsr  nsr     5 Feb  9  2021 .vboxclient-draganddrop.pid
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Videos
+nsr@nsr-VirtualBox:~$ ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.19.128  netmask 255.255.255.0  broadcast 192.168.19.255
+        inet6 fe80::7b4c:4bff:cbc5:2b4f  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:3c:d4:8e  txqueuelen 1000  (Ethernet)
+        RX packets 404  bytes 59454 (59.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 415  bytes 57045 (57.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 179  bytes 19827 (19.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 179  bytes 19827 (19.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tun1: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1500
+        inet 10.4.0.1  netmask 255.255.255.255  destination 10.4.0.2
+        inet6 fe80::9555:f121:8aa8:d208  prefixlen 64  scopeid 0x20<link>
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 100  (UNSPEC)
+        RX packets 225  bytes 16045 (16.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 197  bytes 16820 (16.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+nsr@nsr-VirtualBox:~$ ping 10.4.0.2
+PING 10.4.0.2 (10.4.0.2) 56(84) bytes of data.
+64 bytes from 10.4.0.2: icmp_seq=1 ttl=64 time=0.514 ms
+64 bytes from 10.4.0.2: icmp_seq=2 ttl=64 time=0.765 ms
+64 bytes from 10.4.0.2: icmp_seq=3 ttl=64 time=0.466 ms
+64 bytes from 10.4.0.2: icmp_seq=4 ttl=64 time=0.930 ms
+64 bytes from 10.4.0.2: icmp_seq=5 ttl=64 time=1.60 ms
+64 bytes from 10.4.0.2: icmp_seq=6 ttl=64 time=0.514 ms
+64 bytes from 10.4.0.2: icmp_seq=7 ttl=64 time=1.59 ms
+64 bytes from 10.4.0.2: icmp_seq=8 ttl=64 time=1.47 ms
+64 bytes from 10.4.0.2: icmp_seq=9 ttl=64 time=0.725 ms
+64 bytes from 10.4.0.2: icmp_seq=10 ttl=64 time=1.46 ms
+64 bytes from 10.4.0.2: icmp_seq=11 ttl=64 time=1.59 ms
+64 bytes from 10.4.0.2: icmp_seq=12 ttl=64 time=0.608 ms
+64 bytes from 10.4.0.2: icmp_seq=13 ttl=64 time=0.601 ms
+64 bytes from 10.4.0.2: icmp_seq=14 ttl=64 time=0.679 ms
+64 bytes from 10.4.0.2: icmp_seq=15 ttl=64 time=0.462 ms
+64 bytes from 10.4.0.2: icmp_seq=16 ttl=64 time=1.08 ms
+64 bytes from 10.4.0.2: icmp_seq=17 ttl=64 time=0.758 ms
+64 bytes from 10.4.0.2: icmp_seq=18 ttl=64 time=1.86 ms
+64 bytes from 10.4.0.2: icmp_seq=19 ttl=64 time=0.468 ms
+64 bytes from 10.4.0.2: icmp_seq=20 ttl=64 time=1.44 ms
+64 bytes from 10.4.0.2: icmp_seq=21 ttl=64 time=1.73 ms
+64 bytes from 10.4.0.2: icmp_seq=22 ttl=64 time=0.457 ms
+64 bytes from 10.4.0.2: icmp_seq=23 ttl=64 time=0.728 ms
+64 bytes from 10.4.0.2: icmp_seq=24 ttl=64 time=1.48 ms
+64 bytes from 10.4.0.2: icmp_seq=25 ttl=64 time=1.74 ms
+64 bytes from 10.4.0.2: icmp_seq=26 ttl=64 time=1.64 ms
+64 bytes from 10.4.0.2: icmp_seq=27 ttl=64 time=1.12 ms
+64 bytes from 10.4.0.2: icmp_seq=28 ttl=64 time=1.62 ms
+64 bytes from 10.4.0.2: icmp_seq=29 ttl=64 time=1.87 ms
+64 bytes from 10.4.0.2: icmp_seq=30 ttl=64 time=1.71 ms
+64 bytes from 10.4.0.2: icmp_seq=31 ttl=64 time=1.49 ms
+64 bytes from 10.4.0.2: icmp_seq=32 ttl=64 time=0.836 ms
+64 bytes from 10.4.0.2: icmp_seq=33 ttl=64 time=0.598 ms
+64 bytes from 10.4.0.2: icmp_seq=34 ttl=64 time=0.708 ms
+64 bytes from 10.4.0.2: icmp_seq=35 ttl=64 time=1.51 ms
+64 bytes from 10.4.0.2: icmp_seq=36 ttl=64 time=1.54 ms
+64 bytes from 10.4.0.2: icmp_seq=37 ttl=64 time=1.73 ms
+64 bytes from 10.4.0.2: icmp_seq=38 ttl=64 time=1.55 ms
+64 bytes from 10.4.0.2: icmp_seq=39 ttl=64 time=1.62 ms
+64 bytes from 10.4.0.2: icmp_seq=40 ttl=64 time=1.65 ms
+64 bytes from 10.4.0.2: icmp_seq=41 ttl=64 time=1.64 ms
+64 bytes from 10.4.0.2: icmp_seq=42 ttl=64 time=1.70 ms
+64 bytes from 10.4.0.2: icmp_seq=43 ttl=64 time=1.63 ms
+64 bytes from 10.4.0.2: icmp_seq=44 ttl=64 time=1.55 ms
+64 bytes from 10.4.0.2: icmp_seq=45 ttl=64 time=1.75 ms
+64 bytes from 10.4.0.2: icmp_seq=46 ttl=64 time=1.54 ms
+64 bytes from 10.4.0.2: icmp_seq=47 ttl=64 time=1.61 ms
+64 bytes from 10.4.0.2: icmp_seq=48 ttl=64 time=1.57 ms
+64 bytes from 10.4.0.2: icmp_seq=49 ttl=64 time=1.49 ms
+64 bytes from 10.4.0.2: icmp_seq=50 ttl=64 time=1.63 ms
+^C
+--- 10.4.0.2 ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49313ms
+rtt min/avg/max/mdev = 0.457/1.260/1.866/0.473 ms
+nsr@nsr-VirtualBox:~$ exit
+logout
+Connection closed by foreign host.
+nsr@nsr-VirtualBox:~/Desktop$ ping 10.4.0.2
+PING 10.4.0.2 (10.4.0.2) 56(84) bytes of data.
+64 bytes from 10.4.0.2: icmp_seq=1 ttl=64 time=0.014 ms
+64 bytes from 10.4.0.2: icmp_seq=2 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=3 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=4 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=5 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=6 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=7 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=8 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=9 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=10 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=11 ttl=64 time=0.029 ms
+64 bytes from 10.4.0.2: icmp_seq=12 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=13 ttl=64 time=0.020 ms
+64 bytes from 10.4.0.2: icmp_seq=14 ttl=64 time=0.108 ms
+64 bytes from 10.4.0.2: icmp_seq=15 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=16 ttl=64 time=0.049 ms
+64 bytes from 10.4.0.2: icmp_seq=17 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=18 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=19 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=20 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=21 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=22 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=23 ttl=64 time=0.078 ms
+64 bytes from 10.4.0.2: icmp_seq=24 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=25 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=26 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=27 ttl=64 time=0.053 ms
+64 bytes from 10.4.0.2: icmp_seq=28 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=29 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=30 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=31 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=32 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=33 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=34 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=35 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=36 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=37 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=38 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=39 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=40 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=41 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=42 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=43 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=44 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=45 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=46 ttl=64 time=0.056 ms
+64 bytes from 10.4.0.2: icmp_seq=47 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=48 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=49 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=50 ttl=64 time=0.042 ms
+64 bytes from 10.4.0.2: icmp_seq=51 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=52 ttl=64 time=0.053 ms
+64 bytes from 10.4.0.2: icmp_seq=53 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=54 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=55 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=56 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=57 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=58 ttl=64 time=0.066 ms
+64 bytes from 10.4.0.2: icmp_seq=59 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=60 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=61 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=62 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=63 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=64 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=65 ttl=64 time=0.037 ms
+64 bytes from 10.4.0.2: icmp_seq=66 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=67 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=68 ttl=64 time=0.050 ms
+64 bytes from 10.4.0.2: icmp_seq=69 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=70 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=71 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=72 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=73 ttl=64 time=0.049 ms
+64 bytes from 10.4.0.2: icmp_seq=74 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=75 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=76 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=77 ttl=64 time=0.043 ms
+64 bytes from 10.4.0.2: icmp_seq=78 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=79 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=80 ttl=64 time=0.036 ms
+64 bytes from 10.4.0.2: icmp_seq=81 ttl=64 time=0.054 ms
+64 bytes from 10.4.0.2: icmp_seq=82 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=83 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=84 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=85 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=86 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=87 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=88 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=89 ttl=64 time=0.076 ms
+64 bytes from 10.4.0.2: icmp_seq=90 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=91 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=92 ttl=64 time=0.124 ms
+64 bytes from 10.4.0.2: icmp_seq=93 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=94 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=95 ttl=64 time=0.049 ms
+64 bytes from 10.4.0.2: icmp_seq=96 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=97 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=98 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=99 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=100 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=101 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=102 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=103 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=104 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=105 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=106 ttl=64 time=0.044 ms
+64 bytes from 10.4.0.2: icmp_seq=107 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=108 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=109 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=110 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=111 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=112 ttl=64 time=0.041 ms
+64 bytes from 10.4.0.2: icmp_seq=113 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=114 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=115 ttl=64 time=0.036 ms
+64 bytes from 10.4.0.2: icmp_seq=116 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=117 ttl=64 time=0.066 ms
+64 bytes from 10.4.0.2: icmp_seq=118 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=119 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=120 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=121 ttl=64 time=0.056 ms
+64 bytes from 10.4.0.2: icmp_seq=122 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=123 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=124 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=125 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=126 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=127 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=128 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=129 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=130 ttl=64 time=0.054 ms
+64 bytes from 10.4.0.2: icmp_seq=131 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=132 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=133 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=134 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=135 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=136 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=137 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=138 ttl=64 time=0.044 ms
+64 bytes from 10.4.0.2: icmp_seq=139 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=140 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=141 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=142 ttl=64 time=0.066 ms
+64 bytes from 10.4.0.2: icmp_seq=143 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=144 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=145 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=146 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=147 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=148 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=149 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=150 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=151 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=152 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=153 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=154 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=155 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=156 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=157 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=158 ttl=64 time=0.054 ms
+64 bytes from 10.4.0.2: icmp_seq=159 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=160 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=161 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=162 ttl=64 time=0.035 ms
+64 bytes from 10.4.0.2: icmp_seq=163 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=164 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=165 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=166 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=167 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=168 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=169 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=170 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=171 ttl=64 time=0.042 ms
+64 bytes from 10.4.0.2: icmp_seq=172 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=173 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=174 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=175 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=176 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=177 ttl=64 time=0.032 ms
+64 bytes from 10.4.0.2: icmp_seq=178 ttl=64 time=0.029 ms
+64 bytes from 10.4.0.2: icmp_seq=179 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=180 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=181 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=182 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=183 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=184 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=185 ttl=64 time=0.073 ms
+64 bytes from 10.4.0.2: icmp_seq=186 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=187 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=188 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=189 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=190 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=191 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=192 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=193 ttl=64 time=0.069 ms
+64 bytes from 10.4.0.2: icmp_seq=194 ttl=64 time=0.029 ms
+64 bytes from 10.4.0.2: icmp_seq=195 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=196 ttl=64 time=0.032 ms
+64 bytes from 10.4.0.2: icmp_seq=197 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=198 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=199 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=200 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=201 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=202 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=203 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=204 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=205 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=206 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=207 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=208 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=209 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=210 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=211 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=212 ttl=64 time=0.046 ms
+64 bytes from 10.4.0.2: icmp_seq=213 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=214 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=215 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=216 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=217 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=218 ttl=64 time=0.036 ms
+64 bytes from 10.4.0.2: icmp_seq=219 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=220 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=221 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=222 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=223 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=224 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=225 ttl=64 time=0.020 ms
+64 bytes from 10.4.0.2: icmp_seq=226 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=227 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=228 ttl=64 time=0.036 ms
+64 bytes from 10.4.0.2: icmp_seq=229 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=230 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=231 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=232 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=233 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=234 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=235 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=236 ttl=64 time=0.051 ms
+64 bytes from 10.4.0.2: icmp_seq=237 ttl=64 time=0.098 ms
+64 bytes from 10.4.0.2: icmp_seq=238 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=239 ttl=64 time=0.074 ms
+64 bytes from 10.4.0.2: icmp_seq=240 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=241 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=242 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=243 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=244 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=245 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=246 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=247 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=248 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=249 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=250 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=251 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=252 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=253 ttl=64 time=0.073 ms
+64 bytes from 10.4.0.2: icmp_seq=254 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=255 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=256 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=257 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=258 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=259 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=260 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=261 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=262 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=263 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=264 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=265 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=266 ttl=64 time=0.049 ms
+64 bytes from 10.4.0.2: icmp_seq=267 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=268 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=269 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=270 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=271 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=272 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=273 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=274 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=275 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=276 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=277 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=278 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=279 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=280 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=281 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=282 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=283 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=284 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=285 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=286 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=287 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=288 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=289 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=290 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=291 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=292 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=293 ttl=64 time=0.065 ms
+64 bytes from 10.4.0.2: icmp_seq=294 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=295 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=296 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=297 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=298 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=299 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=300 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=301 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=302 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=303 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=304 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=305 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=306 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=307 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=308 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=309 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=310 ttl=64 time=0.049 ms
+64 bytes from 10.4.0.2: icmp_seq=311 ttl=64 time=0.041 ms
+64 bytes from 10.4.0.2: icmp_seq=312 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=313 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=314 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=315 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=316 ttl=64 time=0.043 ms
+64 bytes from 10.4.0.2: icmp_seq=317 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=318 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=319 ttl=64 time=0.029 ms
+64 bytes from 10.4.0.2: icmp_seq=320 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=321 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=322 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=323 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=324 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=325 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=326 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=327 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=328 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=329 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=330 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=331 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=332 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=333 ttl=64 time=0.053 ms
+64 bytes from 10.4.0.2: icmp_seq=334 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=335 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=336 ttl=64 time=0.020 ms
+64 bytes from 10.4.0.2: icmp_seq=337 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=338 ttl=64 time=0.046 ms
+64 bytes from 10.4.0.2: icmp_seq=339 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=340 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=341 ttl=64 time=0.086 ms
+64 bytes from 10.4.0.2: icmp_seq=342 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=343 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=344 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=345 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=346 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=347 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=348 ttl=64 time=0.046 ms
+64 bytes from 10.4.0.2: icmp_seq=349 ttl=64 time=0.035 ms
+64 bytes from 10.4.0.2: icmp_seq=350 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=351 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=352 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=353 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=354 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=355 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=356 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=357 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=358 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=359 ttl=64 time=0.164 ms
+64 bytes from 10.4.0.2: icmp_seq=360 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=361 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=362 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=363 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=364 ttl=64 time=0.072 ms
+64 bytes from 10.4.0.2: icmp_seq=365 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=366 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=367 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=368 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=369 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=370 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=371 ttl=64 time=0.176 ms
+64 bytes from 10.4.0.2: icmp_seq=372 ttl=64 time=0.043 ms
+64 bytes from 10.4.0.2: icmp_seq=373 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=374 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=375 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=376 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=377 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=378 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=379 ttl=64 time=0.052 ms
+64 bytes from 10.4.0.2: icmp_seq=380 ttl=64 time=0.044 ms
+64 bytes from 10.4.0.2: icmp_seq=381 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=382 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=383 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=384 ttl=64 time=0.040 ms
+64 bytes from 10.4.0.2: icmp_seq=385 ttl=64 time=0.053 ms
+64 bytes from 10.4.0.2: icmp_seq=386 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=387 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=388 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=389 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=390 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=391 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=392 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=393 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=394 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=395 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=396 ttl=64 time=0.069 ms
+64 bytes from 10.4.0.2: icmp_seq=397 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=398 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=399 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=400 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=401 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=402 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=403 ttl=64 time=0.044 ms
+64 bytes from 10.4.0.2: icmp_seq=404 ttl=64 time=0.042 ms
+64 bytes from 10.4.0.2: icmp_seq=405 ttl=64 time=0.054 ms
+64 bytes from 10.4.0.2: icmp_seq=406 ttl=64 time=0.106 ms
+64 bytes from 10.4.0.2: icmp_seq=407 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=408 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=409 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=410 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=411 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=412 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=413 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=414 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=415 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=416 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=417 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=418 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=419 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=420 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=421 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=422 ttl=64 time=0.050 ms
+64 bytes from 10.4.0.2: icmp_seq=423 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=424 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=425 ttl=64 time=0.051 ms
+64 bytes from 10.4.0.2: icmp_seq=426 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=427 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=428 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=429 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=430 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=431 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=432 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=433 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=434 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=435 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=436 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=437 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=438 ttl=64 time=0.029 ms
+64 bytes from 10.4.0.2: icmp_seq=439 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=440 ttl=64 time=0.053 ms
+64 bytes from 10.4.0.2: icmp_seq=441 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=442 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=443 ttl=64 time=0.029 ms
+64 bytes from 10.4.0.2: icmp_seq=444 ttl=64 time=0.049 ms
+64 bytes from 10.4.0.2: icmp_seq=445 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=446 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=447 ttl=64 time=0.052 ms
+64 bytes from 10.4.0.2: icmp_seq=448 ttl=64 time=0.074 ms
+64 bytes from 10.4.0.2: icmp_seq=449 ttl=64 time=0.044 ms
+64 bytes from 10.4.0.2: icmp_seq=450 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=451 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=452 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=453 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=454 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=455 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=456 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=457 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=458 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=459 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=460 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=461 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=462 ttl=64 time=0.046 ms
+64 bytes from 10.4.0.2: icmp_seq=463 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=464 ttl=64 time=0.050 ms
+64 bytes from 10.4.0.2: icmp_seq=465 ttl=64 time=0.032 ms
+64 bytes from 10.4.0.2: icmp_seq=466 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=467 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=468 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=469 ttl=64 time=0.041 ms
+64 bytes from 10.4.0.2: icmp_seq=470 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=471 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=472 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=473 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=474 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=475 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=476 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=477 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=478 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=479 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=480 ttl=64 time=0.070 ms
+64 bytes from 10.4.0.2: icmp_seq=481 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=482 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=483 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=484 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=485 ttl=64 time=0.029 ms
+64 bytes from 10.4.0.2: icmp_seq=486 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=487 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=488 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=489 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=490 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=491 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=492 ttl=64 time=0.051 ms
+64 bytes from 10.4.0.2: icmp_seq=493 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=494 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=495 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=496 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=497 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=498 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=499 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=500 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=501 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=502 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=503 ttl=64 time=0.051 ms
+64 bytes from 10.4.0.2: icmp_seq=504 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=505 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=506 ttl=64 time=0.050 ms
+64 bytes from 10.4.0.2: icmp_seq=507 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=508 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=509 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=510 ttl=64 time=0.047 ms
+64 bytes from 10.4.0.2: icmp_seq=511 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=512 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=513 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=514 ttl=64 time=0.069 ms
+64 bytes from 10.4.0.2: icmp_seq=515 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=516 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=517 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=518 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=519 ttl=64 time=0.020 ms
+64 bytes from 10.4.0.2: icmp_seq=520 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=521 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=522 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=523 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=524 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=525 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=526 ttl=64 time=0.035 ms
+64 bytes from 10.4.0.2: icmp_seq=527 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=528 ttl=64 time=0.066 ms
+64 bytes from 10.4.0.2: icmp_seq=529 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=530 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=531 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=532 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=533 ttl=64 time=0.047 ms
+64 bytes from 10.4.0.2: icmp_seq=534 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=535 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=536 ttl=64 time=0.036 ms
+64 bytes from 10.4.0.2: icmp_seq=537 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=538 ttl=64 time=0.032 ms
+64 bytes from 10.4.0.2: icmp_seq=539 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=540 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=541 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=542 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=543 ttl=64 time=0.045 ms
+64 bytes from 10.4.0.2: icmp_seq=544 ttl=64 time=0.050 ms
+64 bytes from 10.4.0.2: icmp_seq=545 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=546 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=547 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=548 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=549 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=550 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=551 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=552 ttl=64 time=0.065 ms
+64 bytes from 10.4.0.2: icmp_seq=553 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=554 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=555 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=556 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=557 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=558 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=559 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=560 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=561 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=562 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=563 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=564 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=565 ttl=64 time=0.065 ms
+64 bytes from 10.4.0.2: icmp_seq=566 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=567 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=568 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=569 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=570 ttl=64 time=0.045 ms
+64 bytes from 10.4.0.2: icmp_seq=571 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=572 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=573 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=574 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=575 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=576 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=577 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=578 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=579 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=580 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=581 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=582 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=583 ttl=64 time=0.079 ms
+64 bytes from 10.4.0.2: icmp_seq=584 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=585 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=586 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=587 ttl=64 time=0.040 ms
+64 bytes from 10.4.0.2: icmp_seq=588 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=589 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=590 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=591 ttl=64 time=0.159 ms
+64 bytes from 10.4.0.2: icmp_seq=592 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=593 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=594 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=595 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=596 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=597 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=598 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=599 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=600 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=601 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=602 ttl=64 time=0.125 ms
+64 bytes from 10.4.0.2: icmp_seq=603 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=604 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=605 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=606 ttl=64 time=0.053 ms
+64 bytes from 10.4.0.2: icmp_seq=607 ttl=64 time=0.053 ms
+64 bytes from 10.4.0.2: icmp_seq=608 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=609 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=610 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=611 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=612 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=613 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=614 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=615 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=616 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=617 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=618 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=619 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=620 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=621 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=622 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=623 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=624 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=625 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=626 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=627 ttl=64 time=0.077 ms
+64 bytes from 10.4.0.2: icmp_seq=628 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=629 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=630 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=631 ttl=64 time=0.068 ms
+64 bytes from 10.4.0.2: icmp_seq=632 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=633 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=634 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=635 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=636 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=637 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=638 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=639 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=640 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=641 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=642 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=643 ttl=64 time=0.036 ms
+64 bytes from 10.4.0.2: icmp_seq=644 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=645 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=646 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=647 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=648 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=649 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=650 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=651 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=652 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=653 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=654 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=655 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=656 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=657 ttl=64 time=0.065 ms
+64 bytes from 10.4.0.2: icmp_seq=658 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=659 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=660 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=661 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=662 ttl=64 time=0.067 ms
+64 bytes from 10.4.0.2: icmp_seq=663 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=664 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=665 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=666 ttl=64 time=0.072 ms
+64 bytes from 10.4.0.2: icmp_seq=667 ttl=64 time=0.056 ms
+64 bytes from 10.4.0.2: icmp_seq=668 ttl=64 time=0.035 ms
+64 bytes from 10.4.0.2: icmp_seq=669 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=670 ttl=64 time=0.045 ms
+64 bytes from 10.4.0.2: icmp_seq=671 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=672 ttl=64 time=0.112 ms
+64 bytes from 10.4.0.2: icmp_seq=673 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=674 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=675 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=676 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=677 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=678 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=679 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=680 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=681 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=682 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=683 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=684 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=685 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=686 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=687 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=688 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=689 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=690 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=691 ttl=64 time=0.067 ms
+64 bytes from 10.4.0.2: icmp_seq=692 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=693 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=694 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=695 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=696 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=697 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=698 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=699 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=700 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=701 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=702 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=703 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=704 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=705 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=706 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=707 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=708 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=709 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=710 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=711 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=712 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=713 ttl=64 time=0.033 ms
+64 bytes from 10.4.0.2: icmp_seq=714 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=715 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=716 ttl=64 time=0.066 ms
+64 bytes from 10.4.0.2: icmp_seq=717 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=718 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=719 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=720 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=721 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=722 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=723 ttl=64 time=0.056 ms
+64 bytes from 10.4.0.2: icmp_seq=724 ttl=64 time=0.050 ms
+64 bytes from 10.4.0.2: icmp_seq=725 ttl=64 time=0.705 ms
+64 bytes from 10.4.0.2: icmp_seq=726 ttl=64 time=0.046 ms
+64 bytes from 10.4.0.2: icmp_seq=727 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=728 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=729 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=730 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=731 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=732 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=733 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=734 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=735 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=736 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=737 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=738 ttl=64 time=0.059 ms
+64 bytes from 10.4.0.2: icmp_seq=739 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=740 ttl=64 time=0.054 ms
+64 bytes from 10.4.0.2: icmp_seq=741 ttl=64 time=0.063 ms
+64 bytes from 10.4.0.2: icmp_seq=742 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=743 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=744 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=745 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=746 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=747 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=748 ttl=64 time=0.035 ms
+64 bytes from 10.4.0.2: icmp_seq=749 ttl=64 time=0.064 ms
+64 bytes from 10.4.0.2: icmp_seq=750 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=751 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=752 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=753 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=754 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=755 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=756 ttl=64 time=0.028 ms
+64 bytes from 10.4.0.2: icmp_seq=757 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=758 ttl=64 time=0.030 ms
+64 bytes from 10.4.0.2: icmp_seq=759 ttl=64 time=0.039 ms
+64 bytes from 10.4.0.2: icmp_seq=760 ttl=64 time=0.043 ms
+64 bytes from 10.4.0.2: icmp_seq=761 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=762 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=763 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=764 ttl=64 time=0.060 ms
+64 bytes from 10.4.0.2: icmp_seq=765 ttl=64 time=0.061 ms
+64 bytes from 10.4.0.2: icmp_seq=766 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=767 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=768 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=769 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=770 ttl=64 time=0.032 ms
+64 bytes from 10.4.0.2: icmp_seq=771 ttl=64 time=0.037 ms
+64 bytes from 10.4.0.2: icmp_seq=772 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=773 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=774 ttl=64 time=0.034 ms
+64 bytes from 10.4.0.2: icmp_seq=775 ttl=64 time=0.047 ms
+64 bytes from 10.4.0.2: icmp_seq=776 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=777 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=778 ttl=64 time=0.035 ms
+64 bytes from 10.4.0.2: icmp_seq=779 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=780 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=781 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=782 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=783 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=784 ttl=64 time=0.037 ms
+64 bytes from 10.4.0.2: icmp_seq=785 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=786 ttl=64 time=0.055 ms
+64 bytes from 10.4.0.2: icmp_seq=787 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=788 ttl=64 time=0.032 ms
+64 bytes from 10.4.0.2: icmp_seq=789 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=790 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=791 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=792 ttl=64 time=0.057 ms
+64 bytes from 10.4.0.2: icmp_seq=793 ttl=64 time=0.062 ms
+64 bytes from 10.4.0.2: icmp_seq=794 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=795 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=796 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=797 ttl=64 time=0.027 ms
+64 bytes from 10.4.0.2: icmp_seq=798 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=799 ttl=64 time=0.058 ms
+64 bytes from 10.4.0.2: icmp_seq=800 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=801 ttl=64 time=0.043 ms
+64 bytes from 10.4.0.2: icmp_seq=802 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=803 ttl=64 time=0.050 ms
+64 bytes from 10.4.0.2: icmp_seq=804 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=805 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=806 ttl=64 time=0.023 ms
+64 bytes from 10.4.0.2: icmp_seq=807 ttl=64 time=0.040 ms
+64 bytes from 10.4.0.2: icmp_seq=808 ttl=64 time=0.025 ms
+64 bytes from 10.4.0.2: icmp_seq=809 ttl=64 time=0.038 ms
+64 bytes from 10.4.0.2: icmp_seq=810 ttl=64 time=0.031 ms
+64 bytes from 10.4.0.2: icmp_seq=811 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=812 ttl=64 time=0.024 ms
+64 bytes from 10.4.0.2: icmp_seq=813 ttl=64 time=0.022 ms
+64 bytes from 10.4.0.2: icmp_seq=814 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=815 ttl=64 time=0.050 ms
+64 bytes from 10.4.0.2: icmp_seq=816 ttl=64 time=0.026 ms
+64 bytes from 10.4.0.2: icmp_seq=817 ttl=64 time=0.021 ms
+64 bytes from 10.4.0.2: icmp_seq=818 ttl=64 time=0.129 ms
+^C
+--- 10.4.0.2 ping statistics ---
+818 packets transmitted, 818 received, 0% packet loss, time 836587ms
+rtt min/avg/max/mdev = 0.014/0.046/0.705/0.030 ms
+nsr@nsr-VirtualBox:~/Desktop$ ^C
+nsr@nsr-VirtualBox:~/Desktop$ 
+
+
+
+
+
+
+
+VM1:
+
+
+
+
+nsr@nsr-VirtualBox:~/Desktop$ ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.19.128  netmask 255.255.255.0  broadcast 192.168.19.255
+        inet6 fe80::7b4c:4bff:cbc5:2b4f  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:3c:d4:8e  txqueuelen 1000  (Ethernet)
+        RX packets 22  bytes 3512 (3.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 76  bytes 8920 (8.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 45  bytes 5202 (5.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 45  bytes 5202 (5.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+nsr@nsr-VirtualBox:~/Desktop$ ping 192.168.19.128
+PING 192.168.19.128 (192.168.19.128) 56(84) bytes of data.
+64 bytes from 192.168.19.128: icmp_seq=1 ttl=64 time=0.017 ms
+64 bytes from 192.168.19.128: icmp_seq=2 ttl=64 time=0.025 ms
+64 bytes from 192.168.19.128: icmp_seq=3 ttl=64 time=0.045 ms
+64 bytes from 192.168.19.128: icmp_seq=4 ttl=64 time=0.056 ms
+^C
+--- 192.168.19.128 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3068ms
+rtt min/avg/max/mdev = 0.017/0.035/0.056/0.015 ms
+nsr@nsr-VirtualBox:~/Desktop$ ping 192.168.19.129
+PING 192.168.19.129 (192.168.19.129) 56(84) bytes of data.
+64 bytes from 192.168.19.129: icmp_seq=1 ttl=64 time=0.510 ms
+64 bytes from 192.168.19.129: icmp_seq=2 ttl=64 time=0.785 ms
+^C
+--- 192.168.19.129 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1015ms
+rtt min/avg/max/mdev = 0.510/0.647/0.785/0.137 ms
+nsr@nsr-VirtualBox:~/Desktop$ open --genkey --secret mykey
+
+Command 'open' not found, did you mean:
+
+  command 'pen' from deb pen (0.34.1-1build1)
+  command 'wopen' from deb gworkspace.app (0.9.4-2)
+  command 'gopen' from deb gnustep-gui-runtime (0.27.0-5build2)
+
+Try: sudo apt install <deb name>
+
+nsr@nsr-VirtualBox:~/Desktop$ openvpn --genkey --secret mykey
+nsr@nsr-VirtualBox:~/Desktop$ cat mykey
+#
+# 2048 bit OpenVPN static key
+#
+-----BEGIN OpenVPN Static key V1-----
+f424db6250d44138b7dfc3ef6213e0bf
+8852c9b2b08a21d9f54b20161834c79d
+6761f44794c54f801f8ad8f066187d10
+636d2ffd0a48cd34aff3a63f24c24754
+7daf6bd001afd560955908662e3d1d11
+7bcec6c8b510a698cbdc5ea2c19a8cbe
+abc2a07089794b233a6b160b1b1fd17a
+7820a9a94ce749c861ca561d167487e8
+6e71ff3da02e42cef0e5d6d6d9819e33
+33bbeadfdbc831e062f068c34ec35795
+38131c5f20f0a195b5f883a225b99296
+85d455a5fd93e59e0a3e8867ea419c6a
+054e592ac8caa7625c10007115435927
+fe38c02455d3ceeecc57171a4754e201
+df68c09155a7e322f7e8e5260c634db5
+deacde78effd6d8bcd44d60ec6088563
+-----END OpenVPN Static key V1-----
+nsr@nsr-VirtualBox:~/Desktop$ sudo apt-get install openssh-server
+[sudo] password for nsr: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+openssh-server is already the newest version (1:8.2p1-4ubuntu0.5).
+The following packages were automatically installed and are no longer required:
+  linux-headers-5.4.0-42 linux-headers-5.4.0-42-generic
+  linux-image-5.4.0-42-generic linux-modules-5.4.0-42-generic
+  linux-modules-extra-5.4.0-42-generic
+Use 'sudo apt autoremove' to remove them.
+0 to upgrade, 0 to newly install, 0 to remove and 453 not to upgrade.
+nsr@nsr-VirtualBox:~/Desktop$ scp mykey nsr@192.168.19.129:Desktop/mykey
+nsr@192.168.19.129's password: 
+mykey                                        100%  636   548.2KB/s   00:00    
+nsr@nsr-VirtualBox:~/Desktop$ sudo openvpn --remote 192.168.19.128 --dev tun1 --ifconfig 10.4.0.1 10.4.0.2 --verb 5 --secret mykey
+Tue Apr  4 22:21:07 2023 us=910349 disabling NCP mode (--ncp-disable) because not in P2MP client or server mode
+Tue Apr  4 22:21:07 2023 us=910474 Current Parameter Settings:
+Tue Apr  4 22:21:07 2023 us=910520   config = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=910562   mode = 0
+Tue Apr  4 22:21:07 2023 us=910602   persist_config = DISABLED
+Tue Apr  4 22:21:07 2023 us=910665   persist_mode = 1
+Tue Apr  4 22:21:07 2023 us=910708   show_ciphers = DISABLED
+Tue Apr  4 22:21:07 2023 us=910748   show_digests = DISABLED
+Tue Apr  4 22:21:07 2023 us=910787   show_engines = DISABLED
+Tue Apr  4 22:21:07 2023 us=910827   genkey = DISABLED
+Tue Apr  4 22:21:07 2023 us=910867   key_pass_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=910907   show_tls_ciphers = DISABLED
+Tue Apr  4 22:21:07 2023 us=910947   connect_retry_max = 0
+Tue Apr  4 22:21:07 2023 us=910987 Connection profiles [0]:
+Tue Apr  4 22:21:07 2023 us=911027   proto = udp
+Tue Apr  4 22:21:07 2023 us=911067   local = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=911106   local_port = '1194'
+Tue Apr  4 22:21:07 2023 us=911167   remote = '192.168.19.128'
+Tue Apr  4 22:21:07 2023 us=911209   remote_port = '1194'
+Tue Apr  4 22:21:07 2023 us=911249   remote_float = DISABLED
+Tue Apr  4 22:21:07 2023 us=911288   bind_defined = DISABLED
+Tue Apr  4 22:21:07 2023 us=911327   bind_local = ENABLED
+Tue Apr  4 22:21:07 2023 us=911367   bind_ipv6_only = DISABLED
+Tue Apr  4 22:21:07 2023 us=911406   connect_retry_seconds = 5
+Tue Apr  4 22:21:07 2023 us=911445   connect_timeout = 120
+Tue Apr  4 22:21:07 2023 us=911485   socks_proxy_server = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=911524   socks_proxy_port = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=911564   tun_mtu = 1500
+Tue Apr  4 22:21:07 2023 us=911603   tun_mtu_defined = ENABLED
+Tue Apr  4 22:21:07 2023 us=911705   link_mtu = 1500
+Tue Apr  4 22:21:07 2023 us=911759   link_mtu_defined = DISABLED
+Tue Apr  4 22:21:07 2023 us=911799   tun_mtu_extra = 0
+Tue Apr  4 22:21:07 2023 us=911839   tun_mtu_extra_defined = DISABLED
+Tue Apr  4 22:21:07 2023 us=911879   mtu_discover_type = -1
+Tue Apr  4 22:21:07 2023 us=911919   fragment = 0
+Tue Apr  4 22:21:07 2023 us=911958   mssfix = 1450
+Tue Apr  4 22:21:07 2023 us=911998   explicit_exit_notification = 0
+Tue Apr  4 22:21:07 2023 us=912037 Connection profiles END
+Tue Apr  4 22:21:07 2023 us=912077   remote_random = DISABLED
+Tue Apr  4 22:21:07 2023 us=912134   ipchange = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=912180   dev = 'tun1'
+Tue Apr  4 22:21:07 2023 us=912219   dev_type = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=912259   dev_node = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=912298   lladdr = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=912337   topology = 1
+Tue Apr  4 22:21:07 2023 us=912387   ifconfig_local = '10.4.0.1'
+Tue Apr  4 22:21:07 2023 us=912422   ifconfig_remote_netmask = '10.4.0.2'
+Tue Apr  4 22:21:07 2023 us=912458   ifconfig_noexec = DISABLED
+Tue Apr  4 22:21:07 2023 us=912493   ifconfig_nowarn = DISABLED
+Tue Apr  4 22:21:07 2023 us=912528   ifconfig_ipv6_local = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=912563   ifconfig_ipv6_netbits = 0
+Tue Apr  4 22:21:07 2023 us=912599   ifconfig_ipv6_remote = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=912653   shaper = 0
+Tue Apr  4 22:21:07 2023 us=912691   mtu_test = 0
+Tue Apr  4 22:21:07 2023 us=912727   mlock = DISABLED
+Tue Apr  4 22:21:07 2023 us=912762   keepalive_ping = 0
+Tue Apr  4 22:21:07 2023 us=912797   keepalive_timeout = 0
+Tue Apr  4 22:21:07 2023 us=912833   inactivity_timeout = 0
+Tue Apr  4 22:21:07 2023 us=912868   ping_send_timeout = 0
+Tue Apr  4 22:21:07 2023 us=912903   ping_rec_timeout = 0
+Tue Apr  4 22:21:07 2023 us=912939   ping_rec_timeout_action = 0
+Tue Apr  4 22:21:07 2023 us=912975   ping_timer_remote = DISABLED
+Tue Apr  4 22:21:07 2023 us=913010   remap_sigusr1 = 0
+Tue Apr  4 22:21:07 2023 us=913045   persist_tun = DISABLED
+Tue Apr  4 22:21:07 2023 us=913080   persist_local_ip = DISABLED
+Tue Apr  4 22:21:07 2023 us=913211   persist_remote_ip = DISABLED
+Tue Apr  4 22:21:07 2023 us=913260   persist_key = DISABLED
+Tue Apr  4 22:21:07 2023 us=913303   passtos = DISABLED
+Tue Apr  4 22:21:07 2023 us=913346   resolve_retry_seconds = 1000000000
+Tue Apr  4 22:21:07 2023 us=913389   resolve_in_advance = DISABLED
+Tue Apr  4 22:21:07 2023 us=913432   username = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=913475   groupname = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=913517   chroot_dir = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=913560   cd_dir = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=913613   writepid = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=913663   up_script = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=913706   down_script = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=913749   down_pre = DISABLED
+Tue Apr  4 22:21:07 2023 us=913792   up_restart = DISABLED
+Tue Apr  4 22:21:07 2023 us=913834   up_delay = DISABLED
+Tue Apr  4 22:21:07 2023 us=913877   daemon = DISABLED
+Tue Apr  4 22:21:07 2023 us=913919   inetd = 0
+Tue Apr  4 22:21:07 2023 us=913962   log = DISABLED
+Tue Apr  4 22:21:07 2023 us=914005   suppress_timestamps = DISABLED
+Tue Apr  4 22:21:07 2023 us=914047   machine_readable_output = DISABLED
+Tue Apr  4 22:21:07 2023 us=914090   nice = 0
+Tue Apr  4 22:21:07 2023 us=914149   verbosity = 5
+Tue Apr  4 22:21:07 2023 us=914193   mute = 0
+Tue Apr  4 22:21:07 2023 us=914236   gremlin = 0
+Tue Apr  4 22:21:07 2023 us=914278   status_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=914321   status_file_version = 1
+Tue Apr  4 22:21:07 2023 us=914363   status_file_update_freq = 60
+Tue Apr  4 22:21:07 2023 us=914406   occ = ENABLED
+Tue Apr  4 22:21:07 2023 us=914448   rcvbuf = 0
+Tue Apr  4 22:21:07 2023 us=914491   sndbuf = 0
+Tue Apr  4 22:21:07 2023 us=914533   mark = 0
+Tue Apr  4 22:21:07 2023 us=914576   sockflags = 0
+Tue Apr  4 22:21:07 2023 us=914635   fast_io = DISABLED
+Tue Apr  4 22:21:07 2023 us=914680   comp.alg = 0
+Tue Apr  4 22:21:07 2023 us=914723   comp.flags = 0
+Tue Apr  4 22:21:07 2023 us=914766   route_script = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=916762   route_default_gateway = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=916818   route_default_metric = 0
+Tue Apr  4 22:21:07 2023 us=916854   route_noexec = DISABLED
+Tue Apr  4 22:21:07 2023 us=916888   route_delay = 0
+Tue Apr  4 22:21:07 2023 us=916927   route_delay_window = 30
+Tue Apr  4 22:21:07 2023 us=916962   route_delay_defined = DISABLED
+Tue Apr  4 22:21:07 2023 us=916996   route_nopull = DISABLED
+Tue Apr  4 22:21:07 2023 us=917030   route_gateway_via_dhcp = DISABLED
+Tue Apr  4 22:21:07 2023 us=917063   allow_pull_fqdn = DISABLED
+Tue Apr  4 22:21:07 2023 us=917141   management_addr = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917178   management_port = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917212   management_user_pass = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917246   management_log_history_cache = 250
+Tue Apr  4 22:21:07 2023 us=917280   management_echo_buffer_size = 100
+Tue Apr  4 22:21:07 2023 us=917314   management_write_peer_info_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917348   management_client_user = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917382   management_client_group = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917415   management_flags = 0
+Tue Apr  4 22:21:07 2023 us=917449   shared_secret_file = 'mykey'
+Tue Apr  4 22:21:07 2023 us=917483   key_direction = not set
+Tue Apr  4 22:21:07 2023 us=917517   ciphername = 'BF-CBC'
+Tue Apr  4 22:21:07 2023 us=917551   ncp_enabled = DISABLED
+Tue Apr  4 22:21:07 2023 us=917603   ncp_ciphers = 'AES-256-GCM:AES-128-GCM'
+Tue Apr  4 22:21:07 2023 us=917640   authname = 'SHA1'
+Tue Apr  4 22:21:07 2023 us=917674   prng_hash = 'SHA1'
+Tue Apr  4 22:21:07 2023 us=917708   prng_nonce_secret_len = 16
+Tue Apr  4 22:21:07 2023 us=917741   keysize = 0
+Tue Apr  4 22:21:07 2023 us=917764   engine = DISABLED
+Tue Apr  4 22:21:07 2023 us=917786   replay = ENABLED
+Tue Apr  4 22:21:07 2023 us=917795   mute_replay_warnings = DISABLED
+Tue Apr  4 22:21:07 2023 us=917817   replay_window = 64
+Tue Apr  4 22:21:07 2023 us=917838   replay_time = 15
+Tue Apr  4 22:21:07 2023 us=917848   packet_id_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917869   use_iv = ENABLED
+Tue Apr  4 22:21:07 2023 us=917878   test_crypto = DISABLED
+Tue Apr  4 22:21:07 2023 us=917900   tls_server = DISABLED
+Tue Apr  4 22:21:07 2023 us=917908   tls_client = DISABLED
+Tue Apr  4 22:21:07 2023 us=917930   key_method = 2
+Tue Apr  4 22:21:07 2023 us=917939   ca_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917960   ca_path = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917982   dh_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=917991   cert_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918012   extra_certs_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918021   priv_key_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918043   pkcs12_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918051   cipher_list = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918090   cipher_list_tls13 = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918101   tls_cert_profile = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918109   tls_verify = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918132   tls_export_cert = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918141   verify_x509_type = 0
+Tue Apr  4 22:21:07 2023 us=918162   verify_x509_name = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918171   crl_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918217   ns_cert_type = 0
+Tue Apr  4 22:21:07 2023 us=918226   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918247   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918255   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918263   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918271   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918293   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918301   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918323   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918332   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918353   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918374   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918384   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918406   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918414   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918436   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918444   remote_cert_ku[i] = 0
+Tue Apr  4 22:21:07 2023 us=918466   remote_cert_eku = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918475   ssl_flags = 0
+Tue Apr  4 22:21:07 2023 us=918497   tls_timeout = 2
+Tue Apr  4 22:21:07 2023 us=918517   renegotiate_bytes = -1
+Tue Apr  4 22:21:07 2023 us=918527   renegotiate_packets = 0
+Tue Apr  4 22:21:07 2023 us=918549   renegotiate_seconds = 3600
+Tue Apr  4 22:21:07 2023 us=918558   handshake_window = 60
+Tue Apr  4 22:21:07 2023 us=918599   transition_window = 3600
+Tue Apr  4 22:21:07 2023 us=918622   single_session = DISABLED
+Tue Apr  4 22:21:07 2023 us=918644   push_peer_info = DISABLED
+Tue Apr  4 22:21:07 2023 us=918653   tls_exit = DISABLED
+Tue Apr  4 22:21:07 2023 us=918675   tls_auth_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918684   tls_crypt_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=918706   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918728   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918737   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918759   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918768   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918789   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918798   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918820   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918828   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918850   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918871   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918881   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918903   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918911   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918938   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918947   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:21:07 2023 us=918968   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=918978   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=918999   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919008   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919030   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919039   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919089   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919100   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919122   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919131   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919153   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919162   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919183   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919204   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919213   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919236   pkcs11_private_mode = 00000000
+Tue Apr  4 22:21:07 2023 us=919244   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919266   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919275   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919296   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919305   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919327   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919348   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919357   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919379   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919388   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919409   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919418   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919440   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919449   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919470   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919479   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:21:07 2023 us=919500   pkcs11_pin_cache_period = -1
+Tue Apr  4 22:21:07 2023 us=919522   pkcs11_id = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=919531   pkcs11_id_management = DISABLED
+Tue Apr  4 22:21:07 2023 us=919565   server_network = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919596   server_netmask = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919625   server_network_ipv6 = ::
+Tue Apr  4 22:21:07 2023 us=919648   server_netbits_ipv6 = 0
+Tue Apr  4 22:21:07 2023 us=919670   server_bridge_ip = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919679   server_bridge_netmask = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919702   server_bridge_pool_start = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919711   server_bridge_pool_end = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919733   ifconfig_pool_defined = DISABLED
+Tue Apr  4 22:21:07 2023 us=919755   ifconfig_pool_start = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919765   ifconfig_pool_end = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919787   ifconfig_pool_netmask = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=919796   ifconfig_pool_persist_filename = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=919817   ifconfig_pool_persist_refresh_freq = 600
+Tue Apr  4 22:21:07 2023 us=919840   ifconfig_ipv6_pool_defined = DISABLED
+Tue Apr  4 22:21:07 2023 us=919849   ifconfig_ipv6_pool_base = ::
+Tue Apr  4 22:21:07 2023 us=919871   ifconfig_ipv6_pool_netbits = 0
+Tue Apr  4 22:21:07 2023 us=919880   n_bcast_buf = 256
+Tue Apr  4 22:21:07 2023 us=919902   tcp_queue_limit = 64
+Tue Apr  4 22:21:07 2023 us=919923   real_hash_size = 256
+Tue Apr  4 22:21:07 2023 us=919932   virtual_hash_size = 256
+Tue Apr  4 22:21:07 2023 us=919954   client_connect_script = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=919963   learn_address_script = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=919984   client_disconnect_script = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=919993   client_config_dir = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=920015   ccd_exclusive = DISABLED
+Tue Apr  4 22:21:07 2023 us=920024   tmp_dir = '/tmp'
+Tue Apr  4 22:21:07 2023 us=920045   push_ifconfig_defined = DISABLED
+Tue Apr  4 22:21:07 2023 us=920169   push_ifconfig_local = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=920207   push_ifconfig_remote_netmask = 0.0.0.0
+Tue Apr  4 22:21:07 2023 us=920242   push_ifconfig_ipv6_defined = DISABLED
+Tue Apr  4 22:21:07 2023 us=920265   push_ifconfig_ipv6_local = ::/0
+Tue Apr  4 22:21:07 2023 us=920275   push_ifconfig_ipv6_remote = ::
+Tue Apr  4 22:21:07 2023 us=920298   enable_c2c = DISABLED
+Tue Apr  4 22:21:07 2023 us=920320   duplicate_cn = DISABLED
+Tue Apr  4 22:21:07 2023 us=920329   cf_max = 0
+Tue Apr  4 22:21:07 2023 us=920350   cf_per = 0
+Tue Apr  4 22:21:07 2023 us=920359   max_clients = 1024
+Tue Apr  4 22:21:07 2023 us=920381   max_routes_per_client = 256
+Tue Apr  4 22:21:07 2023 us=920390   auth_user_pass_verify_script = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=920411   auth_user_pass_verify_script_via_file = DISABLED
+Tue Apr  4 22:21:07 2023 us=920434   auth_token_generate = DISABLED
+Tue Apr  4 22:21:07 2023 us=920442   auth_token_lifetime = 0
+Tue Apr  4 22:21:07 2023 us=920464   port_share_host = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=920473   port_share_port = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=920494   client = DISABLED
+Tue Apr  4 22:21:07 2023 us=920503   pull = DISABLED
+Tue Apr  4 22:21:07 2023 us=920525   auth_user_pass_file = '[UNDEF]'
+Tue Apr  4 22:21:07 2023 us=920562 OpenVPN 2.4.7 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Sep  5 2019
+Tue Apr  4 22:21:07 2023 us=920583 library versions: OpenSSL 1.1.1f  31 Mar 2020, LZO 2.10
+Tue Apr  4 22:21:07 2023 us=920743 Outgoing Static Key Encryption: Cipher 'BF-CBC' initialized with 128 bit key
+Tue Apr  4 22:21:07 2023 us=920786 WARNING: INSECURE cipher with block size less than 128 bit (64 bit).  This allows attacks like SWEET32.  Mitigate by using a --cipher with a larger block size (e.g. AES-256-CBC).
+Tue Apr  4 22:21:07 2023 us=920828 Outgoing Static Key Encryption: Using 160 bit message hash 'SHA1' for HMAC authentication
+Tue Apr  4 22:21:07 2023 us=920889 Incoming Static Key Encryption: Cipher 'BF-CBC' initialized with 128 bit key
+Tue Apr  4 22:21:07 2023 us=920925 WARNING: INSECURE cipher with block size less than 128 bit (64 bit).  This allows attacks like SWEET32.  Mitigate by using a --cipher with a larger block size (e.g. AES-256-CBC).
+Tue Apr  4 22:21:07 2023 us=920961 Incoming Static Key Encryption: Using 160 bit message hash 'SHA1' for HMAC authentication
+Tue Apr  4 22:21:07 2023 us=933105 TUN/TAP device tun1 opened
+Tue Apr  4 22:21:07 2023 us=933320 TUN/TAP TX queue length set to 100
+Tue Apr  4 22:21:07 2023 us=933353 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Tue Apr  4 22:21:07 2023 us=933369 /sbin/ip link set dev tun1 up mtu 1500
+Tue Apr  4 22:21:07 2023 us=941678 /sbin/ip addr add dev tun1 local 10.4.0.1 peer 10.4.0.2
+Tue Apr  4 22:21:07 2023 us=947850 Data Channel MTU parms [ L:1544 D:1450 EF:44 EB:393 ET:0 EL:3 ]
+Tue Apr  4 22:21:07 2023 us=947953 Local Options String (VER=V4): 'V4,dev-type tun,link-mtu 1544,tun-mtu 1500,proto UDPv4,ifconfig 10.4.0.2 10.4.0.1,cipher BF-CBC,auth SHA1,keysize 128,secret'
+Tue Apr  4 22:21:07 2023 us=947993 Expected Remote Options String (VER=V4): 'V4,dev-type tun,link-mtu 1544,tun-mtu 1500,proto UDPv4,ifconfig 10.4.0.1 10.4.0.2,cipher BF-CBC,auth SHA1,keysize 128,secret'
+Tue Apr  4 22:21:07 2023 us=948034 TCP/UDP: Preserving recently used remote address: [AF_INET]192.168.19.128:1194
+Tue Apr  4 22:21:07 2023 us=948102 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Tue Apr  4 22:21:07 2023 us=948145 UDP link local (bound): [AF_INET][undef]:1194
+Tue Apr  4 22:21:07 2023 us=948209 UDP link remote: [AF_INET]192.168.19.128:1194
+rWRTue Apr  4 22:21:07 2023 us=948474 Peer Connection Initiated with [AF_INET]192.168.19.128:1194
+wTue Apr  4 22:21:09 2023 us=81266 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Tue Apr  4 22:21:09 2023 us=81354 Initialization Sequence Completed
+rWRwWRWRTue Apr  4 22:21:17 2023 us=175156 WARNING: 'ifconfig' is used inconsistently, local='ifconfig 10.4.0.1 10.4.0.2', remote='ifconfig 10.4.0.2 10.4.0.1'
+rWRwrWRwrWRw\
+
+^CTue Apr  4 22:23:08 2023 us=927725 event_wait : Interrupted system call (code=4)
+Tue Apr  4 22:23:08 2023 us=927757 TCP/UDP: Closing socket
+Tue Apr  4 22:23:08 2023 us=927782 Closing TUN/TAP interface
+Tue Apr  4 22:23:08 2023 us=927791 /sbin/ip addr del dev tun1 local 10.4.0.1 peer 10.4.0.2
+Tue Apr  4 22:23:08 2023 us=944821 SIGINT[hard,] received, process exiting
+nsr@nsr-VirtualBox:~/Desktop$ sudo openvpn --remote 192.168.19.129 --dev tun1 --ifconfig 10.4.0.1 10.4.0.2 --verb 5 --secret mykey
+Tue Apr  4 22:23:12 2023 us=964647 disabling NCP mode (--ncp-disable) because not in P2MP client or server mode
+Tue Apr  4 22:23:12 2023 us=964745 Current Parameter Settings:
+Tue Apr  4 22:23:12 2023 us=964786   config = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=964823   mode = 0
+Tue Apr  4 22:23:12 2023 us=964858   persist_config = DISABLED
+Tue Apr  4 22:23:12 2023 us=964894   persist_mode = 1
+Tue Apr  4 22:23:12 2023 us=964930   show_ciphers = DISABLED
+Tue Apr  4 22:23:12 2023 us=964965   show_digests = DISABLED
+Tue Apr  4 22:23:12 2023 us=965000   show_engines = DISABLED
+Tue Apr  4 22:23:12 2023 us=965035   genkey = DISABLED
+Tue Apr  4 22:23:12 2023 us=965143   key_pass_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=965195   show_tls_ciphers = DISABLED
+Tue Apr  4 22:23:12 2023 us=965239   connect_retry_max = 0
+Tue Apr  4 22:23:12 2023 us=965282 Connection profiles [0]:
+Tue Apr  4 22:23:12 2023 us=965325   proto = udp
+Tue Apr  4 22:23:12 2023 us=965368   local = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=965410   local_port = '1194'
+Tue Apr  4 22:23:12 2023 us=965453   remote = '192.168.19.129'
+Tue Apr  4 22:23:12 2023 us=965496   remote_port = '1194'
+Tue Apr  4 22:23:12 2023 us=965538   remote_float = DISABLED
+Tue Apr  4 22:23:12 2023 us=965596   bind_defined = DISABLED
+Tue Apr  4 22:23:12 2023 us=965642   bind_local = ENABLED
+Tue Apr  4 22:23:12 2023 us=965684   bind_ipv6_only = DISABLED
+Tue Apr  4 22:23:12 2023 us=965727   connect_retry_seconds = 5
+Tue Apr  4 22:23:12 2023 us=965769   connect_timeout = 120
+Tue Apr  4 22:23:12 2023 us=965812   socks_proxy_server = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=965854   socks_proxy_port = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=965897   tun_mtu = 1500
+Tue Apr  4 22:23:12 2023 us=965939   tun_mtu_defined = ENABLED
+Tue Apr  4 22:23:12 2023 us=965982   link_mtu = 1500
+Tue Apr  4 22:23:12 2023 us=966024   link_mtu_defined = DISABLED
+Tue Apr  4 22:23:12 2023 us=966080   tun_mtu_extra = 0
+Tue Apr  4 22:23:12 2023 us=966127   tun_mtu_extra_defined = DISABLED
+Tue Apr  4 22:23:12 2023 us=966170   mtu_discover_type = -1
+Tue Apr  4 22:23:12 2023 us=966213   fragment = 0
+Tue Apr  4 22:23:12 2023 us=966255   mssfix = 1450
+Tue Apr  4 22:23:12 2023 us=966297   explicit_exit_notification = 0
+Tue Apr  4 22:23:12 2023 us=966339 Connection profiles END
+Tue Apr  4 22:23:12 2023 us=966382   remote_random = DISABLED
+Tue Apr  4 22:23:12 2023 us=966424   ipchange = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=966466   dev = 'tun1'
+Tue Apr  4 22:23:12 2023 us=966508   dev_type = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=966550   dev_node = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=966607   lladdr = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=966652   topology = 1
+Tue Apr  4 22:23:12 2023 us=966694   ifconfig_local = '10.4.0.1'
+Tue Apr  4 22:23:12 2023 us=966737   ifconfig_remote_netmask = '10.4.0.2'
+Tue Apr  4 22:23:12 2023 us=966779   ifconfig_noexec = DISABLED
+Tue Apr  4 22:23:12 2023 us=966822   ifconfig_nowarn = DISABLED
+Tue Apr  4 22:23:12 2023 us=966864   ifconfig_ipv6_local = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=966906   ifconfig_ipv6_netbits = 0
+Tue Apr  4 22:23:12 2023 us=966948   ifconfig_ipv6_remote = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=966991   shaper = 0
+Tue Apr  4 22:23:12 2023 us=967033   mtu_test = 0
+Tue Apr  4 22:23:12 2023 us=967113   mlock = DISABLED
+Tue Apr  4 22:23:12 2023 us=967162   keepalive_ping = 0
+Tue Apr  4 22:23:12 2023 us=969090   keepalive_timeout = 0
+Tue Apr  4 22:23:12 2023 us=969145   inactivity_timeout = 0
+Tue Apr  4 22:23:12 2023 us=969184   ping_send_timeout = 0
+Tue Apr  4 22:23:12 2023 us=969220   ping_rec_timeout = 0
+Tue Apr  4 22:23:12 2023 us=969256   ping_rec_timeout_action = 0
+Tue Apr  4 22:23:12 2023 us=969292   ping_timer_remote = DISABLED
+Tue Apr  4 22:23:12 2023 us=969328   remap_sigusr1 = 0
+Tue Apr  4 22:23:12 2023 us=969364   persist_tun = DISABLED
+Tue Apr  4 22:23:12 2023 us=969399   persist_local_ip = DISABLED
+Tue Apr  4 22:23:12 2023 us=969435   persist_remote_ip = DISABLED
+Tue Apr  4 22:23:12 2023 us=969470   persist_key = DISABLED
+Tue Apr  4 22:23:12 2023 us=969506   passtos = DISABLED
+Tue Apr  4 22:23:12 2023 us=969557   resolve_retry_seconds = 1000000000
+Tue Apr  4 22:23:12 2023 us=969597   resolve_in_advance = DISABLED
+Tue Apr  4 22:23:12 2023 us=969633   username = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=969669   groupname = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=969704   chroot_dir = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=969740   cd_dir = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=969775   writepid = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=969811   up_script = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=969846   down_script = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=969881   down_pre = DISABLED
+Tue Apr  4 22:23:12 2023 us=969917   up_restart = DISABLED
+Tue Apr  4 22:23:12 2023 us=969952   up_delay = DISABLED
+Tue Apr  4 22:23:12 2023 us=969987   daemon = DISABLED
+Tue Apr  4 22:23:12 2023 us=970041   inetd = 0
+Tue Apr  4 22:23:12 2023 us=970078   log = DISABLED
+Tue Apr  4 22:23:12 2023 us=970114   suppress_timestamps = DISABLED
+Tue Apr  4 22:23:12 2023 us=970150   machine_readable_output = DISABLED
+Tue Apr  4 22:23:12 2023 us=970185   nice = 0
+Tue Apr  4 22:23:12 2023 us=970221   verbosity = 5
+Tue Apr  4 22:23:12 2023 us=970256   mute = 0
+Tue Apr  4 22:23:12 2023 us=970291   gremlin = 0
+Tue Apr  4 22:23:12 2023 us=970327   status_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=970362   status_file_version = 1
+Tue Apr  4 22:23:12 2023 us=970398   status_file_update_freq = 60
+Tue Apr  4 22:23:12 2023 us=970433   occ = ENABLED
+Tue Apr  4 22:23:12 2023 us=970468   rcvbuf = 0
+Tue Apr  4 22:23:12 2023 us=970503   sndbuf = 0
+Tue Apr  4 22:23:12 2023 us=970555   mark = 0
+Tue Apr  4 22:23:12 2023 us=970594   sockflags = 0
+Tue Apr  4 22:23:12 2023 us=970629   fast_io = DISABLED
+Tue Apr  4 22:23:12 2023 us=970665   comp.alg = 0
+Tue Apr  4 22:23:12 2023 us=970700   comp.flags = 0
+Tue Apr  4 22:23:12 2023 us=970736   route_script = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=970771   route_default_gateway = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=970806   route_default_metric = 0
+Tue Apr  4 22:23:12 2023 us=970842   route_noexec = DISABLED
+Tue Apr  4 22:23:12 2023 us=970877   route_delay = 0
+Tue Apr  4 22:23:12 2023 us=970917   route_delay_window = 30
+Tue Apr  4 22:23:12 2023 us=970953   route_delay_defined = DISABLED
+Tue Apr  4 22:23:12 2023 us=970988   route_nopull = DISABLED
+Tue Apr  4 22:23:12 2023 us=971035   route_gateway_via_dhcp = DISABLED
+Tue Apr  4 22:23:12 2023 us=971079   allow_pull_fqdn = DISABLED
+Tue Apr  4 22:23:12 2023 us=971115   management_addr = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=971151   management_port = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=971186   management_user_pass = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=971222   management_log_history_cache = 250
+Tue Apr  4 22:23:12 2023 us=971258   management_echo_buffer_size = 100
+Tue Apr  4 22:23:12 2023 us=971293   management_write_peer_info_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=971329   management_client_user = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=971365   management_client_group = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=971401   management_flags = 0
+Tue Apr  4 22:23:12 2023 us=971437   shared_secret_file = 'mykey'
+Tue Apr  4 22:23:12 2023 us=971472   key_direction = not set
+Tue Apr  4 22:23:12 2023 us=971507   ciphername = 'BF-CBC'
+Tue Apr  4 22:23:12 2023 us=971560   ncp_enabled = DISABLED
+Tue Apr  4 22:23:12 2023 us=971598   ncp_ciphers = 'AES-256-GCM:AES-128-GCM'
+Tue Apr  4 22:23:12 2023 us=971634   authname = 'SHA1'
+Tue Apr  4 22:23:12 2023 us=971669   prng_hash = 'SHA1'
+Tue Apr  4 22:23:12 2023 us=971704   prng_nonce_secret_len = 16
+Tue Apr  4 22:23:12 2023 us=971740   keysize = 0
+Tue Apr  4 22:23:12 2023 us=971775   engine = DISABLED
+Tue Apr  4 22:23:12 2023 us=971810   replay = ENABLED
+Tue Apr  4 22:23:12 2023 us=971846   mute_replay_warnings = DISABLED
+Tue Apr  4 22:23:12 2023 us=971881   replay_window = 64
+Tue Apr  4 22:23:12 2023 us=971916   replay_time = 15
+Tue Apr  4 22:23:12 2023 us=971940   packet_id_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=971963   use_iv = ENABLED
+Tue Apr  4 22:23:12 2023 us=971986   test_crypto = DISABLED
+Tue Apr  4 22:23:12 2023 us=971996   tls_server = DISABLED
+Tue Apr  4 22:23:12 2023 us=972032   tls_client = DISABLED
+Tue Apr  4 22:23:12 2023 us=972043   key_method = 2
+Tue Apr  4 22:23:12 2023 us=972052   ca_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972079   ca_path = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972088   dh_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972111   cert_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972120   extra_certs_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972144   priv_key_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972153   pkcs12_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972176   cipher_list = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972185   cipher_list_tls13 = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972208   tls_cert_profile = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972231   tls_verify = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972240   tls_export_cert = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972263   verify_x509_type = 0
+Tue Apr  4 22:23:12 2023 us=972272   verify_x509_name = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972295   crl_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972304   ns_cert_type = 0
+Tue Apr  4 22:23:12 2023 us=972327   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972349   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972359   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972382   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972391   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972415   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972424   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972447   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972456   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972479   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972488   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972520   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972552   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972576   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972585   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972608   remote_cert_ku[i] = 0
+Tue Apr  4 22:23:12 2023 us=972630   remote_cert_eku = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972640   ssl_flags = 0
+Tue Apr  4 22:23:12 2023 us=972664   tls_timeout = 2
+Tue Apr  4 22:23:12 2023 us=972673   renegotiate_bytes = -1
+Tue Apr  4 22:23:12 2023 us=972696   renegotiate_packets = 0
+Tue Apr  4 22:23:12 2023 us=972705   renegotiate_seconds = 3600
+Tue Apr  4 22:23:12 2023 us=972728   handshake_window = 60
+Tue Apr  4 22:23:12 2023 us=972750   transition_window = 3600
+Tue Apr  4 22:23:12 2023 us=972760   single_session = DISABLED
+Tue Apr  4 22:23:12 2023 us=972783   push_peer_info = DISABLED
+Tue Apr  4 22:23:12 2023 us=972792   tls_exit = DISABLED
+Tue Apr  4 22:23:12 2023 us=972814   tls_auth_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972823   tls_crypt_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=972846   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972856   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972879   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972902   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972911   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972934   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972943   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972966   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972975   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=972997   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=973031   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=973043   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=973052   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=973081   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=973090   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=973113   pkcs11_protected_authentication = DISABLED
+Tue Apr  4 22:23:12 2023 us=973123   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973146   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973155   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973178   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973187   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973210   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973219   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973242   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973264   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973274   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973297   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973306   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973329   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973338   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973360   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973370   pkcs11_private_mode = 00000000
+Tue Apr  4 22:23:12 2023 us=973392   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973402   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973424   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973447   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973457   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973480   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973489   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973527   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973538   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973547   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973572   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973581   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973604   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973614   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973636   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973646   pkcs11_cert_private = DISABLED
+Tue Apr  4 22:23:12 2023 us=973669   pkcs11_pin_cache_period = -1
+Tue Apr  4 22:23:12 2023 us=973678   pkcs11_id = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=973701   pkcs11_id_management = DISABLED
+Tue Apr  4 22:23:12 2023 us=973724   server_network = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973735   server_netmask = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973763   server_network_ipv6 = ::
+Tue Apr  4 22:23:12 2023 us=973787   server_netbits_ipv6 = 0
+Tue Apr  4 22:23:12 2023 us=973797   server_bridge_ip = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973820   server_bridge_netmask = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973843   server_bridge_pool_start = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973853   server_bridge_pool_end = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973876   ifconfig_pool_defined = DISABLED
+Tue Apr  4 22:23:12 2023 us=973885   ifconfig_pool_start = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973909   ifconfig_pool_end = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973931   ifconfig_pool_netmask = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=973941   ifconfig_pool_persist_filename = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=973964   ifconfig_pool_persist_refresh_freq = 600
+Tue Apr  4 22:23:12 2023 us=973973   ifconfig_ipv6_pool_defined = DISABLED
+Tue Apr  4 22:23:12 2023 us=974007   ifconfig_ipv6_pool_base = ::
+Tue Apr  4 22:23:12 2023 us=974040   ifconfig_ipv6_pool_netbits = 0
+Tue Apr  4 22:23:12 2023 us=974064   n_bcast_buf = 256
+Tue Apr  4 22:23:12 2023 us=974073   tcp_queue_limit = 64
+Tue Apr  4 22:23:12 2023 us=974096   real_hash_size = 256
+Tue Apr  4 22:23:12 2023 us=974106   virtual_hash_size = 256
+Tue Apr  4 22:23:12 2023 us=974129   client_connect_script = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=974138   learn_address_script = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=974161   client_disconnect_script = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=974184   client_config_dir = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=974193   ccd_exclusive = DISABLED
+Tue Apr  4 22:23:12 2023 us=974216   tmp_dir = '/tmp'
+Tue Apr  4 22:23:12 2023 us=974225   push_ifconfig_defined = DISABLED
+Tue Apr  4 22:23:12 2023 us=974249   push_ifconfig_local = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=974258   push_ifconfig_remote_netmask = 0.0.0.0
+Tue Apr  4 22:23:12 2023 us=974281   push_ifconfig_ipv6_defined = DISABLED
+Tue Apr  4 22:23:12 2023 us=974305   push_ifconfig_ipv6_local = ::/0
+Tue Apr  4 22:23:12 2023 us=974314   push_ifconfig_ipv6_remote = ::
+Tue Apr  4 22:23:12 2023 us=974337   enable_c2c = DISABLED
+Tue Apr  4 22:23:12 2023 us=974346   duplicate_cn = DISABLED
+Tue Apr  4 22:23:12 2023 us=974369   cf_max = 0
+Tue Apr  4 22:23:12 2023 us=974378   cf_per = 0
+Tue Apr  4 22:23:12 2023 us=974401   max_clients = 1024
+Tue Apr  4 22:23:12 2023 us=974424   max_routes_per_client = 256
+Tue Apr  4 22:23:12 2023 us=974433   auth_user_pass_verify_script = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=974456   auth_user_pass_verify_script_via_file = DISABLED
+Tue Apr  4 22:23:12 2023 us=974465   auth_token_generate = DISABLED
+Tue Apr  4 22:23:12 2023 us=974488   auth_token_lifetime = 0
+Tue Apr  4 22:23:12 2023 us=974528   port_share_host = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=974540   port_share_port = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=974562   client = DISABLED
+Tue Apr  4 22:23:12 2023 us=974572   pull = DISABLED
+Tue Apr  4 22:23:12 2023 us=974595   auth_user_pass_file = '[UNDEF]'
+Tue Apr  4 22:23:12 2023 us=974606 OpenVPN 2.4.7 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Sep  5 2019
+Tue Apr  4 22:23:12 2023 us=974636 library versions: OpenSSL 1.1.1f  31 Mar 2020, LZO 2.10
+Tue Apr  4 22:23:12 2023 us=974787 Outgoing Static Key Encryption: Cipher 'BF-CBC' initialized with 128 bit key
+Tue Apr  4 22:23:12 2023 us=974831 WARNING: INSECURE cipher with block size less than 128 bit (64 bit).  This allows attacks like SWEET32.  Mitigate by using a --cipher with a larger block size (e.g. AES-256-CBC).
+Tue Apr  4 22:23:12 2023 us=974875 Outgoing Static Key Encryption: Using 160 bit message hash 'SHA1' for HMAC authentication
+Tue Apr  4 22:23:12 2023 us=974939 Incoming Static Key Encryption: Cipher 'BF-CBC' initialized with 128 bit key
+Tue Apr  4 22:23:12 2023 us=974976 WARNING: INSECURE cipher with block size less than 128 bit (64 bit).  This allows attacks like SWEET32.  Mitigate by using a --cipher with a larger block size (e.g. AES-256-CBC).
+Tue Apr  4 22:23:12 2023 us=975034 Incoming Static Key Encryption: Using 160 bit message hash 'SHA1' for HMAC authentication
+Tue Apr  4 22:23:12 2023 us=988667 TUN/TAP device tun1 opened
+Tue Apr  4 22:23:12 2023 us=988973 TUN/TAP TX queue length set to 100
+Tue Apr  4 22:23:12 2023 us=989000 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Tue Apr  4 22:23:12 2023 us=989009 /sbin/ip link set dev tun1 up mtu 1500
+Tue Apr  4 22:23:12 2023 us=992527 /sbin/ip addr add dev tun1 local 10.4.0.1 peer 10.4.0.2
+Tue Apr  4 22:23:12 2023 us=996162 Data Channel MTU parms [ L:1544 D:1450 EF:44 EB:393 ET:0 EL:3 ]
+Tue Apr  4 22:23:12 2023 us=996247 Local Options String (VER=V4): 'V4,dev-type tun,link-mtu 1544,tun-mtu 1500,proto UDPv4,ifconfig 10.4.0.2 10.4.0.1,cipher BF-CBC,auth SHA1,keysize 128,secret'
+Tue Apr  4 22:23:12 2023 us=996287 Expected Remote Options String (VER=V4): 'V4,dev-type tun,link-mtu 1544,tun-mtu 1500,proto UDPv4,ifconfig 10.4.0.1 10.4.0.2,cipher BF-CBC,auth SHA1,keysize 128,secret'
+Tue Apr  4 22:23:12 2023 us=999247 TCP/UDP: Preserving recently used remote address: [AF_INET]192.168.19.129:1194
+Tue Apr  4 22:23:12 2023 us=999320 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Tue Apr  4 22:23:12 2023 us=999390 UDP link local (bound): [AF_INET][undef]:1194
+Tue Apr  4 22:23:12 2023 us=999426 UDP link remote: [AF_INET]192.168.19.129:1194
+rWrWWrWWRTue Apr  4 22:23:37 2023 us=288662 Peer Connection Initiated with [AF_INET]192.168.19.129:1194
+Tue Apr  4 22:23:37 2023 us=288694 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Tue Apr  4 22:23:37 2023 us=288701 Initialization Sequence Completed
+wRwWRrWRWRwRwrWRwRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwRwrWrWRwrWRwRwrWRwRwrWRwRwrWRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwrWRwRwrWRwrWRwrWRwrWRwrWrWRwrWRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwrWRwrWRwrWRwrWrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwRwrWRwrWRwrWRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWrWRwRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwrWRwRwrWrWrWRwRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwRwrWRwrWRwrW
+
+

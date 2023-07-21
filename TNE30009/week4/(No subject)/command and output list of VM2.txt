@@ -1,0 +1,162 @@
+nsr@nsr-VirtualBox:~$ ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.243.128  netmask 255.255.255.0  broadcast 192.168.243.255
+        inet6 fe80::8755:e818:64eb:e9c2  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:2a:0d:1d  txqueuelen 1000  (Ethernet)
+        RX packets 259  bytes 272076 (272.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 180  bytes 19335 (19.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 65  bytes 7239 (7.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 65  bytes 7239 (7.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+nsr@nsr-VirtualBox:~$ pinf 192.168.243.128
+
+Command 'pinf' not found, did you mean:
+
+  command 'ping' from deb iputils-ping (3:20190709-3)
+  command 'ping' from deb inetutils-ping (2:1.9.4-11)
+  command 'pinfo' from deb pinfo (0.6.13-1)
+  command 'pinq' from deb qmail (1.06-6.2~deb10u1build0.20.04.1)
+
+Try: sudo apt install <deb name>
+
+nsr@nsr-VirtualBox:~$ ping 192.168.243.128
+PING 192.168.243.128 (192.168.243.128) 56(84) bytes of data.
+64 bytes from 192.168.243.128: icmp_seq=1 ttl=64 time=0.058 ms
+64 bytes from 192.168.243.128: icmp_seq=2 ttl=64 time=0.063 ms
+^C
+--- 192.168.243.128 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1030ms
+rtt min/avg/max/mdev = 0.058/0.060/0.063/0.002 ms
+nsr@nsr-VirtualBox:~$ ping 192.168.243.129
+PING 192.168.243.129 (192.168.243.129) 56(84) bytes of data.
+64 bytes from 192.168.243.129: icmp_seq=1 ttl=64 time=0.350 ms
+64 bytes from 192.168.243.129: icmp_seq=2 ttl=64 time=0.714 ms
+64 bytes from 192.168.243.129: icmp_seq=3 ttl=64 time=0.258 ms
+64 bytes from 192.168.243.129: icmp_seq=4 ttl=64 time=0.764 ms
+64 bytes from 192.168.243.129: icmp_seq=5 ttl=64 time=0.866 ms
+64 bytes from 192.168.243.129: icmp_seq=6 ttl=64 time=0.759 ms
+64 bytes from 192.168.243.129: icmp_seq=7 ttl=64 time=0.779 ms
+^C
+--- 192.168.243.129 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6118ms
+rtt min/avg/max/mdev = 0.258/0.641/0.866/0.218 ms
+nsr@nsr-VirtualBox:~$ nmap -system-dns -v -A 192.168.243.129
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-03-16 02:43 AEDT
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 02:43
+Completed NSE at 02:43, 0.00s elapsed
+Initiating NSE at 02:43
+Completed NSE at 02:43, 0.00s elapsed
+Initiating NSE at 02:43
+Completed NSE at 02:43, 0.00s elapsed
+Initiating Ping Scan at 02:43
+Scanning 192.168.243.129 [2 ports]
+Completed Ping Scan at 02:43, 0.00s elapsed (1 total hosts)
+Initiating System DNS resolution of 1 host. at 02:43
+Completed System DNS resolution of 1 host. at 02:43, 0.01s elapsed
+Initiating Connect Scan at 02:43
+Scanning 192.168.243.129 [1000 ports]
+Discovered open port 23/tcp on 192.168.243.129
+Completed Connect Scan at 02:43, 0.07s elapsed (1000 total ports)
+Initiating Service scan at 02:43
+Scanning 1 service on 192.168.243.129
+Completed Service scan at 02:43, 0.01s elapsed (1 service on 1 host)
+NSE: Script scanning 192.168.243.129.
+Initiating NSE at 02:43
+Completed NSE at 02:43, 7.01s elapsed
+Initiating NSE at 02:43
+Completed NSE at 02:43, 0.00s elapsed
+Initiating NSE at 02:43
+Completed NSE at 02:43, 0.00s elapsed
+Nmap scan report for 192.168.243.129
+Host is up (0.0022s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  Linux telnetd
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+Initiating NSE at 02:43
+Completed NSE at 02:43, 0.00s elapsed
+Initiating NSE at 02:43
+Completed NSE at 02:43, 0.00s elapsed
+Initiating NSE at 02:43
+Completed NSE at 02:43, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.86 seconds
+nsr@nsr-VirtualBox:~$  sudo htc -F 2323 192.168.243.129:80
+[sudo] password for nsr: 
+nsr@nsr-VirtualBox:~$ telnet 192.168.243.128 2323
+Trying 192.168.243.128...
+Connected to 192.168.243.128.
+Escape character is '^]'.
+Ubuntu 20.04.1 LTS
+nsr-VirtualBox login: user
+Password: 
+
+Login incorrect
+nsr-VirtualBox login: nsr
+Password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.8.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+210 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+New release '22.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Tue Feb  9 12:26:54 AEDT 2021 from localhost on pts/3
+nsr@nsr-VirtualBox:~$ ls
+Desktop    Downloads  Pictures  shares     Videos
+Documents  Music      Public    Templates
+nsr@nsr-VirtualBox:~$ ls -al
+total 88
+drwxr-xr-x 17 nsr  nsr  4096 Mar 11 05:47 .
+drwxr-xr-x  4 root root 4096 Feb  4  2021 ..
+-rw-------  1 nsr  nsr  1381 Feb  9  2021 .bash_history
+-rw-r--r--  1 nsr  nsr   220 Feb  4  2021 .bash_logout
+-rw-r--r--  1 nsr  nsr  3771 Feb  4  2021 .bashrc
+drwx------ 13 nsr  nsr  4096 Feb  9  2021 .cache
+drwx------ 12 nsr  nsr  4096 Feb  9  2021 .config
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Desktop
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Documents
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Downloads
+drwx------  3 nsr  nsr  4096 Mar 16 02:38 .gnupg
+drwx------  3 nsr  nsr  4096 Feb  4  2021 .local
+drwx------  5 nsr  nsr  4096 Feb  9  2021 .mozilla
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Music
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Pictures
+-rw-r--r--  1 nsr  nsr   807 Feb  4  2021 .profile
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Public
+drwxr-x---  2 root root 4096 Feb  4  2021 shares
+drwx------  2 nsr  nsr  4096 Mar 11 05:47 .ssh
+-rw-r--r--  1 nsr  nsr     0 Feb  4  2021 .sudo_as_admin_successful
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Templates
+-rw-r-----  1 nsr  nsr     5 Feb  9  2021 .vboxclient-draganddrop.pid
+drwxr-xr-x  2 nsr  nsr  4096 Feb  4  2021 Videos
+nsr@nsr-VirtualBox:~$ ex
+nsr@nsr-VirtualBox:~$ exit
+logout
+Connection closed by foreign host.
+nsr@nsr-VirtualBox:~$ 

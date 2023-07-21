@@ -1,0 +1,17 @@
+Useful links for case study policy and stuff:
+
+https://www.sciencedirect.com/science/article/abs/pii/S0167404820301607 ---data and privacy issue for wireless sensor tech
+
+https://www.sciencedirect.com/science/article/abs/pii/S0010482517303621 ----Adaptive and technology-independent architecture for fault-tolerant distributed AAL solutions 
+(sensor damage, actuator damage and stuff)
+
+https://www.researchgate.net/publication/305906487_Requirements_and_challenges_in_wireless_network%27s_performance_evaluation_in_ambient_assisted_living_environments ---Requirements and Challenges in Wireless Network’s 
+Performance Evaluation in Ambient Assisted Living 
+Environments
+
+https://subscriptions.techstreet.com/products/814099 ___ISO27005 links
+
+
+https://ieeexplore.ieee.org/abstract/document/8889544---  raspberri pi security weakness --- see table1 for list--- the case study didnt mention the version of raspberry pi being used---so te issues mentioned can still exist
+
+
